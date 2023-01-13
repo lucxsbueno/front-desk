@@ -20,3 +20,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+:root {
+  /* Colors */
+  --primary-color: #F97F0C;
+  --primary-color-opacity: rgba(249, 127, 12, 0.1);
+  --secondary-color: #2F364E;
+  --terciary-color: #1F1F1F;
+  --terciary-color-opacity: rgba(0, 0, 0, 0.15);
+  --grey-01: #F9F9F9;
+  --grey-02: #EDF0F3;
+  --grey-03: #9FA7B4;
+  --white-01: #FFFFFF;
+
+  /* State colors */
+  --error-color: #F15656;
+  --error-color-opacity: #FFDDDD;
+  --success-color: #58AE4A;
+  --success-color-opacity: #DFEDDD;
+
+  /* Buttons */
+  --primary-bttn-color: linear-gradient(91.73deg, #F97F0C 0%, #F9450C 100%, rgba(249, 69, 12, 0.82) 100%);
+
+  /* Input */
+  --input-bg-default-color: #FBFBFB;
+  --input-bg-default-border-color: transparent;
+  --input-border-active-color: #F97F0C;
+  --input-active-box-shadow: 0px 0px 0px 3px rgba(249, 127, 12, 0.16);
+
+  /* Others */
+  --profile-badge-bg-opacity-color: rgba(255, 255, 255, 0.08);
+}
