@@ -27,11 +27,14 @@ code {
   --primary-color-opacity: rgba(249, 127, 12, 0.1);
   --secondary-color: #2F364E;
   --terciary-color: #1F1F1F;
-  --terciary-color-opacity: rgba(0, 0, 0, 0.15);
+  --terciary-color-opacity: #1A1A1A;
   --grey-01: #F9F9F9;
   --grey-02: #EDF0F3;
   --grey-03: #9FA7B4;
   --white-01: #FFFFFF;
+
+  /* Box shadow */
+  --box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
 
   /* State colors */
   --error-color: #F15656;
@@ -50,6 +53,43 @@ code {
 
   /* Others */
   --profile-badge-bg-opacity-color: rgba(255, 255, 255, 0.08);
+}
+
+/* General */
+.text-white {
+  color: var(--white-01);
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-primary-color {
+  color: var(--primary-color);
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.text-normal {
+  font-weight: 400;
 }
 
 /*!
