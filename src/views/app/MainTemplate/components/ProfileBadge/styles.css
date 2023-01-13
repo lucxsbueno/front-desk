@@ -1,0 +1,48 @@
+.avatar {
+  background-color: var(--white-01);
+  overflow: hidden;
+}
+
+.avatar--sm {
+  width: 34px;
+  height: 34px;
+  border-radius: 34px;
+}
+
+.avatar__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.profile-badge {
+  margin: 15px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--white-01);
+  padding: 10px 15px;
+  border-radius: 4px;
+
+  box-shadow: var(--box-shadow);
+  background-color: var(--profile-badge-bg-opacity-color);
+}
+
+.profile-badge__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.profile-badge__title {
+  color: var(--white-01);
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.profile-badge__title--bold {
+  font-weight: 600;
+}
