@@ -1,7 +1,8 @@
 import React from "react";
 
+import Menu from "./components/Menu";
 import Header from "../../../components/Header";
-import MainTemplateMenu from "./components/Menu";
+import ProfileBadge from "./components/ProfileBadge";
 
 import "./styles.css";
 
@@ -14,11 +15,11 @@ const MainTemplate = () => {
         </Header>
 
         <div className="main-template__body">
-          <MainTemplateMenu />
+          <Menu />
         </div>
 
         <div className="main-template__footer">
-
+          <ProfileBadge />
         </div>
       </div>
 
