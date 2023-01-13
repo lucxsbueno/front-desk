@@ -1,6 +1,16 @@
 import React from "react";
 
-import { BarChart2, BarChart3, BookOpen, LineChart, LogOut, MessageSquare, Star, User, Users } from "lucide-react";
+import {
+  BarChart2,
+  BarChart3,
+  BookOpen,
+  LineChart,
+  LogOut,
+  MessageSquare,
+  Star,
+  User,
+  Users,
+} from "lucide-react";
 
 import Nav from "../Nav";
 import Link from "../Link";
@@ -8,7 +18,6 @@ import Link from "../Link";
 import "./styles.css";
 
 const Menu = () => {
-
   return (
     <div className="main-template__menu">
       <Nav>
@@ -30,8 +39,8 @@ const Menu = () => {
         <Link icon={<User />} title="Minha conta" to="/" />
         <Link icon={<LogOut />} title="Sair" to="/" />
       </Nav>
-    </div >
+    </div>
   );
-}
+};
 
 export default Menu;
