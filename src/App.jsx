@@ -1,5 +1,7 @@
+import MainTemplate from "./views/app/MainTemplate";
+
 const App = () => {
-  return <div>App</div>;
+  return <MainTemplate />;
 };
 
 export default App;
