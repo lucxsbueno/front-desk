@@ -2,7 +2,6 @@ import React from "react";
 
 import {
   Star,
-  User,
   Users,
   LogOut,
   BookOpen,
@@ -20,23 +19,22 @@ const Menu = () => {
   return (
     <div className="main-template__menu">
       <Nav>
-        <Link icon={<MessageSquare />} title="Conversas" to="/" active={true} />
-        <Link icon={<LineChart />} title="Dashboard" to="/" />
+        <Link icon={<MessageSquare />} title="Conversas" to="/conversas" active={true} />
+        <Link icon={<LineChart />} title="Dashboard" to="/dashboard" />
         <Link icon={<Users />} title="Meus clientes">
-          <Link title="Novos" />
-          <Link title="Disponíveis" />
+          <Link title="Novos" to="/clientes-novos" />
+          <Link title="Disponíveis" to="/clientes-disponiveis" />
         </Link>
       </Nav>
 
       <Nav>
-        <Link icon={<BarChart2 />} title="Ranking" to="/" />
-        <Link icon={<Star />} title="Lotes favoritados" to="/" />
-        <Link icon={<BookOpen />} title="Relatório de acessos" to="/" />
+        <Link icon={<BarChart2 />} title="Ranking" to="/ranking" />
+        <Link icon={<Star />} title="Lotes favoritados" to="/lotes-favoritados" />
+        <Link icon={<BookOpen />} title="Relatório de acessos" to="/relatorio-de-acessos" />
       </Nav>
 
       <Nav>
-        <Link icon={<User />} title="Minha conta" to="/" />
-        <Link icon={<LogOut />} title="Sair" to="/" />
+        <Link icon={<LogOut />} title="Sair" />
       </Nav>
     </div>
   );
