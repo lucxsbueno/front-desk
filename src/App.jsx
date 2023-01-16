@@ -1,7 +1,7 @@
-import MainTemplate from "./views/app/MainTemplate";
+import { MainRoutes } from "./views/Routes";
 
 const App = () => {
-  return <MainTemplate />;
+  return <MainRoutes />;
 };
 
 export default App;
