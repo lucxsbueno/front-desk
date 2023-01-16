@@ -10,4 +10,26 @@
   box-shadow: var(--box-shadow);
 
   flex-shrink: 0;
+
+  position: relative;
+}
+
+.header--bg-white {
+  box-shadow: var(--box-shadow-bg-white);
+}
+
+/* Header filter */
+.header__filter {
+  width: calc(100% - 30px);
+  min-height: 180px;
+
+  position: absolute;
+  top: 50px;
+
+  padding: 10px 15px;
+
+  border: 1px solid var(--filter-menu-border);
+  background-color: var(--white-01);
+  border-radius: 4px;
+  box-shadow: var(--filter-menu-box-shadow);
 }

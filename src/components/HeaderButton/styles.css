@@ -1,0 +1,20 @@
+.header__bttn {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 34px;
+  border: none;
+
+  color: var(--text-color);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  background: #FBFBFB;
+}
+
+.header__bttn:hover {
+  opacity: 0.85;
+}
