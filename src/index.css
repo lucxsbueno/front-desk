@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
 *,
 *::after,
 *::before {
@@ -9,9 +11,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -33,8 +33,21 @@ code {
   --grey-03: #9FA7B4;
   --white-01: #FFFFFF;
 
+  /* Scroll bar */
+  --scroll-track-color: rgba(0, 0, 0, 0.041);
+  --scroll-thumb-color: rgba(0, 0, 0, 0.041);
+  --scroll-hover-color: rgba(0, 0, 0, 0.445);
+
+  /* Text */
+  --text-color: var(--secondary-color);
+
+  /* Filter menu */
+  --filter-menu-border: #F5F5F5;
+  --filter-menu-box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.1);
+
   /* Box shadow */
   --box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+  --box-shadow-bg-white: 0px 2px 0px rgba(189, 189, 189, 0.2);
 
   /* State colors */
   --error-color: #F15656;
@@ -58,6 +71,10 @@ code {
 /* General */
 .text-white {
   color: var(--white-01);
+}
+
+.text-semi-bold {
+  font-weight: 600;
 }
 
 .w-100 {
@@ -92,6 +109,69 @@ code {
   font-weight: 400;
 }
 
+.text-color {
+  color: var(--text-color);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.x-p-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.y-p-15 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.y-p-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/*
+ *
+ * Scroll bar
+ */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--scroll-track-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-hover-color);
+}
+
 /*!
  * Generated using the Bootstrap Customizer (https://getbootstrap.com/docs/3.4/customize/)
  */
@@ -102,7 +182,6 @@ code {
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -343,7 +422,6 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
