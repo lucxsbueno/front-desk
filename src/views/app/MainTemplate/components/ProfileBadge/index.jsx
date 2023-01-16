@@ -1,12 +1,13 @@
 import React from "react";
 
+import { NavLink } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 
 import "./styles.css";
 
 const ProfileBadge = () => {
   return (
-    <a href="/#" className="profile-badge">
+    <NavLink to="minha-conta" className={({ isActive }) => isActive ? "profile-badge active" : "profile-badge"}>
       <div className="profile-badge__wrapper">
         <div className="avatar avatar--sm">
           <img
@@ -22,7 +23,7 @@ const ProfileBadge = () => {
       </div>
 
       <ArrowUpRight />
-    </a>
+    </NavLink>
   );
 };
 

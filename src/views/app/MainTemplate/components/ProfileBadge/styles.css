@@ -31,6 +31,19 @@
   background-color: var(--profile-badge-bg-opacity-color);
 }
 
+.profile-badge:hover {
+  text-decoration: none;
+  color: var(--white-01);
+  opacity: 0.8;
+}
+
+.profile-badge.active, .profile-badge.active:focus {
+  background-color: var(--success-color);
+  color: var(--white-01);
+  text-decoration: none;
+  opacity: 1;
+}
+
 .profile-badge__wrapper {
   display: flex;
   flex-direction: row;
