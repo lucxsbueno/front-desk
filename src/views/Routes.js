@@ -21,13 +21,13 @@ export const MainRoutes = () => {
         <Route index element={<RouteWithoutIndex to="/conversas" />} />
         <Route path="conversas" element={<Chats />} />
         <Route path="dashboard" element={<Dashboard />} />
-        <Route path="clientes-novos" element={<CustomersNew />} />
-        <Route path="clientes-disponiveis" element={<CustomersAvailable />} />
+        <Route path="clientes/novos" element={<CustomersNew />} />
+        <Route path="clientes/disponiveis" element={<CustomersAvailable />} />
         <Route path="ranking" element={<Ranking />} />
         <Route path="lotes-favoritados" element={<FavLots />} />
         <Route path="relatorio-de-acessos" element={<AccessReports />} />
         <Route path="minha-conta" element={<MyAccount />} />
       </Route>
     </Routes>
-  )
-}
+  );
+};

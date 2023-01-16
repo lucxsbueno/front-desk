@@ -12,22 +12,21 @@ const Link = (props) => {
 
   const isToggleActive = toggle ? "main-template__item--active" : "";
 
-  const navActive = ({ isActive }) => (isActive || (toggle && to === "/#")) ? "main-template__link active" : "main-template__link";
+  const navActive = ({ isActive }) =>
+    isActive || (toggle && to === "/#")
+      ? "main-template__link active"
+      : "main-template__link";
 
-  const handleClick = e => {
+  const handleClick = (e) => {
     if (to === "/#") {
       e.preventDefault();
       setToggle(!toggle);
     }
-  }
+  };
 
   return (
     <li className={`main-template__item ${isToggleActive}`.trim()}>
-      <NavLink
-        to={to}
-        onClick={handleClick}
-        className={navActive}
-      >
+      <NavLink to={to} onClick={handleClick} className={navActive}>
         <div className="main-template__title-wrapper">
           {icon ? icon : <div className="fake-icon" />}
 

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import { useLocation, useNavigate } from "react-router-dom";
 
-const RouteWithoutIndex = props => {
+const RouteWithoutIndex = (props) => {
   const { to } = props;
   const location = useLocation();
   const navigate = useNavigate();
@@ -16,6 +16,6 @@ const RouteWithoutIndex = props => {
   }, []);
 
   return null;
-}
+};
 
 export default RouteWithoutIndex;
