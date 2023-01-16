@@ -2,7 +2,6 @@
   "extends": [
     "eslint:recommended",
     "plugin:react-hooks/recommended",
-    "plugin:import/errors",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
     "prettier"
@@ -15,7 +14,6 @@
   },
   "plugins": [
     "react",
-    "import",
     "jsx-a11y"
   ],
   "parserOptions": {
