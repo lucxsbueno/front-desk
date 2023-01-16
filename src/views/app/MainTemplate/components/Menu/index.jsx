@@ -1,15 +1,14 @@
 import React from "react";
 
 import {
-  BarChart2,
-  BarChart3,
-  BookOpen,
-  LineChart,
-  LogOut,
-  MessageSquare,
   Star,
   User,
   Users,
+  LogOut,
+  BookOpen,
+  BarChart2,
+  LineChart,
+  MessageSquare,
 } from "lucide-react";
 
 import Nav from "../Nav";
