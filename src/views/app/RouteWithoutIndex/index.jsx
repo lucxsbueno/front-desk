@@ -11,6 +11,8 @@ const RouteWithoutIndex = props => {
     if (location.pathname === "/") {
       return navigate(to);
     }
+
+    // eslint-disable-next-line
   }, []);
 
   return null;
