@@ -4,13 +4,15 @@ import Menu from "./components/Menu";
 import Header from "../../../components/Header";
 import ProfileBadge from "./components/ProfileBadge";
 
+import { Outlet } from "react-router-dom";
+
 import "./styles.css";
 
 const MainTemplate = () => {
   return (
     <div className="main-template">
       <div className="main-template__nav">
-        <Header></Header>
+        <Header />
 
         <div className="main-template__body">
           <Menu />
@@ -21,7 +23,9 @@ const MainTemplate = () => {
         </div>
       </div>
 
-      <div className="main-template__content"></div>
+      <div className="main-template__content">
+        <Outlet />
+      </div>
     </div>
   );
 };
