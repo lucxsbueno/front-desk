@@ -3,25 +3,33 @@ import React, { useState } from "react";
 import { ChevronDown, ChevronLeft } from "lucide-react";
 
 import "./styles.css";
+import { NavLink } from "react-router-dom";
 
 const Link = (props) => {
-  const { icon, title, to, active, children } = props;
+  const { icon, title, to, children } = props;
 
   const [toggle, setToggle] = useState(false);
 
-  const isActive = active || !!toggle ? "main-template__link--active" : "";
-
   const isToggleActive = toggle ? "main-template__item--active" : "";
+
+  const navActive = ({ isActive }) => (isActive || (toggle && to === "/#")) ? "main-template__link active" : "main-template__link";
+
+  const handleClick = e => {
+    if (to === "/#") {
+      e.preventDefault();
+      setToggle(!toggle);
+    }
+  }
 
   return (
     <li className={`main-template__item ${isToggleActive}`.trim()}>
-      <a
-        href={to}
-        onClick={() => setToggle(!toggle)}
-        className={`main-template__link ${isActive}`.trim()}
+      <NavLink
+        to={to}
+        onClick={handleClick}
+        className={navActive}
       >
         <div className="main-template__title-wrapper">
-          {icon ? icon : <div className="fake-icon"></div>}
+          {icon ? icon : <div className="fake-icon" />}
 
           <span className="main-template__title align-self-center">
             {title}
@@ -29,7 +37,7 @@ const Link = (props) => {
         </div>
 
         {!!children && (toggle ? <ChevronDown /> : <ChevronLeft />)}
-      </a>
+      </NavLink>
       {toggle && <div>{children}</div>}
     </li>
   );
