@@ -1,0 +1,142 @@
+/* .chat__items {} */
+
+.chat__item {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+}
+
+.chat__item:hover {
+  text-decoration: none;
+
+  background-color: var(--grey-01);
+
+  margin: 5px;
+  border-radius: 4px;
+
+  width: calc(100% - 10px);
+
+  box-shadow: var(--box-shadow-bg-white);
+}
+
+.chat__name {
+  margin-top: 1px;
+  margin-bottom: 3px;
+
+  font-size: 14px;
+
+  color: var(--text-color);
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.chat__current-message {
+  font-size: 14px;
+  color: var(--text-color);
+  margin-bottom: 15px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+
+  -ms-word-break: break-all;
+  word-break: break-all;
+
+  /* Non standard for webkit */
+  word-break: break-word;
+
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+.chat__item:hover .chat__current-message {
+  font-size: 14px;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.chat__current-message--read {
+  color: var(--text-grey-color);
+}
+
+.chat__left {
+  padding: 15px;
+}
+
+.chat__item:hover .chat__left {
+  padding: 10px 15px 10px 10px;
+}
+
+.chat__avatar {
+  background-color: var(--white-01);
+  overflow: hidden;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.chat__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.chat__right {
+  width: 100%;
+
+  padding: 15px 15px 0px 0px;
+}
+
+.chat__item:hover .chat__right {
+  width: 100%;
+
+  padding: 10px 10px 0px 0px;
+}
+
+.chat__divider {
+  border-bottom: 1px solid var(--border-bottom-divider);
+}
+
+.chat__item:hover .chat__divider {
+  border-bottom: 1px solid transparent;
+}
+
+.chat__unread-message {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 6px;
+
+  margin-bottom: 10px;
+  margin-left: 5px;
+
+  flex-shrink: 0;
+
+  background-color: var(--primary-color);
+}
+
+.chat__item:hover .chat__unread-message {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 6px;
+
+  margin-bottom: 5px;
+  margin-left: 5px;
+
+  flex-shrink: 0;
+
+  background-color: var(--primary-color);
+}
