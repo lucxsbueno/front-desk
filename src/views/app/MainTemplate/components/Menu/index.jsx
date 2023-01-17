@@ -27,8 +27,10 @@ const Menu = () => {
         />
         <Link icon={<LineChart />} title="Dashboard" to="/dashboard" />
         <Link icon={<Users />} title="Meus clientes">
-          <Link title="Novos" to="clientes/novos" />
-          <Link title="Disponíveis" to="clientes/disponiveis" />
+          <ul>
+            <Link title="Novos" to="clientes/novos" />
+            <Link title="Disponíveis" to="clientes/disponiveis" />
+          </ul>
         </Link>
       </Nav>
 
