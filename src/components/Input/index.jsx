@@ -2,20 +2,26 @@ import React from "react";
 
 import "./styles.css";
 
-const variants = {
-  search: "form__input form__input--search",
-};
-
 const Input = (props) => {
-  const { type, placeholder, variant } = props;
+  const { type, placeholder, variant, className } = props;
+
+  const isSearch = variant === "search" ? "input--search" : "";
 
   return (
-    <input
-      type={type}
-      placeholder={placeholder}
-      className={variants[variant]}
-    />
+    <div className="w-100 mb-15">
+      <input
+        type={type}
+        className={`input ${className} ${isSearch}`.trim()}
+        placeholder={placeholder}
+      />
+    </div>
   );
+};
+
+Input.defaultProps = {
+  notErrorMessage: false,
+  className: "",
+  disabled: false,
 };
 
 export default Input;
