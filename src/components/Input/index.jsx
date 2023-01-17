@@ -8,7 +8,7 @@ const Input = (props) => {
   const isSearch = variant === "search" ? "input--search" : "";
 
   return (
-    <div className="w-100 mb-15">
+    <div className="w-100">
       <input
         type={type}
         className={`input ${className} ${isSearch}`.trim()}
