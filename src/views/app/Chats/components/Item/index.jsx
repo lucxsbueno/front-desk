@@ -6,9 +6,10 @@ import "./styles.css";
 
 const Item = (props) => {
   const { chat } = props;
-  // const { id, name, current_message, unread_messages,
-  //   profile_picture, is_new, is_vacation, hour } = chat;
-  const { id, name, current_message, profile_picture, hour } = chat;
+
+  const { id, name, current_message, profile_picture, unread_messages, hour } = chat;
+
+  const readMessage = unread_messages == 0 ? "chat__current-messages--read" : "";
 
   return (
     <NavLink to={`/conversas/${id}`} className="chat__item">
@@ -25,8 +26,12 @@ const Item = (props) => {
         </div>
 
         <div className="d-flex flex-row justify-content-space-between align-items-center">
-          <span className="chat__current-message">{current_message}</span>
-          <span className="chat__unread-message" />
+          <span className={`chat__current-message ${readMessage}`.trim()}>{current_message}</span>
+          {unread_messages > 0 && (
+            <span className="chat__unread-message">
+              {unread_messages}
+            </span>
+          )}
         </div>
 
         <div className="chat__divider" />
