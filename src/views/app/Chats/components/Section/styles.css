@@ -1,0 +1,17 @@
+/* .chat__section { } */
+
+.chat__heading {
+  padding: 20px 15px 10px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat__title {
+  color: var(--text-grey-color);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+}
