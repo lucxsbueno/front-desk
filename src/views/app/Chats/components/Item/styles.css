@@ -8,11 +8,18 @@
 }
 
 .chat__item:hover {
+  background-color: var(--grey-01);
+
+  text-decoration: none;
+}
+
+.chat__item.active {
   text-decoration: none;
 
   background-color: var(--grey-01);
 
   margin: 5px;
+  margin-bottom: 5px;
   border-radius: 4px;
 
   width: calc(100% - 10px);
@@ -60,7 +67,7 @@
   hyphens: auto;
 }
 
-.chat__item:hover .chat__current-message {
+.chat__item.active .chat__current-message {
   font-size: 14px;
   color: var(--text-color);
   margin-bottom: 10px;
@@ -74,7 +81,7 @@
   padding: 15px;
 }
 
-.chat__item:hover .chat__left {
+.chat__item.active .chat__left {
   padding: 10px 15px 10px 10px;
 }
 
@@ -99,7 +106,7 @@
   padding: 15px 15px 0px 0px;
 }
 
-.chat__item:hover .chat__right {
+.chat__item.active .chat__right {
   width: 100%;
 
   padding: 10px 10px 0px 0px;
@@ -109,7 +116,7 @@
   border-bottom: 1px solid var(--border-bottom-divider);
 }
 
-.chat__item:hover .chat__divider {
+.chat__item.active .chat__divider {
   border-bottom: 1px solid transparent;
 }
 
@@ -135,7 +142,7 @@
   font-size: 11px;
 }
 
-.chat__item:hover .chat__unread-message {
+.chat__item.active .chat__unread-message {
   width: 16px;
   height: 16px;
 
