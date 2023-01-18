@@ -1,12 +1,12 @@
 import React from "react";
 
+import mock from "./mock";
 import Item from "./components/Item";
 import Section from "./components/Section";
 import Input from "../../../components/Input";
 import Button from "../../../components/Button";
 import HeaderMenu from "./components/HeaderMenu";
-
-import chats from "./chats";
+import { Outlet } from "react-router-dom";
 
 import "./styles.css";
 
@@ -21,12 +21,11 @@ const Chats = () => {
         </div>
 
         <div className="chat__menu-body">
-
           <Section
             title="Clientes transferidos"
-            length={chats.filter((chat) => chat.is_transfered == true).length}
+            length={mock.filter((chat) => chat.is_transfered == true).length}
           >
-            {chats
+            {mock
               .filter((chat) => chat.is_transfered == true)
               .map((chat, index) => (
                 <Item key={index} chat={chat} />
@@ -35,9 +34,9 @@ const Chats = () => {
 
           <Section
             title="Novos clientes"
-            length={chats.filter((chat) => chat.is_new == true).length}
+            length={mock.filter((chat) => chat.is_new == true).length}
           >
-            {chats
+            {mock
               .filter((chat) => chat.is_new == true)
               .map((chat, index) => (
                 <Item key={index} chat={chat} />
@@ -46,9 +45,9 @@ const Chats = () => {
 
           <Section
             title="Férias"
-            length={chats.filter((chat) => chat.is_vacation == true).length}
+            length={mock.filter((chat) => chat.is_vacation == true).length}
           >
-            {chats
+            {mock
               .filter((chat) => chat.is_vacation == true)
               .map((chat, index) => (
                 <Item key={index} chat={chat} />
@@ -57,11 +56,13 @@ const Chats = () => {
         </div>
 
         <div className="chat__menu-footer">
-          <Button onClick={() => { }}>Nova conversa</Button>
+          <Button onClick={() => {}}>Nova conversa</Button>
         </div>
       </div>
 
-      <div className="chat__content">Teste</div>
+      <div className="chat__content">
+        <Outlet />
+      </div>
     </div>
   );
 };
