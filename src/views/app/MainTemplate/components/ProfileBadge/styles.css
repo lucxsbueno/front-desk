@@ -9,6 +9,12 @@
   border-radius: 34px;
 }
 
+.avatar--super-sm {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+}
+
 .avatar__img {
   height: 100%;
   width: 100%;
