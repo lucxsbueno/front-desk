@@ -1,4 +1,4 @@
-const chats = [
+const mock = [
   {
     id: 1,
     name: "Carlos Eduardo Daniel Assunção",
@@ -51,7 +51,8 @@ const chats = [
     current_message: "Não entendi o que você quis dizer",
     hour: "12:32",
     unread_messages: 1,
-    profile_picture: "https://cdna.artstation.com/p/assets/images/images/050/172/070/large/mathraw-mathou-chx.jpg?1654208026",
+    profile_picture:
+      "https://cdna.artstation.com/p/assets/images/images/050/172/070/large/mathraw-mathou-chx.jpg?1654208026",
     is_new: false,
     is_vacation: false,
     is_transfered: true,
@@ -62,11 +63,12 @@ const chats = [
     current_message: "Eu sou o Trunks do futuro",
     hour: "12:32",
     unread_messages: 1,
-    profile_picture: "https://cdnb.artstation.com/p/assets/images/images/050/106/473/smaller_square/mathraw-pp-pfa-v2.jpg?1654076570",
+    profile_picture:
+      "https://cdnb.artstation.com/p/assets/images/images/050/106/473/smaller_square/mathraw-pp-pfa-v2.jpg?1654076570",
     is_new: false,
     is_vacation: false,
     is_transfered: true,
   },
 ];
 
-export default chats;
+export default mock;
