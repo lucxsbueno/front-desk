@@ -30,7 +30,7 @@ const mock = [
     hour: "12:32",
     unread_messages: 4,
     profile_picture:
-      "https://cdn.dribbble.com/users/230875/screenshots/12078079/media/1aab4f168be4969bd7f99d3734b71261.jpg?compress=1&resize=400x300&vertical=top",
+      "https://cdn1.iconfinder.com/data/icons/facely-metapeople-3d-avatar-set/512/7._Asia_Woman.png",
     is_new: true,
     is_vacation: false,
     is_transfered: false,
