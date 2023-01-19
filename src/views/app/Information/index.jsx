@@ -1,27 +1,27 @@
 import React from "react";
+
 import { useLocation } from "react-router-dom";
 
-import Header from "../../../components/Header";
+import NameCard from "./components/NameCard";
+import UsadaoAlert from "./components/UsadaoAlert";
+import InformationHeader from "./components/InformationHeader";
 
 import "./styles.css";
 
 const Information = () => {
   const location = useLocation();
+  const userInformation = location.state.data;
 
   return (
     <div className="information">
-      <Header className="header--bg-white">
-        <div className="d-flex flex-row align-items-center justify-content-space-between w-100">
-          <span className="text-color text-semi-bold">Informações gerais</span>
-        </div>
-      </Header>
+      <InformationHeader />
 
-      <div className="x-p-20 y-p-20">
-        <p>{location.state.data.id}</p>
-        <p>{location.state.data.title}</p>
+      <div className="information__body">
+        <NameCard name={userInformation.title} pic={userInformation.profile_picture} />
+        <UsadaoAlert />
       </div>
     </div>
   );
-}
+};
 
 export default Information;
