@@ -47,6 +47,9 @@ code {
   /* Chat */
   --border-bottom-divider: #F5F5F5;
 
+  /* Table */
+  --table-border-color: #ececec;
+
   /* Filter menu */
   --filter-menu-border: #F5F5F5;
   --filter-menu-box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.1);
@@ -54,6 +57,9 @@ code {
   /* Box shadow */
   --box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
   --box-shadow-bg-white: 0px 2px 0px rgba(189, 189, 189, 0.2);
+
+  /* Card */
+  --card-box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.10);
 
   /* State colors */
   --error-color: #F15656;
