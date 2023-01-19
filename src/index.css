@@ -76,6 +76,10 @@ code {
 }
 
 /* General */
+.position-relative {
+  position: relative;
+}
+
 .clear-link:hover {
   color: var(--text-color);
   text-decoration: none;
@@ -196,6 +200,22 @@ code {
 
 .mb-15 {
   margin-bottom: 15px;
+}
+
+.pt-0 {
+  padding-top: 0px;
+}
+
+.pb-0 {
+  padding-bottom: 0px;
+}
+
+.pt-15 {
+  padding-top: 15px;
+}
+
+.pb-15 {
+  padding-bottom: 15px;
 }
 
 /*
