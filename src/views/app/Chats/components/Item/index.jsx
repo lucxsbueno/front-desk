@@ -14,7 +14,11 @@ const Item = (props) => {
     unread_messages == 0 ? "chat__current-messages--read" : "";
 
   return (
-    <NavLink to={`/conversas/${id}`} state={{ data: { title: name, profile_picture: profile_picture } }} className="chat__item">
+    <NavLink
+      to={`/conversas/${id}`}
+      state={{ data: { title: name, profile_picture: profile_picture } }}
+      className="chat__item"
+    >
       <div className="chat__left">
         <div className="chat__avatar">
           <img src={profile_picture} alt="" className="chat__img" />
