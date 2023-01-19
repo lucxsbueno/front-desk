@@ -13,7 +13,17 @@ const Chat = () => {
     <div className="d-flex flex-row">
       <div className="chat__container">
         <Header className="header--bg-white bg-white">
-          <Link to="informacoes" state={{ data: { title: location.state?.data?.title, profile_picture: location.state?.data?.profile_picture, id: params.id } }} className="d-flex flex-row align-items-center clear-link">
+          <Link
+            to="informacoes"
+            state={{
+              data: {
+                title: location.state?.data?.title,
+                profile_picture: location.state?.data?.profile_picture,
+                id: params.id,
+              },
+            }}
+            className="d-flex flex-row align-items-center clear-link"
+          >
             <div className="avatar avatar--super-sm">
               <img
                 alt="Profile user information"
@@ -27,13 +37,9 @@ const Chat = () => {
           </Link>
         </Header>
 
-        <div className="chat__inner">
+        <div className="chat__inner" />
 
-        </div>
-
-        <div className="chat__footer">
-
-        </div>
+        <div className="chat__footer" />
       </div>
 
       <div className="chat__information">
