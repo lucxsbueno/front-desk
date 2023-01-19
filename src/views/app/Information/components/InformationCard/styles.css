@@ -1,0 +1,21 @@
+.information__table {
+  width: 100%;
+}
+
+/* .information__body {} */
+
+/* .information__row {} */
+
+.information__table-data {
+  padding: 10px;
+  border-bottom: 1px solid var(--table-border-color);
+}
+
+.information__table-data--no-border {
+  border-bottom: none;
+}
+
+.information__table-data--align-right {
+  text-align: right;
+  border-right: 1px solid var(--table-border-color);
+}
