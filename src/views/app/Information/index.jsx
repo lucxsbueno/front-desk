@@ -6,6 +6,7 @@ import NameCard from "./components/NameCard";
 import ActionCard from "./components/ActionCard";
 import UsadaoAlert from "./components/UsadaoAlert";
 import DocumentsCard from "./components/DocumentsCard";
+import AnnotationsCard from "./components/AnnotationsCard";
 import InformationCard from "./components/InformationCard";
 import InformationHeader from "./components/InformationHeader";
 
@@ -32,6 +33,8 @@ const Information = () => {
         <ActionCard />
 
         <DocumentsCard />
+
+        <AnnotationsCard />
       </div>
     </div>
   );
