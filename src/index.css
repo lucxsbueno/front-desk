@@ -79,6 +79,9 @@ code {
 
   /* Others */
   --profile-badge-bg-opacity-color: rgba(255, 255, 255, 0.08);
+
+  /* Doc list */
+  --doc-list-bg: rgba(0, 0, 0, 0.03);
 }
 
 /* General */
