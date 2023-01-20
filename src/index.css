@@ -140,8 +140,36 @@ code {
   margin-left: 10px;
 }
 
+.ml-5 {
+  margin-left: 5px;
+}
+
 .mr-10 {
   margin-right: 10px;
+}
+
+.mr-5 {
+  margin-right: 5px;
+}
+
+.mr-15 {
+  margin-right: 15px;
+}
+
+.ml-15 {
+  margin-left: 15px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.fs-12 {
+  font-size: 12px;
 }
 
 .fs-14 {
@@ -166,6 +194,10 @@ code {
 
 .text-color {
   color: var(--text-color);
+}
+
+.text-grey-color {
+  color: var(--text-grey-color);
 }
 
 .d-flex {
@@ -205,6 +237,10 @@ code {
 .y-p-10 {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.mb-5 {
+  margin-bottom: 5px;
 }
 
 .mb-15 {
