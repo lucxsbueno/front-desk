@@ -19,7 +19,7 @@ const Section = (props) => {
 
 Section.defaultProps = {
   title: "Item item item",
-  length: 0,
+  length: "",
 };
 
 export default Section;
