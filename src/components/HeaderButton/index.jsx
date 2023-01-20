@@ -3,10 +3,10 @@ import React from "react";
 import "./styles.css";
 
 const HeaderButton = (props) => {
-  const { onClick, children } = props;
+  const { onClick, className, children } = props;
 
   return (
-    <button className="header__bttn" onClick={onClick}>
+    <button className={`header__bttn ${className}`.trim()} onClick={onClick}>
       {children}
     </button>
   );

@@ -36,9 +36,9 @@ code {
   --white-01: #FFFFFF;
 
   /* Scroll bar */
-  --scroll-track-color: rgba(0, 0, 0, 0.041);
-  --scroll-thumb-color: rgba(0, 0, 0, 0.041);
-  --scroll-hover-color: rgba(0, 0, 0, 0.445);
+  --scroll-track-color: rgba(0, 0, 0, 0.021);
+  --scroll-thumb-color: rgba(0, 0, 0, 0.055);
+  --scroll-hover-color: rgba(0, 0, 0, 0.192);
 
   /* Text */
   --text-color: var(--secondary-color);

@@ -1,0 +1,13 @@
+.search {
+  width: 380px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--white-01);
+}
+
+.search__body {
+  overflow-y: auto;
+}

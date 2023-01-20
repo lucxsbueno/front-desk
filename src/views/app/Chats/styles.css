@@ -24,15 +24,6 @@
   /* background-color: grey; */
 }
 
-.chat__menu-body::-webkit-scrollbar {
-  display: none;
-  transition: all .9s ease-in-out;
-}
-
-.chat__menu-body:hover::-webkit-scrollbar {
-  display: block;
-}
-
 .chat__menu-footer {
   padding: 10px 15px 15px;
 }

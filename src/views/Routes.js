@@ -16,6 +16,7 @@ import MainTemplate from "./app/MainTemplate";
 import RouteWithoutIndex from "./app/RouteWithoutIndex";
 import CustomersAvailable from "./app/CustomersAvailable";
 import Information from "./app/Information";
+import SearchMessages from "./app/SearchMessages";
 
 export const MainRoutes = () => {
   return (
@@ -26,6 +27,7 @@ export const MainRoutes = () => {
           <Route index element={<ChatIndex />} />
           <Route path=":id" element={<Chat />}>
             <Route path="informacoes" element={<Information />} />
+            <Route path="pesquisar-mensagem" element={<SearchMessages />} />
           </Route>
         </Route>
         <Route path="dashboard" element={<Dashboard />} />
