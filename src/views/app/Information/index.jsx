@@ -3,7 +3,9 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 
 import NameCard from "./components/NameCard";
+import ActionCard from "./components/ActionCard";
 import UsadaoAlert from "./components/UsadaoAlert";
+import DocumentsCard from "./components/DocumentsCard";
 import InformationCard from "./components/InformationCard";
 import InformationHeader from "./components/InformationHeader";
 
@@ -18,11 +20,18 @@ const Information = () => {
       <InformationHeader />
 
       <div className="information__body">
-        <NameCard name={userInformation.title} pic={userInformation.profile_picture} />
+        <NameCard
+          name={userInformation.title}
+          pic={userInformation.profile_picture}
+        />
 
         <UsadaoAlert />
 
         <InformationCard />
+
+        <ActionCard />
+
+        <DocumentsCard />
       </div>
     </div>
   );
