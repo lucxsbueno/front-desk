@@ -7,7 +7,7 @@
 /* .information__row {} */
 
 .information__table-data {
-  padding: 10px;
+  padding: 10px 15px;
   border-bottom: 1px solid var(--table-border-color);
 }
 
@@ -17,5 +17,8 @@
 
 .information__table-data--align-right {
   text-align: right;
+}
+
+.information__table-data--border-right {
   border-right: 1px solid var(--table-border-color);
 }
