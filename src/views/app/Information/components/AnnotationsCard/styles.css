@@ -1,0 +1,24 @@
+.annotation__table {
+  width: 100%;
+}
+
+/* .annotation__body {} */
+
+/* .annotation__row {} */
+
+.annotation__table-data {
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--table-border-color);
+}
+
+.annotation__table-data--no-border {
+  border-bottom: none;
+}
+
+.annotation__table-data--align-right {
+  text-align: right;
+}
+
+.annotation__table-data--border-right {
+  border-right: 1px solid var(--table-border-color);
+}
