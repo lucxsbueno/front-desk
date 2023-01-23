@@ -69,12 +69,14 @@ code {
 
   /* Buttons */
   --primary-bttn-color: linear-gradient(91.73deg, #F97F0C 0%, #F9450C 100%, rgba(249, 69, 12, 0.82) 100%);
+  --send-bttn-color: #FFF;
+  --send-bttn-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
 
   /* Input */
   --input-bg-default-color: #FBFBFB;
   --input-bg-default-border-color: transparent;
   --input-border-active-color: #F97F0C;
-  --input-active-box-shadow: 0px 0px 0px 3px rgba(249, 127, 12, 0.16);
+  --input-active-box-shadow: 0px 0px 0px 4px rgba(249, 127, 12, 0.16);
   --placeholder-color: #CBD0D8;
 
   /* Others */
@@ -134,6 +136,14 @@ code {
 
 .mr-20 {
   margin-right: 20px;
+}
+
+.ml-5 {
+  margin-right: 5px;
+}
+
+.mr-5 {
+  margin-right: 5px;
 }
 
 .ml-10 {
@@ -216,6 +226,10 @@ code {
   align-items: center;
 }
 
+.align-items-start {
+  align-items: flex-end;
+}
+
 .justify-content-space-between {
   justify-content: space-between;
 }
@@ -251,8 +265,16 @@ code {
   padding-top: 0px;
 }
 
+.pt-5 {
+  padding-top: 5px;
+}
+
 .pb-0 {
   padding-bottom: 0px;
+}
+
+.pb-3 {
+  padding-bottom: 3px;
 }
 
 .pt-15 {
