@@ -45,4 +45,23 @@
   font-size: 12px;
 }
 
-/* .info-picture__name-wrapper {} */
+.info-picture__name-wrapper {
+  position: relative;
+}
+
+.info-picture__bg-edit {
+  background-color: rgba(0, 0, 0, 0.644);
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-picture:hover .info-picture__bg-edit {
+  display: flex;
+}

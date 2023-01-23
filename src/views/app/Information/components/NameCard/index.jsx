@@ -1,6 +1,9 @@
 import React from "react";
 
+import { Edit2 } from "lucide-react";
+
 import "./styles.css";
+import IconButton from "../../../../../components/IconButton";
 
 const NameCard = (props) => {
   const { name, pic } = props;
@@ -9,6 +12,11 @@ const NameCard = (props) => {
     <div className="x-p-15 y-p-15">
       <div className="info-picture">
         <div className="info-picture__picture-wrapper">
+          <div className="info-picture__bg-edit">
+            <IconButton variant="white" onClick={() => alert("Olá")}>
+              <Edit2 size={20} />
+            </IconButton>
+          </div>
           <img src={pic} alt="" className="info-picture__img" />
         </div>
 
