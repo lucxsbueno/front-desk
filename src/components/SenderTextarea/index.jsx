@@ -10,10 +10,17 @@ const SenderTextarea = () => {
     textAreaRef.current.style.height = "44px";
     textAreaRef.current.style.height = `${target.scrollHeight}px`;
     // props.onChange(e);
-  }
+  };
 
   return (
-    <textarea ref={textAreaRef} onChange={onChangeHandler} rows={1} type="text" placeholder="Escreva uma mensagem para Marcelo" className="sender__input" />
+    <textarea
+      ref={textAreaRef}
+      onChange={onChangeHandler}
+      rows={1}
+      type="text"
+      placeholder="Escreva uma mensagem para Marcelo"
+      className="sender__input"
+    />
   );
 };
 
