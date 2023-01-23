@@ -1,0 +1,29 @@
+.icon__bttn {
+  border: none;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+
+  background-color: transparent;
+}
+
+.icon__bttn:hover {
+  opacity: 0.8;
+}
+
+.icon__bttn--primary {
+  color: var(--primary-color);
+}
+
+.icon__bttn--secondary {
+  color: var(--secondary-color);
+}
+
+.icon__bttn--white {
+  color: var(--white-01);
+}
