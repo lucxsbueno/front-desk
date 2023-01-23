@@ -17,7 +17,9 @@ const SearchMessages = () => {
               <ChevronLeft />
             </HeaderButton>
 
-            <span className="text-color text-semi-bold">Pesquisar mensagem</span>
+            <span className="text-color text-semi-bold">
+              Pesquisar mensagem
+            </span>
           </div>
         </div>
       </Header>
@@ -29,6 +31,6 @@ const SearchMessages = () => {
       <div className="search__body" />
     </div>
   );
-}
+};
 
 export default SearchMessages;
