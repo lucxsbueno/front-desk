@@ -4,6 +4,8 @@ import Header from "../../../../components/Header";
 import { Link, Outlet, useLocation, useParams } from "react-router-dom";
 
 import "./styles.css";
+import Footer from "./components/Footer";
+import Body from "./components/Body";
 
 const Chat = () => {
   const params = useParams();
@@ -37,9 +39,9 @@ const Chat = () => {
           </Link>
         </Header>
 
-        <div className="chat__inner" />
+        <Body />
 
-        <div className="chat__footer" />
+        <Footer />
       </div>
 
       <div className="chat__information">
