@@ -7,16 +7,18 @@ import "./styles.css";
 const Item = (props) => {
   const { chat } = props;
 
-  const { id, name, current_message, profile_picture, unread_messages, hour } =
+  const { id, name, current_message, profile_picture, unread_messages, hour, is_new } =
     chat;
 
   const readMessage =
     unread_messages == 0 ? "chat__current-messages--read" : "";
 
+  const navigateTo = is_new ? `/conversas/${id}?type=new` : `/conversas/${id}`;
+
   return (
     <NavLink
-      to={`/conversas/${id}`}
-      state={{ data: { title: name, profile_picture: profile_picture } }}
+      to={navigateTo}
+      state={{ data: { title: name, profile_picture: profile_picture, id: id } }}
       className="chat__item"
     >
       <div className="chat__left">

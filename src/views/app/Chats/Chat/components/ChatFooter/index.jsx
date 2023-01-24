@@ -1,25 +1,22 @@
 import React from "react";
 
+import EmojiButton from "../EmojiButton";
 import SendButton from "../../../../../../components/SendButton";
 import SenderTextarea from "../../../../../../components/SenderTextarea";
 import HeaderButton from "../../../../../../components/HeaderButton";
-
-import { MoreVertical, Send, Smile } from "lucide-react";
+import { MoreVertical, Send } from "lucide-react";
 
 import "./styles.css";
 
-const Footer = () => {
+const ChatFooter = () => {
   return (
     <div className="chat__footer">
-      {/* Input */}
       <div className="chat__input-wrapper d-flex flex-row align-items-start">
         <div className="chat__input d-flex flex-row">
           <SenderTextarea />
 
           <div className="d-flex flex-row align-items-start pb-3">
-            <HeaderButton className="ml-5 mr-5">
-              <Smile />
-            </HeaderButton>
+            <EmojiButton />
 
             <HeaderButton className="mr-5">
               <MoreVertical />
@@ -35,4 +32,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default ChatFooter;

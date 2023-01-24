@@ -1,5 +1,7 @@
 .chat__input-wrapper {
   padding: 15px;
+
+  position: relative;
 }
 
 .chat__input {

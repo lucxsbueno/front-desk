@@ -1,0 +1,11 @@
+.emoji {
+  position: relative;
+}
+
+.emoji__container {
+  position: absolute;
+  bottom: 35px;
+  right: 0;
+}
+
+/* .emoji__button {} */
