@@ -1,0 +1,22 @@
+.message__text {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+
+  padding: 2px 5px;
+}
+
+.message__inner-box {
+  padding: 5px;
+
+  color: var(--text-color);
+}
+
+.message__hour {
+  color: var(--grey-03);
+
+}
+
+.message--me .message__inner-box {
+  color: var(--white-01);
+}
