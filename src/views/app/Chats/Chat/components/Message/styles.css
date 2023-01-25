@@ -1,0 +1,83 @@
+.message {
+  position: relative;
+
+  display: flex;
+  align-self: flex-start;
+
+  background: var(--white-01);
+  box-shadow: var(--box-shadow-bg-white);
+  border-radius: 0px 4px 4px 4px;
+
+  color: var(--text-color);
+
+  margin-bottom: 10px;
+
+  max-width: 700px;
+}
+
+.message:hover .dropdown__bttn-message {
+  display: flex;
+}
+
+.message--me {
+  align-self: flex-end;
+
+  background: var(--terciary-color);
+  box-shadow: var(--box-shadow-bg-white);
+  border-radius: 4px 0px 4px 4px;
+
+  color: var(--white-01);
+
+  margin-bottom: 10px;
+
+  max-width: 700px;
+}
+
+.message--me .dropdown__bttn-message {
+  width: 27px;
+  height: 27px;
+
+  position: absolute;
+  left: 0;
+
+  border: none;
+
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  padding-left: 0px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+
+  border-radius: 0px;
+
+  border-top-left-radius: 4px;
+
+  background-color: var(--terciary-color);
+
+  color: var(--white-01);
+}
+
+.message--me .dropdown__nav {
+  right: -198px;
+  top: 0px;
+}
+
+/*  */
+.message--me .dropdown__link {
+  color: var(--white-01);
+}
+
+.message--me .dropdown__link:hover {
+  background-color: var(--terciary-color-opacity);
+  color: var(--white-01);
+}
+
+.message--me .dropdown__nav {
+  background-color: var(--terciary-color);
+  border: 1px solid var(--terciary-color);
+  box-shadow: var(--box-shadow-bg-white);
+}
