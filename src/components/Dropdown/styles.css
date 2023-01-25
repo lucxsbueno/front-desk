@@ -1,0 +1,24 @@
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+.dropdown__nav {
+  list-style: none;
+
+  display: none;
+
+  background-color: var(--white-01);
+  border: 1px solid var(--table-border-color);
+  box-shadow: var(--box-shadow-bg-white);
+  border-radius: 8px;
+
+  position: absolute;
+  right: 0px;
+
+  padding: 10px 0px;
+}
+
+/* .dropdown__item {} */

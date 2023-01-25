@@ -1,0 +1,23 @@
+.dropdown__link {
+  display: block;
+  min-width: 200px;
+
+  font-weight: 400;
+  color: var(--text-color);
+  text-decoration: none;
+
+  padding: 5px 20px;
+}
+
+.dropdown__link:hover {
+  text-decoration: none;
+  background-color: var(--grey-01);
+}
+
+.dropdown__btn:focus+.dropdown__nav {
+  display: inline-block;
+}
+
+.dropdown__nav:hover {
+  display: inline-block;
+}
