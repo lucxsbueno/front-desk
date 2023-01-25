@@ -1,0 +1,35 @@
+.dropdown__bttn-message {
+  position: absolute;
+  right: 0;
+
+  border: none;
+
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  padding-left: 5px;
+  padding-bottom: 5px;
+  padding-right: 2px;
+  padding-top: 2px;
+
+  border-bottom-left-radius: 100%;
+  border-top-right-radius: 4px;
+
+  background-color: var(--white-01);
+
+  color: var(--text-color);
+}
+
+.dropdown__bttn-message:focus {
+  background-color: var(--border-color);
+}
+
+.dropdown__bttn-message:focus+.dropdown__nav {
+  display: inline-block;
+}
+
+.dropdown__nav:hover {
+  display: inline-block;
+}
