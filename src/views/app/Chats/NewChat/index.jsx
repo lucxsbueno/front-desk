@@ -3,9 +3,7 @@ import React from "react";
 import "./styles.css";
 
 const NewChat = () => {
-  return (
-    <div />
-  );
-}
+  return <div />;
+};
 
 export default NewChat;

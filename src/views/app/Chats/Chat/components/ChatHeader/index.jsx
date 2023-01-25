@@ -36,6 +36,6 @@ const ChatHeader = (props) => {
       </Link>
     </Header>
   );
-}
+};
 
 export default ChatHeader;

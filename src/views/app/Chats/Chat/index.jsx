@@ -13,7 +13,7 @@ const Chat = () => {
   const [searchParams] = useSearchParams();
 
   if (searchParams.get("type") == "new") {
-    return <NewChat data={location.state?.data} />
+    return <NewChat data={location.state?.data} />;
   }
 
   return (

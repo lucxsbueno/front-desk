@@ -5,15 +5,11 @@ import "./styles.css";
 const Message = (props) => {
   const { children, className } = props;
 
-  return (
-    <div className={`message ${className}`.trim()}>
-      {children}
-    </div>
-  );
+  return <div className={`message ${className}`.trim()}>{children}</div>;
 };
 
 Message.defaultProps = {
-  className: ""
+  className: "",
 };
 
 export default Message;

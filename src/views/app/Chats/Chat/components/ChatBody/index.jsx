@@ -14,16 +14,18 @@ const ChatBody = () => {
   return (
     <div className="chat__inner">
       <Messages>
-
         <Message>
           <TextMessage>
-            Lorem ipsum dolor sit amet, consectetur. Praesent diam ante, scelerisque.
+            Lorem ipsum dolor sit amet, consectetur. Praesent diam ante,
+            scelerisque.
           </TextMessage>
-          <Dropdown button={
-            <DropdownButtonMessage>
-              <ChevronDown size={20} />
-            </DropdownButtonMessage>
-          }>
+          <Dropdown
+            button={
+              <DropdownButtonMessage>
+                <ChevronDown size={20} />
+              </DropdownButtonMessage>
+            }
+          >
             <DropdownLink to="/channels/new">New channel</DropdownLink>
             <DropdownLink to="/">Configurations</DropdownLink>
             <DropdownLink to="/dashboard">Dashboard</DropdownLink>
@@ -31,59 +33,51 @@ const ChatBody = () => {
         </Message>
 
         <Message className="message--me">
-          <Dropdown button={
-            <DropdownButtonMessage>
-              <ChevronDown size={20} />
-            </DropdownButtonMessage>
-          }>
+          <Dropdown
+            button={
+              <DropdownButtonMessage>
+                <ChevronDown size={20} />
+              </DropdownButtonMessage>
+            }
+          >
             <DropdownLink to="/channels/new">New channel</DropdownLink>
             <DropdownLink to="/">Configurations</DropdownLink>
             <DropdownLink to="/dashboard">Dashboard</DropdownLink>
           </Dropdown>
           <TextMessage>
-            Lorem ipsum dolor sit amet, consectetur. Praesent diam ante, scelerisque. Lorem ipsum dolor sit amet, consectetur. Praesent diam ante, scelerisque.
+            Lorem ipsum dolor sit amet, consectetur. Praesent diam ante,
+            scelerisque. Lorem ipsum dolor sit amet, consectetur. Praesent diam
+            ante, scelerisque.
           </TextMessage>
         </Message>
 
         <Message className="message--me">
-          <Dropdown button={
-            <DropdownButtonMessage>
-              <ChevronDown size={20} />
-            </DropdownButtonMessage>
-          }>
+          <Dropdown
+            button={
+              <DropdownButtonMessage>
+                <ChevronDown size={20} />
+              </DropdownButtonMessage>
+            }
+          >
             <DropdownLink to="/channels/new">New channel</DropdownLink>
             <DropdownLink to="/">Configurations</DropdownLink>
             <DropdownLink to="/dashboard">Dashboard</DropdownLink>
           </Dropdown>
-          <TextMessage>
-            Lorem ipsum dolor sit amet, consectetur.
-          </TextMessage>
+          <TextMessage>Lorem ipsum dolor sit amet, consectetur.</TextMessage>
         </Message>
 
         <Message>
           <TextMessage>
-            Lorem ipsum dolor sit amet, consectetur. Praesent diam ante, scelerisque.
+            Lorem ipsum dolor sit amet, consectetur. Praesent diam ante,
+            scelerisque.
           </TextMessage>
-          <Dropdown button={
-            <DropdownButtonMessage>
-              <ChevronDown size={20} />
-            </DropdownButtonMessage>
-          }>
-            <DropdownLink to="/channels/new">New channel</DropdownLink>
-            <DropdownLink to="/">Configurations</DropdownLink>
-            <DropdownLink to="/dashboard">Dashboard</DropdownLink>
-          </Dropdown>
-        </Message>
-
-        <Message>
-          <TextMessage>
-            Lorem ipsum dolor sit amet, consectetur. Praesent diam ante, scelerisque. . Praesent diam ante, scelerisque. Praesent diam ante, scelerisque
-          </TextMessage>
-          <Dropdown button={
-            <DropdownButtonMessage>
-              <ChevronDown size={20} />
-            </DropdownButtonMessage>
-          }>
+          <Dropdown
+            button={
+              <DropdownButtonMessage>
+                <ChevronDown size={20} />
+              </DropdownButtonMessage>
+            }
+          >
             <DropdownLink to="/channels/new">New channel</DropdownLink>
             <DropdownLink to="/">Configurations</DropdownLink>
             <DropdownLink to="/dashboard">Dashboard</DropdownLink>
@@ -92,13 +86,17 @@ const ChatBody = () => {
 
         <Message>
           <TextMessage>
-            Lorem ipsum dolor sit amet, consectetur. Praesent diam ante, scelerisque.. Praesent diam ante, scelerisque
+            Lorem ipsum dolor sit amet, consectetur. Praesent diam ante,
+            scelerisque. . Praesent diam ante, scelerisque. Praesent diam ante,
+            scelerisque
           </TextMessage>
-          <Dropdown button={
-            <DropdownButtonMessage>
-              <ChevronDown size={20} />
-            </DropdownButtonMessage>
-          }>
+          <Dropdown
+            button={
+              <DropdownButtonMessage>
+                <ChevronDown size={20} />
+              </DropdownButtonMessage>
+            }
+          >
             <DropdownLink to="/channels/new">New channel</DropdownLink>
             <DropdownLink to="/">Configurations</DropdownLink>
             <DropdownLink to="/dashboard">Dashboard</DropdownLink>
@@ -107,13 +105,31 @@ const ChatBody = () => {
 
         <Message>
           <TextMessage>
-            Lorem ipsum dolor sit amet, consectetur.
+            Lorem ipsum dolor sit amet, consectetur. Praesent diam ante,
+            scelerisque.. Praesent diam ante, scelerisque
           </TextMessage>
-          <Dropdown button={
-            <DropdownButtonMessage>
-              <ChevronDown size={20} />
-            </DropdownButtonMessage>
-          }>
+          <Dropdown
+            button={
+              <DropdownButtonMessage>
+                <ChevronDown size={20} />
+              </DropdownButtonMessage>
+            }
+          >
+            <DropdownLink to="/channels/new">New channel</DropdownLink>
+            <DropdownLink to="/">Configurations</DropdownLink>
+            <DropdownLink to="/dashboard">Dashboard</DropdownLink>
+          </Dropdown>
+        </Message>
+
+        <Message>
+          <TextMessage>Lorem ipsum dolor sit amet, consectetur.</TextMessage>
+          <Dropdown
+            button={
+              <DropdownButtonMessage>
+                <ChevronDown size={20} />
+              </DropdownButtonMessage>
+            }
+          >
             <DropdownLink to="/channels/new">New channel</DropdownLink>
             <DropdownLink to="/">Configurations</DropdownLink>
             <DropdownLink to="/dashboard">Dashboard</DropdownLink>
