@@ -3,9 +3,11 @@ import React from "react";
 import "./styles.css";
 
 const Message = (props) => {
-  const { children, className } = props;
+  const { children, className, message } = props;
 
-  return <div className={`message ${className}`.trim()}>{children}</div>;
+  const isMe = message.user_id == 34 ? "message--me" : "";
+
+  return <div className={`message ${isMe} ${className}`.trim()}>{children}</div>;
 };
 
 Message.defaultProps = {

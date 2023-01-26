@@ -38,7 +38,7 @@
   height: 27px;
 
   position: absolute;
-  left: 0;
+  right: 0;
 
   border: none;
 
@@ -62,7 +62,6 @@
 }
 
 .message--me .dropdown__nav {
-  right: -198px;
   top: 0px;
 }
 
