@@ -7,7 +7,9 @@ const Message = (props) => {
 
   const isMe = message.user_id == 34 ? "message--me" : "";
 
-  return <div className={`message ${isMe} ${className}`.trim()}>{children}</div>;
+  return (
+    <div className={`message ${isMe} ${className}`.trim()}>{children}</div>
+  );
 };
 
 Message.defaultProps = {
