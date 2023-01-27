@@ -18,9 +18,10 @@ const messages = [
     user_id: 0,
     type: "video",
     body: {
-      srcUrl: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
+      srcUrl:
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
       title: "what_car_can_you_get_for_a_grand.mp4",
-      time_duration: "23:13"
+      time_duration: "23:13",
     },
     timestamp: "12:32",
   },
@@ -92,9 +93,10 @@ const messages = [
     user_id: 0,
     type: "video",
     body: {
-      srcUrl: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+      srcUrl:
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
       title: "for_bigger_meltdowns.mp4",
-      time_duration: "23:13"
+      time_duration: "23:13",
     },
     timestamp: "12:32",
   },
@@ -103,9 +105,10 @@ const messages = [
     user_id: 34,
     type: "video",
     body: {
-      srcUrl: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+      srcUrl:
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
       title: "bigger_joyrides.mp4",
-      time_duration: "3:13"
+      time_duration: "3:13",
     },
     timestamp: "12:32",
   },
@@ -113,7 +116,7 @@ const messages = [
     id: 15,
     user_id: 34,
     type: "image",
-    body: "https://images.unsplash.com/photo-1485550409059-9afb054cada4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+    body: "https://images.unsplash.com/photo-1485550409059-9afb054cada4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
   },
   {
     id: 16,

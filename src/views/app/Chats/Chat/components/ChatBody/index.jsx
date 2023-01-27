@@ -50,7 +50,7 @@ const ChatBody = () => {
                         thumbnailURL: item.body,
                         width: 1875,
                         height: 2500,
-                      }
+                      },
                     ]}
                   />
                 </Message>

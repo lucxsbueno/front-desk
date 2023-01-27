@@ -1,10 +1,10 @@
 const defaultOptions = {
-  videoAttributes: { controls: '', playsinline: '', preload: 'auto' },
+  videoAttributes: { controls: "", playsinline: "", preload: "auto" },
   autoplay: true,
 
   // prevent drag/swipe gesture over the bottom part of video
   // set to 0 to disable
-  preventDragOffset: 40
+  preventDragOffset: 40,
 };
 
 /**
@@ -14,7 +14,7 @@ const defaultOptions = {
  * @returns Boolean
  */
 function isVideoContent(content) {
-  return (content && content.data && content.data.type === 'video');
+  return content && content.data && content.data.type === "video";
 }
 
 class VideoContentSetup {
@@ -22,25 +22,31 @@ class VideoContentSetup {
     this.options = options;
 
     this.initLightboxEvents(lightbox);
-    lightbox.on('init', () => {
+    lightbox.on("init", () => {
       this.initPswpEvents(lightbox.pswp);
     });
   }
 
   initLightboxEvents(lightbox) {
-    lightbox.on('contentLoad', this.onContentLoad.bind(this));
-    lightbox.on('contentDestroy', this.onContentDestroy.bind(this));
-    lightbox.on('contentActivate', this.onContentActivate.bind(this));
-    lightbox.on('contentDeactivate', this.onContentDeactivate.bind(this));
-    lightbox.on('contentAppend', this.onContentAppend.bind(this));
-    lightbox.on('contentResize', this.onContentResize.bind(this));
+    lightbox.on("contentLoad", this.onContentLoad.bind(this));
+    lightbox.on("contentDestroy", this.onContentDestroy.bind(this));
+    lightbox.on("contentActivate", this.onContentActivate.bind(this));
+    lightbox.on("contentDeactivate", this.onContentDeactivate.bind(this));
+    lightbox.on("contentAppend", this.onContentAppend.bind(this));
+    lightbox.on("contentResize", this.onContentResize.bind(this));
 
-    lightbox.addFilter('isKeepingPlaceholder', this.isKeepingPlaceholder.bind(this));
-    lightbox.addFilter('isContentZoomable', this.isContentZoomable.bind(this));
-    lightbox.addFilter('useContentPlaceholder', this.useContentPlaceholder.bind(this));
+    lightbox.addFilter(
+      "isKeepingPlaceholder",
+      this.isKeepingPlaceholder.bind(this)
+    );
+    lightbox.addFilter("isContentZoomable", this.isContentZoomable.bind(this));
+    lightbox.addFilter(
+      "useContentPlaceholder",
+      this.useContentPlaceholder.bind(this)
+    );
 
-    lightbox.addFilter('domItemData', (itemData, element, linkEl) => {
-      if (itemData.type === 'video' && linkEl) {
+    lightbox.addFilter("domItemData", (itemData, element, linkEl) => {
+      if (itemData.type === "video" && linkEl) {
         if (linkEl.dataset.pswpVideoSources) {
           // eslint-disable-next-line
           itemData.videoSources = JSON.parse(pswpVideoSources);
@@ -57,16 +63,18 @@ class VideoContentSetup {
   initPswpEvents(pswp) {
     // Prevent draggin when pointer is in bottom part of the video
     // todo: add option for this
-    pswp.on('pointerDown', (e) => {
+    pswp.on("pointerDown", (e) => {
       const slide = pswp.currSlide;
       if (isVideoContent(slide) && this.options.preventDragOffset) {
         const origEvent = e.originalEvent;
-        if (origEvent.type === 'pointerdown') {
+        if (origEvent.type === "pointerdown") {
           const videoHeight = Math.ceil(slide.height * slide.currZoomLevel);
           const verticalEnding = videoHeight + slide.bounds.center.y;
           const pointerYPos = origEvent.pageY - pswp.offset.y;
-          if (pointerYPos > verticalEnding - this.options.preventDragOffset
-            && pointerYPos < verticalEnding) {
+          if (
+            pointerYPos > verticalEnding - this.options.preventDragOffset &&
+            pointerYPos < verticalEnding
+          ) {
             e.preventDefault();
           }
         }
@@ -74,19 +82,21 @@ class VideoContentSetup {
     });
 
     // do not append video on nearby slides
-    pswp.on('appendHeavy', (e) => {
+    pswp.on("appendHeavy", (e) => {
       if (isVideoContent(e.slide) && !e.slide.isActive) {
         e.preventDefault();
       }
     });
 
-    pswp.on('close', () => {
+    pswp.on("close", () => {
       if (isVideoContent(pswp.currSlide.content)) {
         // Switch from zoom to fade closing transition,
         // as zoom transition is choppy for videos
-        if (!pswp.options.showHideAnimationType
-          || pswp.options.showHideAnimationType === 'zoom') {
-          pswp.options.showHideAnimationType = 'fade';
+        if (
+          !pswp.options.showHideAnimationType ||
+          pswp.options.showHideAnimationType === "zoom"
+        ) {
+          pswp.options.showHideAnimationType = "fade";
         }
 
         // pause video when closing
@@ -113,20 +123,19 @@ class VideoContentSetup {
       const content = e.content;
 
       if (content.element) {
-        content.element.style.width = width + 'px';
-        content.element.style.height = height + 'px';
+        content.element.style.width = width + "px";
+        content.element.style.height = height + "px";
       }
 
       if (content.slide && content.slide.placeholder) {
         // override placeholder size, so it more accurately matches the video
         const placeholderElStyle = content.slide.placeholder.element.style;
-        placeholderElStyle.transform = 'none';
-        placeholderElStyle.width = width + 'px';
-        placeholderElStyle.height = height + 'px';
+        placeholderElStyle.transform = "none";
+        placeholderElStyle.width = width + "px";
+        placeholderElStyle.height = height + "px";
       }
     }
   }
-
 
   isKeepingPlaceholder(isZoomable, content) {
     if (isVideoContent(content)) {
@@ -176,28 +185,31 @@ class VideoContentSetup {
       return;
     }
 
-    content.state = 'loading';
-    content.type = 'video'; // TODO: move this to pswp core?
+    content.state = "loading";
+    content.type = "video"; // TODO: move this to pswp core?
 
-    content.element = document.createElement('video');
+    content.element = document.createElement("video");
 
     if (this.options.videoAttributes) {
       for (let key in this.options.videoAttributes) {
-        content.element.setAttribute(key, this.options.videoAttributes[key] || '');
+        content.element.setAttribute(
+          key,
+          this.options.videoAttributes[key] || ""
+        );
       }
     }
 
-    content.element.setAttribute('poster', content.data.msrc);
+    content.element.setAttribute("poster", content.data.msrc);
 
     this.preloadVideoPoster(content, content.data.msrc);
 
-    content.element.style.position = 'absolute';
+    content.element.style.position = "absolute";
     content.element.style.left = 0;
     content.element.style.top = 0;
 
     if (content.data.videoSources) {
       content.data.videoSources.forEach((source) => {
-        let sourceEl = document.createElement('source');
+        let sourceEl = document.createElement("source");
         sourceEl.src = source.src;
         sourceEl.type = source.type;
         content.element.appendChild(sourceEl);
@@ -217,13 +229,13 @@ class VideoContentSetup {
       if (content._videoPosterImg.complete) {
         content.onLoaded();
       } else {
-        content._videoPosterImg.onload = content._videoPosterImg.onerror = () => {
-          content.onLoaded();
-        };
+        content._videoPosterImg.onload = content._videoPosterImg.onerror =
+          () => {
+            content.onLoaded();
+          };
       }
     }
   }
-
 
   playVideo(content) {
     if (content.element) {
@@ -243,14 +255,13 @@ class VideoContentSetup {
     }
     return usePlaceholder;
   }
-
 }
 
 class PhotoSwipeVideoPlugin {
   constructor(lightbox, options) {
     new VideoContentSetup(lightbox, {
       ...defaultOptions,
-      ...options
+      ...options,
     });
   }
 }

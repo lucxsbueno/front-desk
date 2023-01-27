@@ -15,22 +15,23 @@ const VideoThumb = ({ videoSrc }) => {
     video.currentTime = 5;
 
     // Desenhe o quadro do vídeo no canvas
-    video.addEventListener("seeked", function () {
-      context.drawImage(video, 0, 0, canvas.width, canvas.height);
-    }, false);
+    video.addEventListener(
+      "seeked",
+      function () {
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+      },
+      false
+    );
 
     video.onloadeddata = function () {
       console.log("acabou");
-    }
+    };
   }, [videoSrc]);
 
   return (
     <>
       <video ref={videoRef} src={videoSrc} hidden>
-        <track default
-          kind="captions"
-          srcLang="en"
-          src={videoSrc} />
+        <track default kind="captions" srcLang="en" src={videoSrc} />
       </video>
       <canvas ref={canvasRef} className="video-thumb" />
     </>

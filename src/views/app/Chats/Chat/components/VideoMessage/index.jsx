@@ -23,13 +23,17 @@ const VideoMessage = (props) => {
     video.currentTime = 5;
 
     // Desenhe o quadro do vídeo no canvas
-    video.addEventListener("seeked", function () {
-      context.drawImage(video, 0, 0, canvas.width, canvas.height);
-    }, false);
+    video.addEventListener(
+      "seeked",
+      function () {
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+      },
+      false
+    );
 
     video.onloadeddata = function () {
       setIsLoading(false);
-    }
+    };
   }, [srcUrl]);
 
   return (
@@ -38,18 +42,13 @@ const VideoMessage = (props) => {
       <span className="message__video-title">{title}</span>
       <span className="message__video-time-duration">
         <Clock size={14} />
-        <span>
-          {time_duration}
-        </span>
+        <span>{time_duration}</span>
       </span>
       <span className="message__video-hour">12:34</span>
       <div className="message__video-cover" />
 
       <video ref={videoRef} src={srcUrl} hidden>
-        <track default
-          kind="captions"
-          srcLang="en"
-          src={srcUrl} />
+        <track default kind="captions" srcLang="en" src={srcUrl} />
       </video>
       <canvas ref={canvasRef} className="video-thumb" />
     </div>
