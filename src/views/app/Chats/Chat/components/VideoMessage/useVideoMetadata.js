@@ -43,6 +43,7 @@ const useVideoMetadata = ({ videoRef, canvasRef, srcUrl }) => {
         timeString += hours.toString().padStart(2, "0") + ":";
       }
 
+      // eslint-disable-next-line
       timeString += [minutes, seconds]
         .map(function (x) {
           return x.toString().padStart(2, "0");

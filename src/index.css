@@ -87,6 +87,20 @@ code {
 }
 
 /* General */
+.epr-main {
+  border-width: 0px !important;
+  border-radius: 4px !important;
+  box-shadow: var(--box-shadow-bg-white);
+}
+
+.EmojiPickerReact .epr-preview {
+  border-top: 1px solid var(--border-bottom-divider) !important;
+}
+
+.EmojiPickerReact {
+  font-family: "Segoe UI" !important;
+}
+
 .p-inherit {
   position: inherit;
 }
