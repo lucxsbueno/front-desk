@@ -9,7 +9,7 @@ const useVideoMetadata = ({ videoRef, canvasRef, srcUrl }) => {
     e.preventDefault();
     videoRef.current.requestFullscreen();
     videoRef.current.style.hidden = false;
-  }
+  };
 
   useEffect(() => {
     const video = videoRef.current;
@@ -43,9 +43,11 @@ const useVideoMetadata = ({ videoRef, canvasRef, srcUrl }) => {
         timeString += hours.toString().padStart(2, "0") + ":";
       }
 
-      timeString += [minutes, seconds].map(function (x) {
-        return x.toString().padStart(2, "0");
-      }).join(":");
+      timeString += [minutes, seconds]
+        .map(function (x) {
+          return x.toString().padStart(2, "0");
+        })
+        .join(":");
 
       updateTimeDuration(timeString);
     };

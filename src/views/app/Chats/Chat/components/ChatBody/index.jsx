@@ -21,11 +21,13 @@ const ChatBody = (props) => {
   const messagesEndRef = useRef(null);
 
   const supportedTypes = ["image", "video"];
-  const newArr = mock.filter(message => supportedTypes.includes(message.type));
+  const newArr = mock.filter((message) =>
+    supportedTypes.includes(message.type)
+  );
 
   const scrollToBottom = () => {
     messagesEndRef.current.scrollIntoView({
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
 
@@ -37,7 +39,13 @@ const ChatBody = (props) => {
 
   return (
     <div className="chat__inner">
-      <SliderGallery gallery={newArr} index={index} setIndex={setIndex} openGallery={openGallery} setOpenGallery={setOpenGallery} />
+      <SliderGallery
+        gallery={newArr}
+        index={index}
+        setIndex={setIndex}
+        openGallery={openGallery}
+        setOpenGallery={setOpenGallery}
+      />
 
       <Messages>
         {mock.map((item, i) => {
@@ -68,7 +76,8 @@ const ChatBody = (props) => {
                     message={item}
                     index={i}
                     setIndex={setIndex}
-                    openGallery={openGallery} setOpenGallery={setOpenGallery}
+                    openGallery={openGallery}
+                    setOpenGallery={setOpenGallery}
                   />
                 </Message>
               );
@@ -77,7 +86,13 @@ const ChatBody = (props) => {
             case "video": {
               return (
                 <Message key={i} message={item}>
-                  <VideoMessage videoMetadata={item.body} index={i} setIndex={setIndex} openGallery={openGallery} setOpenGallery={setOpenGallery} />
+                  <VideoMessage
+                    videoMetadata={item.body}
+                    index={i}
+                    setIndex={setIndex}
+                    openGallery={openGallery}
+                    setOpenGallery={setOpenGallery}
+                  />
                 </Message>
               );
             }

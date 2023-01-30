@@ -4,7 +4,12 @@ import NewChat from "../NewChat";
 import ChatBody from "./components/ChatBody";
 import ChatHeader from "./components/ChatHeader";
 import ChatFooter from "./components/ChatFooter";
-import { Outlet, useLocation, useParams, useSearchParams } from "react-router-dom";
+import {
+  Outlet,
+  useLocation,
+  useParams,
+  useSearchParams,
+} from "react-router-dom";
 
 import "./styles.css";
 

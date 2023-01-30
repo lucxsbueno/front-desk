@@ -11,13 +11,17 @@ const VideoMessage = (props) => {
 
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
-  const { timeDuration, isLoading } = useVideoMetadata({ videoRef, canvasRef, srcUrl });
+  const { timeDuration, isLoading } = useVideoMetadata({
+    videoRef,
+    canvasRef,
+    srcUrl,
+  });
 
   const handleOpenGallery = (e) => {
     e.preventDefault();
     setIndex(index);
     setOpenGallery(!openGallery);
-  }
+  };
 
   return (
     // eslint-disable-next-line

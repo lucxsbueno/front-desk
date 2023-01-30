@@ -4,12 +4,17 @@ import "photoswipe/style.css";
 
 import "./styles.css";
 
-export default function ImageMessage({ setIndex, index, message, openGallery, setOpenGallery }) {
-
+export default function ImageMessage({
+  setIndex,
+  index,
+  message,
+  openGallery,
+  setOpenGallery,
+}) {
   const handleOpenGallery = () => {
     setIndex(index);
     setOpenGallery(!openGallery);
-  }
+  };
 
   return (
     // eslint-disable-next-line
@@ -17,7 +22,12 @@ export default function ImageMessage({ setIndex, index, message, openGallery, se
       <span className="message__image-hour">12:34</span>
       <div className="message__image-cover" />
       {/* eslint-disable-next-line */}
-      <img src={message.body} alt="" className="message__image" onClick={handleOpenGallery} />
+      <img
+        src={message.body}
+        alt=""
+        className="message__image"
+        onClick={handleOpenGallery}
+      />
     </div>
   );
 }
