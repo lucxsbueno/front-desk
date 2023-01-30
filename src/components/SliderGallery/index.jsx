@@ -36,11 +36,14 @@ const SliderGallery = ({
     setIndex(0);
   };
 
-  const handleKeyDown = useCallback((event) => {
-    if (event.key === "Escape") {
-      setOpenGallery(false);
-    }
-  }, [setOpenGallery]);
+  const handleKeyDown = useCallback(
+    (event) => {
+      if (event.key === "Escape") {
+        setOpenGallery(false);
+      }
+    },
+    [setOpenGallery]
+  );
 
   useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
@@ -59,7 +62,10 @@ const SliderGallery = ({
       >
         {/* eslint-disable-next-line */}
         <div className="slider">
-          <button className="slider__bttns slider__bttns--close" onClick={close}>
+          <button
+            className="slider__bttns slider__bttns--close"
+            onClick={close}
+          >
             <X />
           </button>
 
