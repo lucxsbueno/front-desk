@@ -1,15 +1,16 @@
 import React from "react";
 
+import NewChat from "../NewChat";
 import ChatBody from "./components/ChatBody";
+import ChatHeader from "./components/ChatHeader";
 import ChatFooter from "./components/ChatFooter";
-import { Outlet, useLocation, useSearchParams } from "react-router-dom";
+import { Outlet, useLocation, useParams, useSearchParams } from "react-router-dom";
 
 import "./styles.css";
-import NewChat from "../NewChat";
-import ChatHeader from "./components/ChatHeader";
 
 const Chat = () => {
   const location = useLocation();
+  const params = useParams();
   const [searchParams] = useSearchParams();
 
   if (searchParams.get("type") == "new") {
@@ -21,7 +22,7 @@ const Chat = () => {
       <div className="chat__container">
         <ChatHeader location={location} />
 
-        <ChatBody />
+        <ChatBody id={params.id} />
 
         <ChatFooter />
       </div>

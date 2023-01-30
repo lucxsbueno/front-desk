@@ -15,6 +15,7 @@
 }
 
 .message__video-cover {
+  cursor: pointer;
   position: absolute;
   top: 0;
   left: 0;
@@ -27,7 +28,7 @@
   position: absolute;
   bottom: 5px;
   right: 10px;
-  z-index: 9999;
+  z-index: 9997;
   color: #fff;
 }
 
@@ -35,7 +36,7 @@
   position: absolute;
   bottom: 5px;
   left: 10px;
-  z-index: 9999;
+  z-index: 9998;
   color: #fff;
 
   display: flex;
@@ -43,16 +44,11 @@
   align-items: center;
 }
 
-.message__video-time-duration span {
-  display: inline-block;
-  margin-left: 5px;
-}
-
 .message__video-title {
   position: absolute;
   top: 5px;
   left: 10px;
-  z-index: 9999;
+  z-index: 9998;
   color: #fff;
 
   font-weight: 600;
@@ -65,4 +61,5 @@
 
 .video-thumb {
   vertical-align: middle;
+  cursor: pointer;
 }

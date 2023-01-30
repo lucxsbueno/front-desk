@@ -87,6 +87,10 @@ code {
 }
 
 /* General */
+.p-inherit {
+  position: inherit;
+}
+
 .position-relative {
   position: relative;
 }

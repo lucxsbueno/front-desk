@@ -26,10 +26,14 @@
   background: linear-gradient(180deg, #000000 -28.4%, rgba(0, 0, 0, 0) 10.05%, rgba(0, 0, 0, 0) 51.45%, rgba(0, 0, 0, 0) 72.63%, #000000 132.28%);
 }
 
+.message__image-cover:hover {
+  cursor: pointer;
+}
+
 .message__image-hour {
   position: absolute;
   bottom: 5px;
   right: 10px;
-  z-index: 9999;
+  z-index: 9998;
   color: #fff;
 }

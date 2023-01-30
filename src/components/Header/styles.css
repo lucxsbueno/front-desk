@@ -12,6 +12,8 @@
   flex-shrink: 0;
 
   position: relative;
+
+  z-index: 9998;
 }
 
 .header--bg-white {

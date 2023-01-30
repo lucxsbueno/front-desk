@@ -1,28 +1,50 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
+
+import mock from "../../mock";
+import { ChevronDown } from "lucide-react";
 
 import Message from "../Message";
 import Messages from "../Messages";
 import TextMessage from "../TextMessage";
+import VideoMessage from "../VideoMessage";
+import ImageMessage from "../ImageMessage";
 import Dropdown from "../../../../../../components/Dropdown";
-import DropdownLink from "../../../../../../components/DropdownLink";
 import DropdownButtonMessage from "../DropdownButtonMessage";
-import { ChevronDown } from "lucide-react";
+import DropdownLink from "../../../../../../components/DropdownLink";
+import SliderGallery from "../../../../../../components/SliderGallery";
 
 import "./styles.css";
 
-import mock from "../../mock";
-import ImageMessage from "../ImageMessage";
-import VideoMessage from "../VideoMessage";
+const ChatBody = (props) => {
+  const [index, setIndex] = useState(0);
+  const [openGallery, setOpenGallery] = useState(false);
+  const messagesEndRef = useRef(null);
 
-const ChatBody = () => {
+  const supportedTypes = ["image", "video"];
+  const newArr = mock.filter(message => supportedTypes.includes(message.type));
+
+  const scrollToBottom = () => {
+    messagesEndRef.current.scrollIntoView({
+      behavior: "smooth"
+    });
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
+      scrollToBottom();
+    }, 100);
+  }, [props.id]);
+
   return (
     <div className="chat__inner">
+      <SliderGallery gallery={newArr} index={index} setIndex={setIndex} openGallery={openGallery} setOpenGallery={setOpenGallery} />
+
       <Messages>
-        {mock.map((item, index) => {
+        {mock.map((item, i) => {
           switch (item.type) {
             case "text": {
               return (
-                <Message key={index} message={item}>
+                <Message key={i} message={item}>
                   <TextMessage hour={item.timestamp}>{item.body}</TextMessage>
                   <Dropdown
                     button={
@@ -41,17 +63,12 @@ const ChatBody = () => {
 
             case "image": {
               return (
-                <Message key={index} message={item}>
+                <Message key={i} message={item}>
                   <ImageMessage
-                    galleryID="gallery"
-                    images={[
-                      {
-                        largeURL: item.body,
-                        thumbnailURL: item.body,
-                        width: 1875,
-                        height: 2500,
-                      },
-                    ]}
+                    message={item}
+                    index={i}
+                    setIndex={setIndex}
+                    openGallery={openGallery} setOpenGallery={setOpenGallery}
                   />
                 </Message>
               );
@@ -59,13 +76,14 @@ const ChatBody = () => {
 
             case "video": {
               return (
-                <Message key={index} message={item}>
-                  <VideoMessage videoMetadata={item.body} />
+                <Message key={i} message={item}>
+                  <VideoMessage videoMetadata={item.body} index={i} setIndex={setIndex} openGallery={openGallery} setOpenGallery={setOpenGallery} />
                 </Message>
               );
             }
           }
         })}
+        <div ref={messagesEndRef} />
       </Messages>
     </div>
   );
