@@ -22,8 +22,17 @@
   background-color: var(--terciary-color);
 }
 
+.main-template--close .main-template__nav {
+  width: auto;
+}
+
 .main-template__content {
   width: calc(100% - var(--main-template-nav-width));
+  height: 100vh;
+}
+
+.main-template--close .main-template__content {
+  width: 100%;
   height: 100vh;
 }
 

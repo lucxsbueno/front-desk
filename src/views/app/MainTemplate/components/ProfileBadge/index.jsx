@@ -27,7 +27,9 @@ const ProfileBadge = () => {
         </span>
       </div>
 
-      <ArrowUpRight />
+      <div className="profile-badge__icon">
+        <ArrowUpRight />
+      </div>
     </NavLink>
   );
 };

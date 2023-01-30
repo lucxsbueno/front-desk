@@ -54,3 +54,21 @@
   width: 24px;
   height: 24px;
 }
+
+.main-template__right-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.main-template__right-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.main-template--close .main-template__title {
+  display: none;
+}
+
+.main-template--close .main-template__right-icon {
+  display: none;
+}

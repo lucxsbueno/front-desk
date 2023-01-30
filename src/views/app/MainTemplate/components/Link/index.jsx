@@ -35,7 +35,16 @@ const Link = (props) => {
           </span>
         </div>
 
-        {!!children && (toggle ? <ChevronDown /> : <ChevronLeft />)}
+        {!!children &&
+          (toggle ? (
+            <div className="main-template__right-icon">
+              <ChevronDown />
+            </div>
+          ) : (
+            <div className="main-template__right-icon">
+              <ChevronLeft />
+            </div>
+          ))}
       </NavLink>
       {toggle && <div>{children}</div>}
     </li>
