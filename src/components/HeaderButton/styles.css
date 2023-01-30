@@ -18,3 +18,13 @@
 .header__bttn:hover {
   opacity: 0.85;
 }
+
+.header__bttn--dark-bg {
+  background: var(--terciary-color);
+  color: #FFF;
+}
+
+.header__bttn--dark-bg:hover {
+  opacity: 1;
+  background: var(--terciary-color-opacity);
+}
