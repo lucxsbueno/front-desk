@@ -24,7 +24,7 @@ const useAudio = () => {
       progressColor: "#FE6E00",
       responsive: true,
       waveColor: "#C4C4C4",
-      cursorColor: "transparent"
+      cursorColor: "transparent",
     });
 
     waveform.current.load(track);
@@ -88,7 +88,7 @@ const useAudio = () => {
 
       setAudioDuration(timeString);
     });
-  }, [])
+  }, []);
 
   useEffect(() => {
     createAudioElement();
@@ -122,7 +122,7 @@ const useAudio = () => {
 
       setAudioDuration(timeString);
     });
-  }, [])
+  }, []);
 
   const playPause = () => {
     let context = new AudioContext();
@@ -134,6 +134,6 @@ const useAudio = () => {
   };
 
   return { audioDuration, playPause, playing };
-}
+};
 
 export default useAudio;

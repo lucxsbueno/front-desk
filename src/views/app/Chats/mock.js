@@ -41,7 +41,8 @@ const mock = [
     current_message: "Não quero mais nenhum trator, obrigado",
     hour: "12:32",
     unread_messages: 1,
-    profile_picture: "https://img.freepik.com/premium-vector/happy-smiling-young-man-avatar-3d-portrait-man-cartoon-character-people-vector-illustration_653240-187.jpg",
+    profile_picture:
+      "https://img.freepik.com/premium-vector/happy-smiling-young-man-avatar-3d-portrait-man-cartoon-character-people-vector-illustration_653240-187.jpg",
     is_new: false,
     is_vacation: true,
   },

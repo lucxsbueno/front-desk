@@ -16,7 +16,11 @@ const AudioMessage = (props) => {
       <div className="audio__left">
         <div className="audio__wave-wrapper">
           <button className="audio__button" onClick={playPause}>
-            {playing ? <img src={PauseSvg} alt="" /> : <img src={PlaySvg} alt="" />}
+            {playing ? (
+              <img src={PauseSvg} alt="" />
+            ) : (
+              <img src={PlaySvg} alt="" />
+            )}
           </button>
           <div id="waveform" className="audio__wave" />
           {/* eslint-disable-next-line */}

@@ -14,7 +14,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 import { BrowserRouter as Router } from "react-router-dom";
 
 root.render(
-
   <Router>
     <App />
   </Router>

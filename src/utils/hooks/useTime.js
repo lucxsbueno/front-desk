@@ -25,9 +25,9 @@ const useTime = () => {
       .join(":");
 
     setAudioDuration(timeString);
-  }
+  };
 
   return { convertSecondsToCompleteTime, audioDuration };
-}
+};
 
 export default useTime;
