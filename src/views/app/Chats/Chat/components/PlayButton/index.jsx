@@ -1,6 +1,6 @@
 import React from "react";
 
-import Icon from "../../../../../../utils/icons/play.svg";
+import Icon from "../../../../../../utils/icons/play_white.svg";
 
 import "./styles.css";
 

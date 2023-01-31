@@ -14,6 +14,7 @@ import DropdownLink from "../../../../../../components/DropdownLink";
 import SliderGallery from "../../../../../../components/SliderGallery";
 
 import "./styles.css";
+import AudioMessage from "../AudioMessage";
 
 const ChatBody = (props) => {
   const [index, setIndex] = useState(0);
@@ -93,6 +94,14 @@ const ChatBody = (props) => {
                     openGallery={openGallery}
                     setOpenGallery={setOpenGallery}
                   />
+                </Message>
+              );
+            }
+
+            case "audio": {
+              return (
+                <Message key={i} message={item}>
+                  <AudioMessage message={item} />
                 </Message>
               );
             }

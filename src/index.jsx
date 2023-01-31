@@ -14,9 +14,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 import { BrowserRouter as Router } from "react-router-dom";
 
 root.render(
-  <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
-  </React.StrictMode>
+
+  <Router>
+    <App />
+  </Router>
 );

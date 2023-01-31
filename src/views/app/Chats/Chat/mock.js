@@ -36,7 +36,7 @@ const messages = [
     id: 5,
     user_id: 0,
     type: "audio",
-    body: "Lorem ipsum dolor sit amet",
+    body: require("../../../../utils/audio/1-audio.mp3"),
     timestamp: "12:32",
   },
   {

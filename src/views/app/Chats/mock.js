@@ -6,7 +6,7 @@ const mock = [
     hour: "12:32",
     unread_messages: 0,
     profile_picture:
-      "https://cdn.dribbble.com/users/1786866/screenshots/13992097/media/c461eeae4d4b523c9d3bab7c66264916.png?compress=1&resize=400x300",
+      "https://www.getillustrations.com/photos/pack/3d-avatar-male_lg.png",
     is_new: true,
     is_vacation: false,
     is_transfered: false,
@@ -18,7 +18,7 @@ const mock = [
     hour: "12:32",
     unread_messages: 3,
     profile_picture:
-      "https://cdn.dribbble.com/users/230875/screenshots/12078079/media/7ba8ec4a42b529dcbbc695ce0dd07a4a.jpg?compress=1&resize=400x300&vertical=top",
+      "https://static.vecteezy.com/system/resources/previews/010/871/103/original/3d-avatar-dj-png.png",
     is_new: true,
     is_vacation: false,
     is_transfered: false,
@@ -41,7 +41,7 @@ const mock = [
     current_message: "Não quero mais nenhum trator, obrigado",
     hour: "12:32",
     unread_messages: 1,
-    profile_picture: "https://pbs.twimg.com/media/EbRZ0YAU8AEY7KJ.jpg",
+    profile_picture: "https://img.freepik.com/premium-vector/happy-smiling-young-man-avatar-3d-portrait-man-cartoon-character-people-vector-illustration_653240-187.jpg",
     is_new: false,
     is_vacation: true,
   },
@@ -52,7 +52,7 @@ const mock = [
     hour: "12:32",
     unread_messages: 1,
     profile_picture:
-      "https://cdna.artstation.com/p/assets/images/images/050/172/070/large/mathraw-mathou-chx.jpg?1654208026",
+      "https://static.vecteezy.com/system/resources/previews/010/871/337/original/3d-avatar-designer-png.png",
     is_new: false,
     is_vacation: false,
     is_transfered: true,
@@ -64,7 +64,7 @@ const mock = [
     hour: "12:32",
     unread_messages: 1,
     profile_picture:
-      "https://cdnb.artstation.com/p/assets/images/images/050/106/473/smaller_square/mathraw-pp-pfa-v2.jpg?1654076570",
+      "https://img.freepik.com/psd-premium/avatar-3d-feminino-isolado_239978-147.jpg?w=2000",
     is_new: false,
     is_vacation: false,
     is_transfered: true,
