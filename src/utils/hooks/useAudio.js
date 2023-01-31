@@ -30,6 +30,7 @@ const useAudio = () => {
     waveform.current.load(track);
 
     waveform.current.on("ready", () => {
+      // eslint-disable-next-line
       timeString = "";
 
       let totalTime = waveform.current.getDuration();
@@ -96,6 +97,7 @@ const useAudio = () => {
 
   useEffect(() => {
     waveform.current.on("audioprocess", () => {
+      // eslint-disable-next-line
       timeString = "";
 
       let totalTime = waveform.current.getDuration();
