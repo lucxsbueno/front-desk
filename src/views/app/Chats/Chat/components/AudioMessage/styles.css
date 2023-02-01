@@ -71,3 +71,11 @@
   width: 100%;
   object-fit: cover;
 }
+
+.audio--me .audio__time {
+  color: #FFF;
+}
+
+.audio--me .audio__sended-at {
+  color: #FFF;
+}

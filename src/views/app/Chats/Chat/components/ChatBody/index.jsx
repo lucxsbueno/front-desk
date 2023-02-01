@@ -8,6 +8,7 @@ import Messages from "../Messages";
 import TextMessage from "../TextMessage";
 import VideoMessage from "../VideoMessage";
 import ImageMessage from "../ImageMessage";
+import DocumentMessage from "../DocumentMessage";
 import Dropdown from "../../../../../../components/Dropdown";
 import DropdownButtonMessage from "../DropdownButtonMessage";
 import DropdownLink from "../../../../../../components/DropdownLink";
@@ -22,6 +23,7 @@ const ChatBody = (props) => {
   const messagesEndRef = useRef(null);
 
   const supportedTypes = ["image", "video"];
+
   const newArr = mock.filter((message) =>
     supportedTypes.includes(message.type)
   );
@@ -102,6 +104,14 @@ const ChatBody = (props) => {
               return (
                 <Message key={i} message={item}>
                   <AudioMessage message={item} />
+                </Message>
+              );
+            }
+
+            case "document": {
+              return (
+                <Message key={i} message={item}>
+                  <DocumentMessage message={item} />
                 </Message>
               );
             }

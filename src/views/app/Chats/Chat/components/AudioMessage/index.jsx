@@ -1,7 +1,9 @@
 import React from "react";
 
 import PlaySvg from "../../../../../../utils/icons/play.svg";
+import PlayWhiteSvg from "../../../../../../utils/icons/play_white.svg";
 import PauseSvg from "../../../../../../utils/icons/pause.svg";
+import PauseWhiteSvg from "../../../../../../utils/icons/pause_white.svg";
 import useAudio from "../../../../../../utils/hooks/useAudio";
 
 import "./styles.css";
@@ -9,22 +11,30 @@ import "./styles.css";
 const AudioMessage = (props) => {
   const { message } = props;
 
-  const { audioDuration, playPause, playing } = useAudio();
+  const audioId = message.id;
+  const userId = message.user_id;
+
+  const { audioDuration, playPause, playing } = useAudio(audioId, userId);
+
+  const playSvg = message.user_id == 34 ? PauseWhiteSvg : PauseSvg;
+  const pauseSvg = message.user_id == 34 ? PlayWhiteSvg : PlaySvg;
+
+  const isMe = message.user_id == 34 ? "audio--me" : "";
 
   return (
-    <div className="audio">
+    <div className={`audio ${isMe}`.trim()}>
       <div className="audio__left">
         <div className="audio__wave-wrapper">
           <button className="audio__button" onClick={playPause}>
             {playing ? (
-              <img src={PauseSvg} alt="" />
+              <img src={playSvg} alt="" />
             ) : (
-              <img src={PlaySvg} alt="" />
+              <img src={pauseSvg} alt="" />
             )}
           </button>
-          <div id="waveform" className="audio__wave" />
+          <div id={`waveform-${message.id}`} className="audio__wave" />
           {/* eslint-disable-next-line */}
-          <audio id="track" src={message.body} />
+          <audio id={`track-${message.id}`} src={message.body} />
         </div>
         <div className="d-flex flex-row align-items-center justify-content-space-between">
           <span className="audio__time">{audioDuration && audioDuration}</span>
