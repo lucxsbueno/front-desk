@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 
 import WaveSurfer from "wavesurfer.js";
 
-const useAudio = () => {
+const useAudio = (audioId, userId) => {
   const waveform = useRef(null);
   const [playing, setPlaying] = useState(false);
   const [audioDuration, setAudioDuration] = useState("");
@@ -10,7 +10,7 @@ const useAudio = () => {
   var timeString = "";
 
   const createAudioElement = useCallback(() => {
-    const track = document.querySelector("#track");
+    const track = document.querySelector("#track-" + audioId);
 
     waveform.current = WaveSurfer.create({
       barWidth: 3,
@@ -18,12 +18,12 @@ const useAudio = () => {
       barGap: 2,
       barMinHeight: 1,
       cursorWidth: 1,
-      container: "#waveform",
+      container: "#waveform-" + audioId,
       backend: "WebAudio",
       height: 60,
       progressColor: "#FE6E00",
       responsive: true,
-      waveColor: "#C4C4C4",
+      waveColor: userId ? "#343434" : "#EBEBEB",
       cursorColor: "transparent",
     });
 
