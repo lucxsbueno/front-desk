@@ -2,7 +2,7 @@ import React from "react";
 
 import Card from "../../../../../components/Card";
 import ImageSvg from "../../../../../utils/icons/image.svg";
-import PdfSvg from "../../../../../utils/icons/pdf.svg";
+import PdfSvg from "../../../../../utils/icons/pdf1x.svg";
 
 import "./styles.css";
 

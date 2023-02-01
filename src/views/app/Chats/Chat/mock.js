@@ -21,7 +21,6 @@ const messages = [
       srcUrl:
         "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
       title: "what_car_can_you_get_for_a_grand.mp4",
-      time_duration: "23:13",
     },
     timestamp: "12:32",
   },
@@ -29,7 +28,11 @@ const messages = [
     id: 4,
     user_id: 0,
     type: "document",
-    body: "Lorem ipsum dolor sit amet",
+    body: {
+      type: "pdf",
+      title: "certificado-startup-summit-2022.pdf",
+      srcUrl: "https://www.africau.edu/images/default/sample.pdf",
+    },
     timestamp: "12:32",
   },
   {
@@ -96,7 +99,6 @@ const messages = [
       srcUrl:
         "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
       title: "for_bigger_meltdowns.mp4",
-      time_duration: "23:13",
     },
     timestamp: "12:32",
   },
@@ -108,7 +110,6 @@ const messages = [
       srcUrl:
         "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
       title: "bigger_joyrides.mp4",
-      time_duration: "3:13",
     },
     timestamp: "12:32",
   },
@@ -127,6 +128,52 @@ const messages = [
   },
   {
     id: 17,
+    user_id: 34,
+    type: "text",
+    body: "Lorem ipsum dolor sit amet. Praesent diam ante, scelerisque",
+    timestamp: "12:32",
+  },
+  {
+    id: 18,
+    user_id: 34,
+    type: "audio",
+    body: require("../../../../utils/audio/2-audio.mp3"),
+    timestamp: "12:32",
+  },
+  {
+    id: 19,
+    user_id: 34,
+    type: "audio",
+    body: require("../../../../utils/audio/3-audio.mp3"),
+    timestamp: "12:32",
+  },
+  {
+    id: 20,
+    user_id: 0,
+    type: "audio",
+    body: require("../../../../utils/audio/3-audio.mp3"),
+    timestamp: "12:32",
+  },
+  {
+    id: 21,
+    user_id: 34,
+    type: "document",
+    body: {
+      type: "pdf",
+      title: "certificado-startup-summit-2022.pdf",
+      srcUrl: "https://www.africau.edu/images/default/sample.pdf",
+    },
+    timestamp: "12:32",
+  },
+  {
+    id: 22,
+    user_id: 34,
+    type: "text",
+    body: "Lorem ipsum dolor sit amet. Praesent diam ante, scelerisque. Praesent diam ante, scelerisque",
+    timestamp: "12:32",
+  },
+  {
+    id: 23,
     user_id: 34,
     type: "text",
     body: "Lorem ipsum dolor sit amet. Praesent diam ante, scelerisque",
