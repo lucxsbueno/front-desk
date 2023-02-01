@@ -1,5 +1,7 @@
 import React from "react";
 
+import notRead from "../../../../../../utils/icons/not-read.png";
+import read from "../../../../../../utils/icons/read.png";
 import PlaySvg from "../../../../../../utils/icons/play.svg";
 import PlayWhiteSvg from "../../../../../../utils/icons/play_white.svg";
 import PauseSvg from "../../../../../../utils/icons/pause.svg";
@@ -19,10 +21,12 @@ const AudioMessage = (props) => {
   const playSvg = message.user_id == 34 ? PauseWhiteSvg : PauseSvg;
   const pauseSvg = message.user_id == 34 ? PlayWhiteSvg : PlaySvg;
 
-  const isMe = message.user_id == 34 ? "audio--me" : "";
+  const isMe = message.user_id == 34;
+  const isMessageRead = message.is_read ? read : notRead;
+  const isMessageMe = message.user_id == 34 ? "audio--me" : "";
 
   return (
-    <div className={`audio ${isMe}`.trim()}>
+    <div className={`audio ${isMessageMe}`.trim()}>
       <div className="audio__left">
         <div className="audio__wave-wrapper">
           <button className="audio__button" onClick={playPause}>
@@ -38,7 +42,10 @@ const AudioMessage = (props) => {
         </div>
         <div className="d-flex flex-row align-items-center justify-content-space-between">
           <span className="audio__time">{audioDuration && audioDuration}</span>
-          <span className="audio__sended-at">{message.timestamp}</span>
+          <div className="d-flex">
+            <span className="audio__sended-at mr-5">{message.timestamp}</span>
+            {isMe && <img src={isMessageRead} alt="Mensagem não lida." className="message__read" />}
+          </div>
         </div>
       </div>
       <div className="audio__right">

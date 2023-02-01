@@ -1,12 +1,14 @@
 import React, { useRef } from "react";
 
-import PlayButton from "../PlayButton";
-
 import "./styles.css";
+
+import PlayButton from "../PlayButton";
 import useVideoMetadata from "./useVideoMetadata";
+import notRead from "../../../../../../utils/icons/not-read.png";
+import read from "../../../../../../utils/icons/read.png";
 
 const VideoMessage = (props) => {
-  const { videoMetadata, index, setIndex, openGallery, setOpenGallery } = props;
+  const { videoMetadata, message, index, setIndex, openGallery, setOpenGallery } = props;
   const { srcUrl, title } = videoMetadata;
 
   const videoRef = useRef(null);
@@ -16,6 +18,9 @@ const VideoMessage = (props) => {
     canvasRef,
     srcUrl,
   });
+
+  const isMe = message.user_id == 34;
+  const isMessageRead = message.is_read ? read : notRead;
 
   const handleOpenGallery = (e) => {
     e.preventDefault();
@@ -35,7 +40,10 @@ const VideoMessage = (props) => {
         <span>{timeDuration}</span>
       </span>
 
-      <span className="message__video-hour">12:34</span>
+      <div className="d-flex flex-row">
+        <span className="message__video-hour mr-5">{message.timestamp}</span>
+        {isMe && <img src={isMessageRead} alt="Mensagem não lida." className="message__read" />}
+      </div>
 
       <div className="message__video-cover" />
 

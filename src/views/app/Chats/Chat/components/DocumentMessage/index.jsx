@@ -1,7 +1,8 @@
 import React from "react";
 
-// Document icons
 import pdf from "../../../../../../utils/icons/pdf3x.svg";
+import notRead from "../../../../../../utils/icons/not-read.png";
+import read from "../../../../../../utils/icons/read.png";
 import { Download } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -12,10 +13,14 @@ const DocumentMessage = (props) => {
 
   const { type, title, srcUrl } = message.body;
 
-  const isMe = message.user_id == 34 ? "document--me" : "";
+  const isMe = message.user_id == 34;
+
+  const isDocumentMe = isMe ? "document--me" : "";
+
+  const isMessageRead = message.is_read ? read : notRead;
 
   return (
-    <div className={`document d-flex flex-row ${isMe}`}>
+    <div className={`document d-flex flex-row ${isDocumentMe}`}>
       <div className="document__icon-wrapper">
         <img src={pdf} alt="" className="document__icon" />
       </div>
@@ -27,9 +32,9 @@ const DocumentMessage = (props) => {
             <span className="document__size"> 1.005 B</span>
           </div>
 
-          <div className="">
+          <div className="d-flex">
             <span className="document__sended-at">{message.timestamp}</span>
-            <img src="" alt="" />
+            {isMe && <img src={isMessageRead} alt="Mensagem não lida." className="message__read" />}
           </div>
         </div>
       </div>
