@@ -1,0 +1,45 @@
+.tag {
+  background-color: var(--primary-color-opacity);
+
+  padding: 3px 12px;
+  border-radius: 14px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.tag__name {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-right: 5px;
+}
+
+.tag__bttn {
+  width: 16px;
+  height: 16px;
+
+  border: none;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.tag:hover {
+  background-color: var(--primary-color);
+}
+
+.tag:hover .tag__name {
+  color: var(--white-01);
+}
+
+.tag:hover .tag__bttn {
+  color: var(--white-01);
+}
