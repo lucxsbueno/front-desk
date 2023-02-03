@@ -1,0 +1,18 @@
+.customer-edit {
+  width: 360px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--white-01);
+}
+
+.customer-edit__body {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.customer-edit__footer {
+  padding: 10px 15px 15px;
+}

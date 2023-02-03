@@ -17,6 +17,7 @@ import RouteWithoutIndex from "./app/RouteWithoutIndex";
 import CustomersAvailable from "./app/CustomersAvailable";
 import Information from "./app/Information";
 import SearchMessages from "./app/SearchMessages";
+import CustomersEdit from "./app/CustomersEdit";
 
 export const MainRoutes = () => {
   return (
@@ -28,6 +29,7 @@ export const MainRoutes = () => {
           <Route path=":id" element={<Chat />}>
             <Route path="informacoes" element={<Information />} />
             <Route path="pesquisar-mensagem" element={<SearchMessages />} />
+            <Route path="editar-cliente" element={<CustomersEdit />} />
           </Route>
         </Route>
         <Route path="dashboard" element={<Dashboard />} />
