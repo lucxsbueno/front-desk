@@ -132,6 +132,7 @@ const messages = [
     user_id: 34,
     type: "image",
     body: "https://images.unsplash.com/photo-1485550409059-9afb054cada4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+    timestamp: "23:32",
     is_read: true
   },
   {
@@ -140,7 +141,7 @@ const messages = [
     type: "text",
     body: "Lorem ipsum dolor sit amet. Praesent diam ante, scelerisque. Praesent diam ante, scelerisque",
     timestamp: "00:32",
-    is_read: false
+    is_read: true
   },
   {
     id: 23,
