@@ -28,9 +28,11 @@ const VideoMessage = (props) => {
     setOpenGallery(!openGallery);
   };
 
+  const isMessageVideoMe = isMe ? "message__video-wrapper message__video-wrapper--me" : "message__video-wrapper";
+
   return (
     // eslint-disable-next-line
-    <div className="message__video-wrapper" onClick={handleOpenGallery}>
+    <div className={isMessageVideoMe} onClick={handleOpenGallery}>
       {/* eslint-disable-next-line */}
       <PlayButton isLoading={isLoading} onClick={handleOpenGallery} />
 
