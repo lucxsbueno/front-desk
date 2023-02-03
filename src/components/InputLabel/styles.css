@@ -1,0 +1,9 @@
+.input__label {
+  margin-bottom: 10px;
+  color: var(--text-color);
+  display: block;
+}
+
+.label {
+  display: block;
+}
