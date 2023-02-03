@@ -87,6 +87,10 @@ code {
 }
 
 /* General */
+.text-grey {
+  color: var(--text-grey-color);
+}
+
 .message__read {
   width: 16px;
   height: 16px;
@@ -155,6 +159,10 @@ code {
   color: var(--primary-color);
 }
 
+.mb-25 {
+  margin-bottom: 25px;
+}
+
 .ml-20 {
   margin-left: 20px;
 }
@@ -201,6 +209,14 @@ code {
 
 .mr-10 {
   margin-right: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
 }
 
 .fs-12 {
