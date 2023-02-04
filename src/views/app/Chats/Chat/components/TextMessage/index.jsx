@@ -14,12 +14,16 @@ const TextMessage = (props) => {
 
   return (
     <div className="message__text">
-      <div className="message__inner-box">
-        {message.body}
-      </div>
+      <div className="message__inner-box">{message.body}</div>
       <span className="message__hour d-flex">
         <span className="mr-5">{message.timestamp}</span>
-        {isMe && <img src={isMessageRead} alt="Mensagem não lida." className="message__read" />}
+        {isMe && (
+          <img
+            src={isMessageRead}
+            alt="Mensagem não lida."
+            className="message__read"
+          />
+        )}
       </span>
     </div>
   );

@@ -34,7 +34,13 @@ const DocumentMessage = (props) => {
 
           <div className="d-flex">
             <span className="document__sended-at">{message.timestamp}</span>
-            {isMe && <img src={isMessageRead} alt="Mensagem não lida." className="message__read" />}
+            {isMe && (
+              <img
+                src={isMessageRead}
+                alt="Mensagem não lida."
+                className="message__read"
+              />
+            )}
           </div>
         </div>
       </div>

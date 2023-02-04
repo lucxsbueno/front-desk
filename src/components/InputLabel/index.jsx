@@ -16,7 +16,7 @@ const InputLabel = (props) => {
 InputLabel.defaultProps = {
   label: "",
   children: "",
-  className: ""
+  className: "",
 };
 
 export default InputLabel;

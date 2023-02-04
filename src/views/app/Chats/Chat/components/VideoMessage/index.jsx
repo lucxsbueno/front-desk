@@ -8,7 +8,14 @@ import notRead from "../../../../../../utils/icons/not-read.png";
 import read from "../../../../../../utils/icons/read.png";
 
 const VideoMessage = (props) => {
-  const { videoMetadata, message, index, setIndex, openGallery, setOpenGallery } = props;
+  const {
+    videoMetadata,
+    message,
+    index,
+    setIndex,
+    openGallery,
+    setOpenGallery,
+  } = props;
   const { srcUrl, title } = videoMetadata;
 
   const videoRef = useRef(null);
@@ -28,7 +35,9 @@ const VideoMessage = (props) => {
     setOpenGallery(!openGallery);
   };
 
-  const isMessageVideoMe = isMe ? "message__video-wrapper message__video-wrapper--me" : "message__video-wrapper";
+  const isMessageVideoMe = isMe
+    ? "message__video-wrapper message__video-wrapper--me"
+    : "message__video-wrapper";
 
   return (
     // eslint-disable-next-line
@@ -44,7 +53,13 @@ const VideoMessage = (props) => {
 
       <div className="d-flex flex-row">
         <span className="message__video-hour mr-5">{message.timestamp}</span>
-        {isMe && <img src={isMessageRead} alt="Mensagem não lida." className="message__read" />}
+        {isMe && (
+          <img
+            src={isMessageRead}
+            alt="Mensagem não lida."
+            className="message__read"
+          />
+        )}
       </div>
 
       <div className="message__video-cover" />

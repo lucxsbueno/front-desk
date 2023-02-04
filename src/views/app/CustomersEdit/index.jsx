@@ -16,31 +16,31 @@ const CustomersEdit = () => {
   const tags = [
     {
       id: 1,
-      name: "item"
+      name: "item",
     },
     {
       id: 2,
-      name: "item-item"
+      name: "item-item",
     },
     {
       id: 3,
-      name: "item"
+      name: "item",
     },
     {
       id: 4,
-      name: "item-item-item-item"
+      name: "item-item-item-item",
     },
     {
       id: 5,
-      name: "item-item"
+      name: "item-item",
     },
     {
       id: 6,
-      name: "item-item"
+      name: "item-item",
     },
     {
       id: 7,
-      name: "item-item"
+      name: "item-item",
     },
   ];
 
@@ -62,8 +62,8 @@ const CustomersEdit = () => {
 
       <div className="customer-edit__body x-p-15 pt-15">
         <p className="text-grey mb-20">
-          Aqui você pode editar informações públicas sobre este cliente.
-          Você pode mudá-las a qualquer momento que quiser.
+          Aqui você pode editar informações públicas sobre este cliente. Você
+          pode mudá-las a qualquer momento que quiser.
         </p>
 
         <InputLabel label="Nome completo" className="mb-25">
@@ -78,16 +78,15 @@ const CustomersEdit = () => {
           </p>
 
           <Tags>
-            {tags.map((tag, i) => <TagBadge key={i} tag={tag} />)}
+            {tags.map((tag, i) => (
+              <TagBadge key={i} tag={tag} />
+            ))}
           </Tags>
         </InputLabel>
-
       </div>
 
       <div className="customer-edit__footer">
-        <Button onClick={() => { }}>
-          Salvar alterações
-        </Button>
+        <Button onClick={() => {}}>Salvar alterações</Button>
       </div>
     </div>
   );

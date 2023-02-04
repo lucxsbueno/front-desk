@@ -56,7 +56,13 @@ const ChatBody = (props) => {
             case "text": {
               return (
                 <Message key={i} message={item}>
-                  <TextMessage hour={item.timestamp} isRead={item.is_read} message={item}>{item.body}</TextMessage>
+                  <TextMessage
+                    hour={item.timestamp}
+                    isRead={item.is_read}
+                    message={item}
+                  >
+                    {item.body}
+                  </TextMessage>
                   <Dropdown
                     button={
                       <DropdownButtonMessage>

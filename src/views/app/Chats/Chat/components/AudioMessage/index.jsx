@@ -44,7 +44,13 @@ const AudioMessage = (props) => {
           <span className="audio__time">{audioDuration && audioDuration}</span>
           <div className="d-flex">
             <span className="audio__sended-at mr-5">{message.timestamp}</span>
-            {isMe && <img src={isMessageRead} alt="Mensagem não lida." className="message__read" />}
+            {isMe && (
+              <img
+                src={isMessageRead}
+                alt="Mensagem não lida."
+                className="message__read"
+              />
+            )}
           </div>
         </div>
       </div>

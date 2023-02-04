@@ -5,11 +5,7 @@ import "./styles.css";
 const Tags = (props) => {
   const { children } = props;
 
-  return (
-    <div className="tags">
-      {children}
-    </div>
-  );
+  return <div className="tags">{children}</div>;
 };
 
 Tags.defaultProps = {};

@@ -9,9 +9,7 @@ const TagBadge = (props) => {
 
   return (
     <div className="tag">
-      <span className="tag__name">
-        #{tag.name}
-      </span>
+      <span className="tag__name">#{tag.name}</span>
       <button className="tag__bttn">
         <X size={16} />
       </button>
@@ -20,7 +18,7 @@ const TagBadge = (props) => {
 };
 
 TagBadge.defaultProps = {
-  tag: ""
-}
+  tag: "",
+};
 
 export default TagBadge;
