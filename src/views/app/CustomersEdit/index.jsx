@@ -1,23 +1,19 @@
 import React from "react";
 
-import { useNavigate } from "react-router-dom";
-
+import Header from "./Header";
 import Tags from "../../../components/Tags";
 import Input from "../../../components/Input";
-import Header from "../../../components/Header";
 import Button from "../../../components/Button";
 import TagBadge from "../../../components/TagBadge";
 import InputLabel from "../../../components/InputLabel";
-import HeaderButton from "../../../components/HeaderButton";
-
-import { ChevronLeft } from "lucide-react";
+import DocDropzone from "../../../components/DocDropzone";
+import Textarea from "../../../components/Forms/Textarea";
+import RadioGroup from "../../../components/Forms/RadioGroup";
+import RadioButton from "../../../components/Forms/RadioButton";
 
 import "./styles.css";
-import DocDropzone from "../../../components/DocDropzone";
 
 const CustomersEdit = () => {
-  const navigate = useNavigate();
-
   const tags = [
     {
       id: 1,
@@ -49,25 +45,9 @@ const CustomersEdit = () => {
     },
   ];
 
-  const goBack = () => {
-    navigate(-1);
-  }
-
   return (
     <div className="customer-edit">
-      <Header className="header--bg-white">
-        <div className="d-flex flex-row align-items-center justify-content-space-between w-100">
-          <div className="d-flex flex-row align-items-center">
-            <HeaderButton className="mr-10" onClick={goBack}>
-              <ChevronLeft />
-            </HeaderButton>
-
-            <span className="text-color text-semi-bold">
-              Editar dados do cliente
-            </span>
-          </div>
-        </div>
-      </Header>
+      <Header />
 
       <div className="customer-edit__body x-p-15 pt-15">
         <p className="text-grey mb-20">
@@ -76,11 +56,12 @@ const CustomersEdit = () => {
         </p>
 
         <InputLabel label="Nome completo" className="mb-25">
-          <Input type="text" placeholder="John Doe" />
+          <Input type="text" placeholder="John Doe" className="mb-10" />
+          <Button onClick={() => { }}>Salvar nome</Button>
         </InputLabel>
 
         <InputLabel label="Tags" className="mb-25">
-          <Input type="text" placeholder="John Doe" className="mb-15" />
+          <Input type="text" placeholder="Ex: bom. Pressione [ENTER] para adicionar." className="mb-15" />
 
           <p className="text-grey mb-15">
             Adicione ou exclua as tags do cliente.
@@ -97,12 +78,30 @@ const CustomersEdit = () => {
           <DocDropzone user={{ docs: [] }} />
         </InputLabel>
 
-        <InputLabel label="Observação" className="mb-25" />
+        <InputLabel label="Observações" className="mb-25">
+          <Textarea rows={4} className="mb-10" />
+          <Button onClick={() => { }}>Salvar observação</Button>
+        </InputLabel>
+
+        <InputLabel label="Trocar telefone" className="mb-25">
+          <p className="text-grey mb-15">
+            Escolha um número para alterar
+          </p>
+
+          <RadioGroup className="mb-10">
+            <RadioButton name="phone" value="1">Telefone 1</RadioButton>
+            <RadioButton name="phone" value="2">Telefone 2</RadioButton>
+          </RadioGroup>
+
+          <Input type="text" placeholder="Ex: (47) 0 0000-0000" className="mb-15" />
+
+          <Button onClick={() => { }}>Alterar número</Button>
+        </InputLabel>
+
+
       </div>
 
-      <div className="customer-edit__footer">
-        <Button onClick={() => { }}>Salvar alterações</Button>
-      </div>
+      {/* <div className="customer-edit__footer" /> */}
     </div>
   );
 };
