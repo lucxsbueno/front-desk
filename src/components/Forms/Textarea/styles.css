@@ -1,0 +1,33 @@
+.textarea {
+  width: 100%;
+
+  background-color: var(--input-bg-default-color);
+  border-radius: 4px;
+
+  color: var(--text-color);
+
+  border: 2px solid var(--input-bg-default-border-color);
+  outline: none;
+
+  font-size: 14px;
+
+  padding: 0px 10px;
+
+  padding: 10px;
+
+  resize: none;
+}
+
+.textarea::placeholder {
+  color: var(--placeholder-color);
+}
+
+.textarea:focus {
+  border: 2px solid var(--input-border-active-color);
+  box-shadow: var(--input-active-box-shadow);
+}
+
+.textarea--error:focus {
+  border: 2px solid var(--red-dark);
+  box-shadow: var(--input-box-shadow-error);
+}
