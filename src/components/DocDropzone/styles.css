@@ -1,0 +1,80 @@
+/*
+ *
+ *
+ *
+ *
+ * Dropzone area
+ */
+.my-dropzone {
+  width: 100%;
+  min-height: 100px;
+
+  padding: 20px;
+  margin-bottom: 10px;
+
+  background: var(--grey-01);
+  border: 2px dashed var(--grey-02);
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-dropzone__icon {
+  color: var(--primary-color);
+}
+
+.my-dropzone__title {
+  margin-top: 2px;
+  color: var(--text-grey);
+  font-weight: 400;
+  display: block;
+}
+
+.my-dropzone__link {
+  margin-left: 4px;
+  color: var(--primary-color);
+  font-weight: 600;
+  display: inline;
+  text-decoration: underline;
+}
+
+.my-dropzone__accepted-files {
+  color: var(--text-grey);
+  display: block;
+  font-size: 14px;
+}
+
+.my-dropzone--ondrop .my-dropzone__title {
+  color: var(--primary-color);
+}
+
+.my-dropzone--ondrop {
+  background: rgba(249, 127, 12, 0.03);
+  border: 2px dashed var(--primary-color);
+}
+
+.btn__upload {
+  width: 100%;
+  border: none;
+  background-color: var(--white-01);
+  height: 34px;
+  font-weight: 500;
+  color: var(--primary-color);
+  border-radius: 2px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn__upload:focus {
+  background-color: var(--hover);
+}
+
+.btn__upload:hover {
+  background-color: var(--hover);
+}

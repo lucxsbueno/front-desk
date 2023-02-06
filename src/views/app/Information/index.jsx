@@ -16,15 +16,14 @@ const Information = () => {
   const location = useLocation();
   const userInformation = location.state.data;
 
+  console.log(userInformation);
+
   return (
     <div className="information">
       <InformationHeader />
 
       <div className="information__body">
-        <NameCard
-          name={userInformation.title}
-          pic={userInformation.profile_picture}
-        />
+        <NameCard userData={userInformation} />
 
         <UsadaoAlert />
 

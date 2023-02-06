@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
+import { NavLink } from "react-router-dom";
 import { ChevronDown, ChevronLeft } from "lucide-react";
 
 import "./styles.css";
-import { NavLink } from "react-router-dom";
 
 const Link = (props) => {
   const { icon, title, to, children } = props;
