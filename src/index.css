@@ -34,6 +34,12 @@ code {
   --grey-02: #EDF0F3;
   --grey-03: #9FA7B4;
   --white-01: #FFFFFF;
+  --verified-green: #58AE4A;
+  --opacity-red: #FFDDDD;
+  --red: #ED4343;
+  --divider-color: #EDF0F3;
+  --opacity-green: #DFEDDD;
+  --green: #58AE4A;
 
   /* Scroll bar */
   --scroll-track-color: rgba(0, 0, 0, 0.021);
