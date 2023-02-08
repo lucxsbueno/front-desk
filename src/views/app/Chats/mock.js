@@ -66,9 +66,9 @@ const mock = [
     unread_messages: 1,
     profile_picture:
       "https://img.freepik.com/psd-premium/avatar-3d-feminino-isolado_239978-147.jpg?w=2000",
-    is_new: false,
+    is_new: true,
     is_vacation: false,
-    is_transfered: true,
+    is_transfered: false,
   },
 ];
 

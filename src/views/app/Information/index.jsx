@@ -16,8 +16,6 @@ const Information = () => {
   const location = useLocation();
   const userInformation = location.state.data;
 
-  console.log(userInformation);
-
   return (
     <div className="information">
       <InformationHeader />

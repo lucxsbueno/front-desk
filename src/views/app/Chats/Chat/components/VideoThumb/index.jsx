@@ -23,9 +23,9 @@ const VideoThumb = ({ videoSrc }) => {
       false
     );
 
-    video.onloadeddata = function () {
-      console.log("acabou");
-    };
+    // video.onloadeddata = function () {
+
+    // };
   }, [videoSrc]);
 
   return (

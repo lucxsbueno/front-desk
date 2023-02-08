@@ -10,10 +10,10 @@ const CHeader = () => {
 
   const goBack = () => {
     navigate(-1);
-  }
+  };
 
   return (
-    <Header className="header--bg-white">
+    <Header className="header--bg-white bg-light">
       <div className="d-flex flex-row align-items-center justify-content-space-between w-100">
         <div className="d-flex flex-row align-items-center">
           <HeaderButton className="mr-10" onClick={goBack}>

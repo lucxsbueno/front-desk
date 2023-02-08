@@ -6,6 +6,7 @@ import Section from "./components/Section";
 import Input from "../../../components/Input";
 import Button from "../../../components/Button";
 import HeaderMenu from "./components/HeaderMenu";
+
 import { Outlet } from "react-router-dom";
 
 import "./styles.css";
@@ -22,7 +23,7 @@ const Chats = () => {
 
         <div className="chat__menu-body">
           <Section
-            title="Clientes transferidos"
+            title="Em atendimento"
             length={mock.filter((chat) => chat.is_transfered == true).length}
           >
             {mock
@@ -33,7 +34,7 @@ const Chats = () => {
           </Section>
 
           <Section
-            title="Novos clientes"
+            title="Novas"
             length={mock.filter((chat) => chat.is_new == true).length}
           >
             {mock
@@ -42,21 +43,10 @@ const Chats = () => {
                 <Item key={index} chat={chat} />
               ))}
           </Section>
-
-          <Section
-            title="Férias"
-            length={mock.filter((chat) => chat.is_vacation == true).length}
-          >
-            {mock
-              .filter((chat) => chat.is_vacation == true)
-              .map((chat, index) => (
-                <Item key={index} chat={chat} />
-              ))}
-          </Section>
         </div>
 
         <div className="chat__menu-footer">
-          <Button onClick={() => {}}>Nova conversa</Button>
+          <Button onClick={() => { }}>Nova conversa</Button>
         </div>
       </div>
 

@@ -6,4 +6,13 @@
 
 .label {
   display: block;
+  background-color: var(--white-01);
+
+  padding: 15px;
+
+  margin: 0px 15px 15px;
+
+  border-radius: 4px;
+
+  box-shadow: var(--box-shadow-bg-white);
 }
