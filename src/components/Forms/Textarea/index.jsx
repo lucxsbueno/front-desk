@@ -5,13 +5,11 @@ import "./styles.css";
 const Textarea = (props) => {
   const { className, rows } = props;
 
-  return (
-    <textarea className={`textarea ${className}`.trim()} rows={rows} />
-  );
+  return <textarea className={`textarea ${className}`.trim()} rows={rows} />;
 };
 
 Textarea.defaultProps = {
-  className: ""
+  className: "",
 };
 
 export default Textarea;

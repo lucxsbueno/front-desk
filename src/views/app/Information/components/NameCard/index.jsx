@@ -13,8 +13,10 @@ const NameCard = (props) => {
   const navigate = useNavigate();
 
   const goToEditPage = () => {
-    navigate("/conversas/" + userData.id + "/editar-cliente", { state: { data: userData } });
-  }
+    navigate("/conversas/" + userData.id + "/editar-cliente", {
+      state: { data: userData },
+    });
+  };
 
   return (
     <div className="x-p-15 y-p-15">
@@ -25,7 +27,11 @@ const NameCard = (props) => {
               <Edit2 size={20} />
             </IconButton>
           </div>
-          <img src={userData.profile_picture} alt="" className="info-picture__img" />
+          <img
+            src={userData.profile_picture}
+            alt=""
+            className="info-picture__img"
+          />
         </div>
 
         <div className="info-picture__name-wrapper">

@@ -5,15 +5,11 @@ import "./styles.css";
 const RadioGroup = (props) => {
   const { className, children } = props;
 
-  return (
-    <div className={`radio__group ${className}`.trim()}>
-      {children}
-    </div>
-  );
+  return <div className={`radio__group ${className}`.trim()}>{children}</div>;
 };
 
 RadioGroup.defaultProps = {
-  className: ""
+  className: "",
 };
 
 export default RadioGroup;
