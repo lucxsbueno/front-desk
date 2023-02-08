@@ -18,6 +18,9 @@ import CustomersAvailable from "./app/CustomersAvailable";
 import Information from "./app/Information";
 import SearchMessages from "./app/SearchMessages";
 import CustomersEdit from "./app/CustomersEdit";
+import CallsHistory from "./app/MyAccount/pages/CallsHistory";
+import Presets from "./app/MyAccount/pages/Presets";
+import Tags from "./app/MyAccount/pages/Tags";
 
 export const MainRoutes = () => {
   return (
@@ -38,7 +41,11 @@ export const MainRoutes = () => {
         <Route path="ranking" element={<Ranking />} />
         <Route path="lotes-favoritados" element={<FavLots />} />
         <Route path="relatorio-de-acessos" element={<AccessReports />} />
-        <Route path="minha-conta" element={<MyAccount />} />
+        <Route path="minha-conta" element={<MyAccount />}>
+          <Route index element={<CallsHistory />} />
+          <Route path="presets" element={<Presets />} />
+          <Route path="tags" element={<Tags />} />
+        </Route>
       </Route>
     </Routes>
   );
