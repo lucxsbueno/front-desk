@@ -1,0 +1,11 @@
+.customer-new {
+  width: 350px;
+  height: 100%;
+
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--grey-01);
+}
