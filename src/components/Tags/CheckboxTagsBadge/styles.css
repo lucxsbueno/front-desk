@@ -1,0 +1,47 @@
+.checkbox-tag {
+  background-color: var(--primary-color-opacity);
+
+  padding: 3px 12px;
+  border-radius: 14px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  cursor: pointer;
+
+  position: relative;
+}
+
+.checkbox-tag__name {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-right: 5px;
+}
+
+.checkbox-tag__bttn {
+  width: 16px;
+  height: 16px;
+
+  border: none;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.checkbox-tag:hover {
+  background-color: var(--primary-color);
+}
+
+.checkbox-tag:hover .checkbox-tag__name {
+  color: var(--white-01);
+}
+
+.checkbox-tag:hover .checkbox-tag__bttn {
+  color: var(--white-01);
+}
