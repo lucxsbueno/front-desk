@@ -43,7 +43,7 @@ code {
 
   /* Scroll bar */
   --scroll-track-color: rgba(0, 0, 0, 0.021);
-  --scroll-thumb-color: rgba(0, 0, 0, 0.055);
+  --scroll-thumb-color: rgb(0 0 0 / 3%);
   --scroll-hover-color: rgba(0, 0, 0, 0.192);
 
   /* Text */
