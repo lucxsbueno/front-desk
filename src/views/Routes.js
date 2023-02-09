@@ -10,17 +10,16 @@ import FavLots from "./app/FavLots";
 import Ranking from "./app/Ranking";
 import Dashboard from "./app/Dashboard";
 import MyAccount from "./app/MyAccount";
+import Information from "./app/Information";
 import ChatIndex from "./app/Chats/ChatIndex";
 import CustomersNew from "./app/CustomersNew";
 import MainTemplate from "./app/MainTemplate";
-import RouteWithoutIndex from "./app/RouteWithoutIndex";
-import CustomersAvailable from "./app/CustomersAvailable";
-import Information from "./app/Information";
-import SearchMessages from "./app/SearchMessages";
-import CustomersEdit from "./app/CustomersEdit";
-import CallsHistory from "./app/MyAccount/pages/CallsHistory";
-import Presets from "./app/MyAccount/pages/Presets";
 import Tags from "./app/MyAccount/pages/Tags";
+import CustomersEdit from "./app/CustomersEdit";
+import SearchMessages from "./app/SearchMessages";
+import Presets from "./app/MyAccount/pages/Presets";
+import RouteWithoutIndex from "./app/RouteWithoutIndex";
+import CallsHistory from "./app/MyAccount/pages/CallsHistory";
 
 export const MainRoutes = () => {
   return (
@@ -36,8 +35,9 @@ export const MainRoutes = () => {
           </Route>
         </Route>
         <Route path="dashboard" element={<Dashboard />} />
-        <Route path="clientes/novos" element={<CustomersNew />} />
-        <Route path="clientes/disponiveis" element={<CustomersAvailable />} />
+        <Route path="clientes" element={<CustomersNew />}>
+          <Route path=":id" element={<Information />} />
+        </Route>
         <Route path="ranking" element={<Ranking />} />
         <Route path="lotes-favoritados" element={<FavLots />} />
         <Route path="relatorio-de-acessos" element={<AccessReports />} />

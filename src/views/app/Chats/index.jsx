@@ -22,23 +22,15 @@ const Chats = () => {
         </div>
 
         <div className="chat__menu-body">
-          <Section
-            title="Em atendimento"
-            length={mock.filter((chat) => chat.is_transfered == true).length}
-          >
-            {mock
-              .filter((chat) => chat.is_transfered == true)
+          <Section title="Em atendimento" length={mock.filter((chat) => chat.is_transfered == true).length}>
+            {mock.filter((chat) => chat.is_transfered == true)
               .map((chat, index) => (
                 <Item key={index} chat={chat} />
               ))}
           </Section>
 
-          <Section
-            title="Novas"
-            length={mock.filter((chat) => chat.is_new == true).length}
-          >
-            {mock
-              .filter((chat) => chat.is_new == true)
+          <Section title="Novas" length={mock.filter((chat) => chat.is_new == true).length}>
+            {mock.filter((chat) => chat.is_new == true)
               .map((chat, index) => (
                 <Item key={index} chat={chat} />
               ))}

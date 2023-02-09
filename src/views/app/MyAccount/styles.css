@@ -12,6 +12,7 @@
 .account__body {
   height: 100%;
   background-color: var(--white-01);
+  overflow-y: auto;
 }
 
 .account__avatar {
