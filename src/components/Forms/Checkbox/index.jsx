@@ -9,7 +9,7 @@ const Checkbox = (props) => {
     <label className="checkbox">
       {label}
       <input type="checkbox" />
-      <span className="checkmark"></span>
+      <span className="checkmark" />
     </label>
   );
 };
