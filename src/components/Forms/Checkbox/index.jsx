@@ -6,7 +6,8 @@ const Checkbox = (props) => {
   const { label } = props;
 
   return (
-    <label className="checkbox">{label}
+    <label className="checkbox">
+      {label}
       <input type="checkbox" />
       <span className="checkmark"></span>
     </label>
@@ -14,7 +15,7 @@ const Checkbox = (props) => {
 };
 
 Checkbox.defaultProps = {
-  label: ""
-}
+  label: "",
+};
 
 export default Checkbox;

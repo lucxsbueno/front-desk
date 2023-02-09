@@ -13,21 +13,23 @@ import { Outlet } from "react-router-dom";
 import "./styles.css";
 
 const CustomersNew = () => {
-
   return (
     <div className="h-100 d-flex flex-column">
-      <Header className="header--bg-white bg-light">
-        Área de clientes
-      </Header>
+      <Header className="header--bg-white bg-light">Área de clientes</Header>
 
       <div className="customer-new">
         <p className="text-grey x-p-15 y-p-15">
-          Aqui você pode filtrar seus resultados e buscar por
-          clientes específicos.
+          Aqui você pode filtrar seus resultados e buscar por clientes
+          específicos.
         </p>
 
         <InputLabel label="Tags">
-          <Input className="mb-15" type="text" variant="search" placeholder="Pesquisar" />
+          <Input
+            className="mb-15"
+            type="text"
+            variant="search"
+            placeholder="Pesquisar"
+          />
 
           <Tags>
             <CheckboxTagsBadge tag={{ name: "item-item" }} />
@@ -83,7 +85,7 @@ const CustomersNew = () => {
         </InputLabel>
 
         <div className="x-p-15 mb-15">
-          <Button onClick={() => { }}>Aplicar filtros</Button>
+          <Button onClick={() => {}}>Aplicar filtros</Button>
         </div>
       </div>
 

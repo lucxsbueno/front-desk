@@ -13,7 +13,7 @@ const Button = (props) => {
 };
 
 Button.defaultProps = {
-  className: ""
+  className: "",
 };
 
 export default Button;

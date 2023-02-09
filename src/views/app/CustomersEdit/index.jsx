@@ -42,7 +42,7 @@ const CustomersEdit = () => {
     {
       id: 7,
       name: "item-item",
-    }
+    },
   ];
 
   return (
@@ -57,7 +57,7 @@ const CustomersEdit = () => {
 
         <InputLabel label="Nome completo">
           <Input type="text" placeholder="John Doe" className="mb-10" />
-          <Button onClick={() => { }}>Salvar nome</Button>
+          <Button onClick={() => {}}>Salvar nome</Button>
         </InputLabel>
 
         <InputLabel label="Tags">
@@ -72,7 +72,9 @@ const CustomersEdit = () => {
           </p>
 
           <Tags>
-            {tags.map((tag, i) => <TagBadge key={i} tag={tag} />)}
+            {tags.map((tag, i) => (
+              <TagBadge key={i} tag={tag} />
+            ))}
           </Tags>
         </InputLabel>
 
@@ -82,7 +84,7 @@ const CustomersEdit = () => {
 
         <InputLabel label="Observações">
           <Textarea rows={4} className="mb-10" />
-          <Button onClick={() => { }}>Salvar observação</Button>
+          <Button onClick={() => {}}>Salvar observação</Button>
         </InputLabel>
 
         <InputLabel label="Trocar telefone">
@@ -103,7 +105,7 @@ const CustomersEdit = () => {
             className="mb-15"
           />
 
-          <Button onClick={() => { }}>Alterar número</Button>
+          <Button onClick={() => {}}>Alterar número</Button>
         </InputLabel>
       </div>
 
