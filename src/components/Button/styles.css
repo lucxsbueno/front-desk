@@ -9,6 +9,8 @@
   height: 40px;
 
   font-weight: 600;
+
+  flex-shrink: 0;
 }
 
 .form__bttn:hover {
