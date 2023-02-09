@@ -1,0 +1,105 @@
+/* The container */
+.checkbox {
+  display: inline-block;
+  padding-left: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox input {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 4px;
+  background-color: var(--white-01);
+
+  border: 3px solid var(--text-color);
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox:hover input~.checkmark {
+  border: 3px solid var(--text-color);
+  box-shadow: 0px 0px 0px 4px rgba(47, 54, 78, 0.164);
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox input:checked~.checkmark {
+  background-color: var(--primary-color);
+
+  border: 3px solid #df7818;
+}
+
+.checkbox input:focus~.checkmark {
+  box-shadow: 0px 0px 0px 4px rgba(249, 127, 12, 0.16);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--white-01);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+.checkbox-tag:hover .checkbox:hover input~.checkmark {
+  border: 3px solid var(--primary-color);
+  box-shadow: 0px 0px 0px 4px rgba(249, 127, 12, 0.16);
+}
+
+.checkbox-tag .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 4px;
+  background-color: var(--white-01);
+
+  border: 3px solid #df7818;
+}
