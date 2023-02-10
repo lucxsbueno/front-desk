@@ -26,7 +26,7 @@ const Menu = () => {
           active={true}
         />
         <Link icon={<LineChart />} title="Dashboard" to="/dashboard" />
-        <Link icon={<Users />} title="Clientes" to="/clientes" />
+        <Link icon={<Users />} title="Base de clientes" to="/clientes" />
         {/* <Link icon={<Users />} title="Meus clientes">
           <ul>
             <Link title="Novos" to="clientes/novos" />

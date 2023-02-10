@@ -1,0 +1,55 @@
+:root {
+  --strip: #fcfcfc;
+}
+
+table {
+  overflow-x: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  background-color: var(--white-01);
+  border-radius: 4px;
+  box-shadow: var(--box-shadow-bg-white);
+
+  color: var(--text-color);
+}
+
+th {
+  font-weight: 600;
+  border-bottom: 2px solid var(--grey-02);
+}
+
+th, td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 10px 15px;
+}
+
+td {
+  border-right: 1px solid var(--grey-01);
+}
+
+td:first-child {
+  margin-top: 20px;
+}
+
+td:last-child {
+  border: none;
+}
+
+tr {
+  border-bottom: 1px solid var(--grey-01);
+}
+
+tr:last-child {
+  border: none;
+}
+
+tr:nth-child(even) {
+  background-color: var(--strip);
+}
+
+/**/
+.th-checkbox {
+  width: 50px;
+}

@@ -29,12 +29,12 @@
   border-radius: 4px;
   background-color: var(--white-01);
 
-  border: 3px solid var(--text-color);
+  border: 3px solid var(--grey-02);
 }
 
 /* On mouse-over, add a grey background color */
 .checkbox:hover input~.checkmark {
-  border: 3px solid var(--text-color);
+  border: 3px solid var(--grey-03);
   box-shadow: 0px 0px 0px 4px rgba(47, 54, 78, 0.164);
 }
 
