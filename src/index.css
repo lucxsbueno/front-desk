@@ -93,6 +93,14 @@ code {
 }
 
 /* General */
+.clear-link {
+  color: var(--text-color);
+}
+
+.clear-link:hover {
+  opacity: 0.5;
+}
+
 .d-block {
   display: block;
 }

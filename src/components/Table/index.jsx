@@ -1,12 +1,12 @@
 import React from "react";
-import Checkbox from "../Forms/Checkbox";
 
-import "./styles.css"
+import "./styles.css";
 
-const Table = () => {
+const Table = ({ children }) => {
   return (
-    <table>
-      <tr>
+    <table className="table">
+      {children}
+      {/* <tr>
         <th className="th-checkbox">
           <Checkbox />
         </th>
@@ -93,7 +93,7 @@ const Table = () => {
         <td>Ativo</td>
         <td>Bloqueado</td>
         <td></td>
-      </tr>
+      </tr> */}
     </table>
   );
 };

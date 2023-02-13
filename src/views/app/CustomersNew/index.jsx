@@ -1,22 +1,23 @@
 import React from "react";
 
 import Tags from "../../../components/Tags";
+import CustomersTable from "./CustomersTable";
 import Input from "../../../components/Input";
-import Table from "../../../components/Table";
 import Button from "../../../components/Button";
 import Header from "../../../components/Header";
+import Pagination from "../../../components/Pagination";
 import InputLabel from "../../../components/InputLabel";
 import RadioGroup from "../../../components/Forms/RadioGroup";
 import RadioButton from "../../../components/Forms/RadioButton";
 import CheckboxTagsBadge from "../../../components/Tags/CheckboxTagsBadge";
 
 import { Outlet } from "react-router-dom";
+
 import "./styles.css";
 
 const CustomersNew = () => {
   return (
     <div className="customers-new">
-
       <div className="customers-new__left">
         <Header className="header--bg-white bg-light">Base de clientes</Header>
 
@@ -76,6 +77,10 @@ const CustomersNew = () => {
               </RadioGroup>
             </InputLabel>
 
+            <InputLabel label="Nome completo">
+              <Input type="text" placeholder="João da Silva" />
+            </InputLabel>
+
             <InputLabel label="CPF">
               <Input type="text" placeholder="Placeholder" />
             </InputLabel>
@@ -89,20 +94,20 @@ const CustomersNew = () => {
             </InputLabel>
 
             <div className="x-p-15 mb-15">
-              <Button onClick={() => { }}>Aplicar filtros</Button>
+              <Button onClick={() => {}}>Aplicar filtros</Button>
             </div>
           </div>
 
           <div className="customers-new__table">
-            <div className="d-flex flex-row justify-content-space-between mb-15">
+            <div className="d-flex flex-row justify-content-space-between align-items-center mb-15">
               <span className="text-color">34 clientes</span>
 
-              <div className="">
-
+              <div className="customers-nwe__table--right d-flex flex-row align-items-center">
+                <Pagination />
               </div>
             </div>
 
-            <Table />
+            <CustomersTable />
           </div>
         </div>
       </div>
@@ -110,7 +115,6 @@ const CustomersNew = () => {
       <div className="customers-new__right">
         <Outlet />
       </div>
-
     </div>
   );
 };
