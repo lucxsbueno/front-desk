@@ -1,15 +1,15 @@
-import { Calendar, Users, Verified } from "lucide-react";
 import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
 
 import Header from "../../../components/Header";
+import { NavLink, Outlet } from "react-router-dom";
+import { Calendar, Users, Verified } from "lucide-react";
 
 import "./styles.css";
 
 const MyAccount = () => {
   return (
     <div className="account">
-      <Header className="header--bg-white bg-light">Meu perfil</Header>
+      <Header className="header--bg-white bg-white">Meu perfil</Header>
 
       <div className="account__header">
         <div className="container">

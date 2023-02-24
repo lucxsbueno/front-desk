@@ -13,6 +13,10 @@
   font-weight: 400;
 }
 
+.main-template--close .darkmode-toggle-static__span {
+  display: none;
+}
+
 /* Switch */
 .dark-switch {
   display: inline-block;
@@ -83,4 +87,8 @@
 
 .dark-switch input:checked+i::after {
   transform: translate3d(22px, 2px, 0);
+}
+
+.main-template--close .dark-switch {
+  margin-left: 2px;
 }

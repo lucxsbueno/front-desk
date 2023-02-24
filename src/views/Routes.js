@@ -24,11 +24,11 @@ import CallsHistory from "./app/MyAccount/pages/CallsHistory";
 //auth
 import Signin from "./auth/Signin";
 import NotFound from "./auth/NotFound";
+import SendedEmail from "./auth/SendedEmail";
+import InvalidToken from "./auth/InvalidToken";
 import ResetPassword from "./auth/ResetPassword";
 import SendEmailValidate from "./auth/SendEmailValidate";
 import ResetPasswordWrapper from "./auth/ResetPasswordWrapper";
-import InvalidToken from "./auth/InvalidToken";
-import SendedEmail from "./auth/SendedEmail";
 
 export const MainRoutes = () => {
   return (
