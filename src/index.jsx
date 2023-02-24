@@ -12,9 +12,12 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
  * Configs
  */
 import { BrowserRouter as Router } from "react-router-dom";
+import { ThemeProvider } from "./utils/hooks/useTheme";
 
 root.render(
   <Router>
-    <App />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </Router>
 );

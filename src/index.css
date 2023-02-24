@@ -24,6 +24,8 @@ code {
 }
 
 :root {
+  --fixed-white: #FFFFFF;
+
   /* Colors */
   --primary-color: #F97F0C;
   --primary-color-opacity: rgba(249, 127, 12, 0.1);
@@ -70,7 +72,7 @@ code {
   /* State colors */
   --error-color: #F15656;
   --error-color-opacity: #FFDDDD;
-  --success-color: #58AE4A;
+  --success-color: #4BD763;
   --success-color-opacity: #DFEDDD;
 
   /* Buttons */
@@ -92,7 +94,100 @@ code {
   --doc-list-bg: rgba(0, 0, 0, 0.03);
 }
 
+[data-theme="dark"] {
+  /* Colors */
+  --primary-color: #F97F0C;
+  --primary-color-opacity: rgba(249, 127, 12, 0.1);
+  --secondary-color: #2F364E;
+  --terciary-color: #1F1F1F;
+  --terciary-color-opacity: #1A1A1A;
+  --grey-01: #343434;
+  --grey-02: #EDF0F3;
+  --grey-03: #9FA7B4;
+  --white-01: #292929;
+  --verified-green: #58AE4A;
+  --opacity-red: #FFDDDD;
+  --red: #ED4343;
+  --divider-color: #343434;
+  --opacity-green: #DFEDDD;
+  --green: #58AE4A;
+
+  /* Scroll bar */
+  --scroll-track-color: rgba(0, 0, 0, 0.021);
+  --scroll-thumb-color: rgb(0 0 0 / 3%);
+  --scroll-hover-color: rgba(0, 0, 0, 0.192);
+
+  /* Text */
+  --text-color: #FFFFFF;
+  --text-grey-color: #9FA7B4;
+
+  /* Chat */
+  --border-bottom-divider: #2e2e2e;
+
+  /* Table */
+  --table-border-color: #2e2e2e;
+
+  /* Filter menu */
+  --filter-menu-border: #1F1F1F;
+  --filter-menu-box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.1);
+
+  /* Box shadow */
+  --box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+  --box-shadow-bg-white: 0px 2px 0px rgba(0, 0, 0, 0.2);
+
+  /* Card */
+  --card-box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.10);
+
+  /* State colors */
+  --error-color: #F15656;
+  --error-color-opacity: #FFDDDD;
+  --success-color: #47c25c;
+  --success-color-opacity: #DFEDDD;
+
+  /* Buttons */
+  --primary-bttn-color: linear-gradient(91.73deg, #F97F0C 0%, #F9450C 100%, rgba(249, 69, 12, 0.82) 100%);
+  --send-bttn-color: var(--white-01);
+  --send-bttn-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
+
+  /* Input */
+  --input-bg-default-color: var(--grey-01);
+  --input-bg-default-border-color: transparent;
+  --input-border-active-color: #F97F0C;
+  --input-active-box-shadow: 0px 0px 0px 4px rgba(249, 127, 12, 0.16);
+  --placeholder-color: #CBD0D8;
+
+  /* Others */
+  --profile-badge-bg-opacity-color: rgba(255, 255, 255, 0.08);
+
+  /* Doc list */
+  --doc-list-bg: rgba(0, 0, 0, 0.03);
+}
+
 /* General */
+.text-description {
+  margin: 0px;
+  padding: 0px;
+
+  color: var(--text-color);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.w-400-h-auto {
+  width: 400;
+  height: auto;
+}
+
+.bg-chat {
+  background-color: var(--grey-01);
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+
 .clear-link {
   color: var(--text-color);
 }
@@ -165,6 +260,10 @@ code {
   color: var(--white-01);
 }
 
+.text-fixed-white {
+  color: var(--fixed-white);
+}
+
 .text-semi-bold {
   font-weight: 600;
 }
@@ -183,6 +282,22 @@ code {
 
 .text-primary-color {
   color: var(--primary-color);
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-5 {
+  margin-top: 5px;
 }
 
 .mb-25 {
@@ -273,6 +388,10 @@ code {
   color: var(--text-color);
 }
 
+.text-color:hover {
+  color: var(--text-color);
+}
+
 .text-grey-color {
   color: var(--text-grey-color);
 }
@@ -305,6 +424,11 @@ code {
   justify-content: center;
 }
 
+.x-p-20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .x-p-15 {
   padding-left: 15px;
   padding-right: 15px;
@@ -313,6 +437,11 @@ code {
 .y-p-15 {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.y-p-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .y-p-10 {
