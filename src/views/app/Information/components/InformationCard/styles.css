@@ -1,5 +1,7 @@
 .information__table {
   width: 100%;
+
+  color: var(--text-color);
 }
 
 /* .information__body {} */

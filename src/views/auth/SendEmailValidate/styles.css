@@ -1,0 +1,15 @@
+.w-400-h-auto {
+  width: 370px;
+  height: auto;
+}
+
+.box--email-validate {
+  margin-top: 10px;
+}
+
+.w-275 {
+  display: inline-block;
+  width: 275px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
