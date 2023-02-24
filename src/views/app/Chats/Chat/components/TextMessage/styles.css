@@ -18,5 +18,5 @@
 }
 
 .message--me .message__inner-box {
-  color: var(--white-01);
+  color: var(--fixed-white);
 }

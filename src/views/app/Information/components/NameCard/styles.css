@@ -29,7 +29,7 @@
 }
 
 .info-picture__name {
-  color: var(--white-01);
+  color: var(--fixed-white);
   font-size: 14px;
   font-weight: 600;
 }
@@ -40,7 +40,7 @@
 
 .info-picture__social-media {
   display: inline-block;
-  color: var(--white-01);
+  color: var(--fixed-white);
   margin-right: 5px;
   font-size: 12px;
 }

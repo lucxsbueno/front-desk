@@ -8,14 +8,17 @@
   border-spacing: 0;
   width: 100%;
   background-color: var(--white-01);
-  border-radius: 4px;
+  border-radius: 6px;
   box-shadow: var(--box-shadow-bg-white);
 
   color: var(--text-color);
+
+  overflow: hidden;
 }
 
 .th {
   font-weight: 600;
+  background-color: var(--white-01);
   border-bottom: 2px solid var(--grey-02);
 }
 
@@ -45,8 +48,12 @@
   border: none;
 }
 
-.tr:nth-child(even) {
+.tr:nth-child(odd) {
   background-color: var(--strip);
+}
+
+[data-theme="dark"] .tr:nth-child(odd) {
+  background-color: #2b2b2b;
 }
 
 /**/

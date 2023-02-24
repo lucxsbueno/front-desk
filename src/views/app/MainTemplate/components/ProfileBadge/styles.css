@@ -1,5 +1,5 @@
 .avatar {
-  background-color: var(--white-01);
+  background-color: var(--fixed-white);
   overflow: hidden;
 }
 
@@ -29,7 +29,7 @@
   align-items: center;
   justify-content: space-between;
 
-  color: var(--white-01);
+  color: var(--fixed-white);
   padding: 10px 15px;
   border-radius: 4px;
 
@@ -39,13 +39,13 @@
 
 .profile-badge:hover {
   text-decoration: none;
-  color: var(--white-01);
+  color: var(--fixed-white);
   opacity: 0.8;
 }
 
 .profile-badge.active, .profile-badge.active:focus {
   background-color: var(--success-color);
-  color: var(--white-01);
+  color: var(--fixed-white);
   text-decoration: none;
   opacity: 1;
 }
@@ -57,7 +57,7 @@
 }
 
 .profile-badge__title {
-  color: var(--white-01);
+  color: var(--fixed-white);
   display: inline-block;
   margin-left: 10px;
 }

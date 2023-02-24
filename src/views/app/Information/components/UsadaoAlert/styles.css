@@ -16,7 +16,7 @@
 }
 
 .usadao-alert__title {
-  color: var(--white-01);
+  color: var(--fixed-white);
 }
 
 .usadao-alert__bg-icon {
@@ -35,5 +35,5 @@
 
   background-color: rgba(255, 255, 255, 0.13);
 
-  color: var(--white-01);
+  color: var(--fixed-white);
 }

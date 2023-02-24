@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Route, Routes } from "react-router-dom";
-import AccessReports from "./app/AccessReports";
 
 //views
 import Chats from "./app/Chats";
@@ -15,11 +14,21 @@ import ChatIndex from "./app/Chats/ChatIndex";
 import CustomersNew from "./app/CustomersNew";
 import MainTemplate from "./app/MainTemplate";
 import Tags from "./app/MyAccount/pages/Tags";
+import AccessReports from "./app/AccessReports";
 import CustomersEdit from "./app/CustomersEdit";
 import SearchMessages from "./app/SearchMessages";
 import Presets from "./app/MyAccount/pages/Presets";
 import RouteWithoutIndex from "./app/RouteWithoutIndex";
 import CallsHistory from "./app/MyAccount/pages/CallsHistory";
+
+//auth
+import Signin from "./auth/Signin";
+import NotFound from "./auth/NotFound";
+import ResetPassword from "./auth/ResetPassword";
+import SendEmailValidate from "./auth/SendEmailValidate";
+import ResetPasswordWrapper from "./auth/ResetPasswordWrapper";
+import InvalidToken from "./auth/InvalidToken";
+import SendedEmail from "./auth/SendedEmail";
 
 export const MainRoutes = () => {
   return (
@@ -46,6 +55,21 @@ export const MainRoutes = () => {
           <Route path="presets" element={<Presets />} />
           <Route path="tags" element={<Tags />} />
         </Route>
+      </Route>
+    </Routes>
+  );
+};
+
+export const AuthRoutes = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Signin />} />
+      <Route path="*" element={<NotFound />} />
+      <Route path="esqueci-minha-senha" element={<ResetPasswordWrapper />}>
+        <Route index element={<SendEmailValidate />} />
+        <Route path=":token" element={<ResetPassword />} />
+        <Route path="email-enviado" element={<SendedEmail />} />
+        <Route path="token-invalido" element={<InvalidToken />} />
       </Route>
     </Routes>
   );

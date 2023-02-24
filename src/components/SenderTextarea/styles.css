@@ -24,6 +24,10 @@
   border: 2px solid var(--white-01);
 }
 
+[data-theme="dark"] .sender__input {
+  background-color: var(--white-01);
+}
+
 .sender__input:focus {
   border: 2px solid var(--input-border-active-color);
   box-shadow: var(--input-active-box-shadow);
