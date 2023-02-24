@@ -1,0 +1,86 @@
+.darkmode-toggle-static {
+  color: var(--fixed-white);
+  padding: 0px 15px;
+  font-weight: 500;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.darkmode-toggle-static__span {
+  font-weight: 400;
+}
+
+/* Switch */
+.dark-switch {
+  display: inline-block;
+
+  cursor: pointer;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dark-switch i {
+  width: 40px;
+  height: 20px;
+
+  display: inline-block;
+
+  position: relative;
+  background-color: #2D2D2D;
+  border-radius: 21px;
+  vertical-align: text-bottom;
+  transition: all 0.3s linear;
+}
+
+.dark-switch i::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  /* width: 40px; */
+  height: 20px;
+  background-color: #2D2D2D;
+  border-radius: 9px;
+  transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
+  transition: all 0.25s linear;
+}
+
+.dark-switch i::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+  transform: translate3d(2px, 2px, 0);
+  transition: all 0.2s ease-in-out;
+}
+
+.dark-switch:active i::after {
+  width: 24px;
+  transform: translate3d(2px, 2px, 0);
+}
+
+.dark-switch:active input:checked+i::after {
+  transform: translate3d(16px, 2px, 0);
+}
+
+.dark-switch input {
+  display: none;
+}
+
+.dark-switch input:checked+i {
+  background-color: var(--success-color);
+}
+
+.dark-switch input:checked+i::before {
+  transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
+}
+
+.dark-switch input:checked+i::after {
+  transform: translate3d(22px, 2px, 0);
+}
