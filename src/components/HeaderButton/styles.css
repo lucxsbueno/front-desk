@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
 
-  background: #FBFBFB;
+  background: var(--grey-01);
 }
 
 .header__bttn:hover {
