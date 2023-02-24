@@ -1,0 +1,21 @@
+.conn-alert {
+  padding: 15px 20px;
+  background-color: var(--error-color);
+  color: #FFF;
+}
+
+.conn-alert__icon-bg {
+  margin-bottom: 5px;
+}
+
+.conn-alert__wrapper {}
+
+.conn-alert__title {
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+}
+
+.conn-alert__message {
+  display: block;
+}
