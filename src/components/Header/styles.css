@@ -14,6 +14,8 @@
   position: relative;
 
   z-index: 9998;
+
+  color: var(--text-color);
 }
 
 .header--bg-white {
