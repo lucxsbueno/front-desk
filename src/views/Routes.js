@@ -29,6 +29,7 @@ import InvalidToken from "./auth/InvalidToken";
 import ResetPassword from "./auth/ResetPassword";
 import SendEmailValidate from "./auth/SendEmailValidate";
 import ResetPasswordWrapper from "./auth/ResetPasswordWrapper";
+import AuthTemplate from "./auth/AuthTemplate";
 
 export const MainRoutes = () => {
   return (
@@ -63,13 +64,15 @@ export const MainRoutes = () => {
 export const AuthRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Signin />} />
-      <Route path="*" element={<NotFound />} />
-      <Route path="esqueci-minha-senha" element={<ResetPasswordWrapper />}>
-        <Route index element={<SendEmailValidate />} />
-        <Route path=":token" element={<ResetPassword />} />
-        <Route path="email-enviado" element={<SendedEmail />} />
-        <Route path="token-invalido" element={<InvalidToken />} />
+      <Route element={<AuthTemplate />}>
+        <Route path="/" element={<Signin />} />
+        <Route path="*" element={<NotFound />} />
+        <Route path="esqueci-minha-senha" element={<ResetPasswordWrapper />}>
+          <Route index element={<SendEmailValidate />} />
+          <Route path=":token" element={<ResetPassword />} />
+          <Route path="email-enviado" element={<SendedEmail />} />
+          <Route path="token-invalido" element={<InvalidToken />} />
+        </Route>
       </Route>
     </Routes>
   );

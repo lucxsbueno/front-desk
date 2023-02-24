@@ -101,10 +101,10 @@ code {
   --secondary-color: #2F364E;
   --terciary-color: #1F1F1F;
   --terciary-color-opacity: #1A1A1A;
-  --grey-01: #343434;
+  --grey-01: #292929;
   --grey-02: #3f3f3f;
   --grey-03: #9FA7B4;
-  --white-01: #292929;
+  --white-01: #303030;
   --verified-green: #58AE4A;
   --opacity-red: #FFDDDD;
   --red: #ED4343;
@@ -150,7 +150,7 @@ code {
   --send-bttn-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
 
   /* Input */
-  --input-bg-default-color: var(--grey-01);
+  --input-bg-default-color: #2b2b2b;
   --input-bg-default-border-color: transparent;
   --input-border-active-color: #F97F0C;
   --input-active-box-shadow: 0px 0px 0px 4px rgba(249, 127, 12, 0.16);
