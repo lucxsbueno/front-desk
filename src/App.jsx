@@ -1,7 +1,7 @@
-import { AuthRoutes } from "./views/Routes";
+import { MainRoutes } from "./views/Routes";
 
 const App = () => {
-  return <AuthRoutes />;
+  return <MainRoutes />;
 };
 
 export default App;

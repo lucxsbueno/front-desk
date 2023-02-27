@@ -284,6 +284,10 @@ code {
   color: var(--primary-color);
 }
 
+.mt-30 {
+  margin-top: 30px;
+}
+
 .mt-20 {
   margin-top: 20px;
 }
@@ -422,6 +426,22 @@ code {
 
 .justify-content-center {
   justify-content: center;
+}
+
+.pt-15 {
+  padding-top: 15px;
+}
+
+.pt-10 {
+  padding-top: 10px;
+}
+
+.pr-10 {
+  padding-right: 10px;
+}
+
+.pr-15 {
+  padding-right: 15px;
 }
 
 .x-p-20 {

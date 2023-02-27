@@ -1,0 +1,17 @@
+.dashboard {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.dashboard__title {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.dashboard__title span {
+  font-weight: 700;
+}
+
+.dashboard__subtitle {
+  color: var(--text-color);
+}
