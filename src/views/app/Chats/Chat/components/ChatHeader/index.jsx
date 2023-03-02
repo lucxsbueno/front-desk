@@ -1,17 +1,24 @@
 import React from "react";
 
-import { Link, useParams } from "react-router-dom";
+import { Search } from "lucide-react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Header from "../../../../../../components/Header";
 
 import "./styles.css";
+import HeaderButton from "../../../../../../components/HeaderButton";
 
 const ChatHeader = (props) => {
   const { location } = props;
 
   const params = useParams();
+  const navigate = useNavigate();
+
+  const openSearch = () => {
+    navigate(`/conversas/${params.id}/pesquisar-mensagem`, { state: { data: location.state.data } });
+  };
 
   return (
-    <Header className="header--bg-white bg-white">
+    <Header className="header--bg-white bg-white d-flex flex-row align-items-center justify-content-space-between">
       <Link
         to="informacoes"
         state={{
@@ -34,6 +41,10 @@ const ChatHeader = (props) => {
           {location.state?.data?.title}
         </span>
       </Link>
+
+      <HeaderButton onClick={openSearch}>
+        <Search />
+      </HeaderButton>
     </Header>
   );
 };

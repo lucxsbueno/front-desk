@@ -1,32 +1,38 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
+
+import autosize from "autosize";
 
 import "./styles.css";
 
 const SenderTextarea = () => {
-  const textAreaRef = useRef(null);
+  const textareaRef = useRef(null);
 
-  const handleKeyDown = (event) => {
-    if (
-      (event.key === "Enter" && event.shiftKey) ||
-      event.key === "Backspace"
-    ) {
-      const target = event.target;
-      textAreaRef.current.style.height = "44px";
-      textAreaRef.current.style.height = `${target.scrollHeight}px`;
-      // props.onChange(e);
-    } else if (event.key === "Enter") {
-      event.preventDefault();
-      submitForm();
+  useEffect(() => {
+    autosize(textareaRef.current);
+  }, []);
+
+  const handleKeyDown = (e) => {
+    // Get the code of pressed key
+    const keyCode = e.which || e.keyCode;
+
+    // 13 represents the Enter key
+    if (keyCode === 13 && !e.shiftKey) {
+      // Don't generate a new line
+      e.preventDefault();
+
+      if (textareaRef.current.value != "") {
+        // Do something else such as send the message to back-end
+        // ...
+        console.log(textareaRef.current.value.trim());
+        textareaRef.current.value = "";
+        autosize.update(textareaRef.current);
+      }
     }
-  };
-
-  const submitForm = () => {
-    //
-  };
+  }
 
   return (
     <textarea
-      ref={textAreaRef}
+      ref={textareaRef}
       onKeyDown={handleKeyDown}
       rows={1}
       type="text"

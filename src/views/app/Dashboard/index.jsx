@@ -1,19 +1,19 @@
 import React from "react";
 
 import Box from "../../../components/Box";
+import Table from "../../../components/Table";
 import Card from "../../../components/Dashboard/Card";
+import Spline from "../../../components/Charts/Spline";
+import TableRow from "../../../components/Table/TableRow";
+import TableHead from "../../../components/Table/TableHead";
+import TableData from "../../../components/Table/TableData";
 import CardGrid from "../../../components/Dashboard/CardGrid";
+import ApexPieChart from "../../../components/Charts/ApexPieChart";
+import StackedColumn from "../../../components/Charts/StackedColumn";
 
 import { AlertOctagon, MessageCircle, MessageSquare } from "lucide-react";
 
 import "./styles.css";
-import Table from "../../../components/Table";
-import TableRow from "../../../components/Table/TableRow";
-import TableHead from "../../../components/Table/TableHead";
-import TableData from "../../../components/Table/TableData";
-import ApexPieChart from "../../../components/Charts/ApexPieChart";
-import StackedColumn from "../../../components/Charts/StackedColumn";
-import Spline from "../../../components/Charts/Spline";
 
 const Dashboard = () => {
   return (
@@ -25,8 +25,8 @@ const Dashboard = () => {
               <h2 className="mb-5 mt-30 dashboard__title">Olá, <span>Lucas Bueno</span>!</h2>
               <p className="mb-20 dashboard__subtitle">Fique por dentro dos principais indicadores do gvmdesk.</p>
 
+              <Card icon={<AlertOctagon />} title="$2.456,0" subtitle="Lorem ipsum dolor" color="primary" />
               <CardGrid>
-                <Card icon={<AlertOctagon />} title="$2.456,0" subtitle="Lorem ipsum dolor" color="primary" />
                 <Card icon={<AlertOctagon />} title="45%" subtitle="Lorem ipsum dolor" />
                 <Card icon={<MessageCircle />} title="$2.456,0" subtitle="Lorem ipsum dolor" iconColor="blue" />
                 <Card icon={<MessageSquare />} title="$2.456,0" subtitle="Lorem ipsum dolor" iconColor="purple" />

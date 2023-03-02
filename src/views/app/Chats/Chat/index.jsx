@@ -1,6 +1,5 @@
 import React from "react";
 
-import NewChat from "../NewChat";
 import ChatBody from "./components/ChatBody";
 import ChatHeader from "./components/ChatHeader";
 import ChatFooter from "./components/ChatFooter";
@@ -18,9 +17,7 @@ const Chat = () => {
   const params = useParams();
   const [searchParams] = useSearchParams();
 
-  if (searchParams.get("type") == "new") {
-    return <NewChat data={location.state?.data} />;
-  }
+  const isNewChat = searchParams.get("type") == "new";
 
   return (
     <div className="d-flex flex-row">
@@ -29,7 +26,7 @@ const Chat = () => {
 
         <ChatBody id={params.id} />
 
-        <ChatFooter />
+        <ChatFooter isNewChat={isNewChat} />
       </div>
 
       <div className="chat__information">

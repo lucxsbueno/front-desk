@@ -65,7 +65,7 @@ const ApexPieChart = () => {
         }
       }
     });
-  }, []);
+  }, [state.series]);
 
   return (
     <ReactApexChart options={state.options} series={state.series} type="donut" />

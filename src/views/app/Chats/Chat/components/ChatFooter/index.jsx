@@ -8,7 +8,11 @@ import { MoreVertical, Send } from "lucide-react";
 
 import "./styles.css";
 
-const ChatFooter = () => {
+const ChatFooter = (props) => {
+  const { isNewChat } = props;
+
+  console.log(isNewChat);
+
   return (
     <div className="chat__footer">
       <div className="chat__input-wrapper d-flex flex-row align-items-start">
