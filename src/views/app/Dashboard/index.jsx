@@ -22,14 +22,39 @@ const Dashboard = () => {
         <div className="container mb-10">
           <div className="row">
             <div className="col-md-12 mb-20 pt-15">
-              <h2 className="mb-5 mt-30 dashboard__title">Olá, <span>Lucas Bueno</span>!</h2>
-              <p className="mb-20 dashboard__subtitle">Fique por dentro dos principais indicadores do gvmdesk.</p>
+              <h2 className="mb-5 mt-30 dashboard__title">
+                Olá, <span>Lucas Bueno</span>!
+              </h2>
+              <p className="mb-20 dashboard__subtitle">
+                Fique por dentro dos principais indicadores do gvmdesk.
+              </p>
 
-              <Card icon={<AlertOctagon />} title="$2.456,0" subtitle="Lorem ipsum dolor" color="primary" />
+              <Card
+                icon={<AlertOctagon />}
+                title="$2.456,0"
+                subtitle="Lorem ipsum dolor"
+                color="primary"
+              />
+
               <CardGrid>
-                <Card icon={<AlertOctagon />} title="45%" subtitle="Lorem ipsum dolor" />
-                <Card icon={<MessageCircle />} title="$2.456,0" subtitle="Lorem ipsum dolor" iconColor="blue" />
-                <Card icon={<MessageSquare />} title="$2.456,0" subtitle="Lorem ipsum dolor" iconColor="purple" />
+                <Card
+                  icon={<AlertOctagon />}
+                  title="45%"
+                  subtitle="Lorem ipsum dolor"
+                />
+
+                <Card
+                  icon={<MessageCircle />}
+                  title="$2.456,0"
+                  subtitle="Lorem ipsum dolor"
+                  iconColor="blue"
+                />
+                <Card
+                  icon={<MessageSquare />}
+                  title="$2.456,0"
+                  subtitle="Lorem ipsum dolor"
+                  iconColor="purple"
+                />
               </CardGrid>
             </div>
           </div>

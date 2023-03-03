@@ -4,20 +4,34 @@ import autosize from "autosize";
 
 import "./styles.css";
 
-const SenderTextarea = () => {
+const SenderTextarea = (props) => {
+  const { setOpenPresets, textMessage, setTextMessage } = props;
   const textareaRef = useRef(null);
+
+  useEffect(() => {
+    textareaRef.current.focus();
+    autosize.update(textareaRef.current);
+  }, [textMessage]);
 
   useEffect(() => {
     autosize(textareaRef.current);
   }, []);
 
   const handleKeyDown = (e) => {
+    const regex = /\/[^ ]*[^ ]?$/;
+
+    if (regex.test(e.target.value)) {
+      setOpenPresets(true);
+    } else {
+      setOpenPresets(false);
+    }
+
     // Get the code of pressed key
     const keyCode = e.which || e.keyCode;
 
     // 13 represents the Enter key
     if (keyCode === 13 && !e.shiftKey) {
-      // Don't generate a new line
+      // Donnt generate a new line
       e.preventDefault();
 
       if (textareaRef.current.value != "") {
@@ -28,10 +42,12 @@ const SenderTextarea = () => {
         autosize.update(textareaRef.current);
       }
     }
-  }
+  };
 
   return (
     <textarea
+      onChange={(e) => setTextMessage(e.target.value)}
+      value={textMessage}
       ref={textareaRef}
       onKeyDown={handleKeyDown}
       rows={1}

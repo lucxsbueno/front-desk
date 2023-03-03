@@ -11,6 +11,6 @@ const AuthTemplate = () => {
       <Outlet />
     </div>
   );
-}
+};
 
 export default AuthTemplate;

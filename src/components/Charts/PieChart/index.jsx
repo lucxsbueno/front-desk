@@ -7,25 +7,21 @@ import { useTheme } from "../../../utils/hooks/useTheme";
 const PieChart = () => {
   const { theme } = useTheme();
 
-  const bgColor = theme === "dark"
-    ? "#292929"
-    : "#F9F9F9";
+  const bgColor = theme === "dark" ? "#292929" : "#F9F9F9";
 
-  const textColor = theme === "dark"
-    ? "#F9F9F9"
-    : "#292929";
+  const textColor = theme === "dark" ? "#F9F9F9" : "#292929";
 
   const chartOptions = {
     title: "Lorem ipsum dolor sit amet",
     width: "auto",
     height: "auto",
     titleTextStyle: {
-      color: textColor
+      color: textColor,
     },
     legend: {
       textStyle: {
-        color: textColor
-      }
+        color: textColor,
+      },
     },
     animation: {
       startup: true,
@@ -34,21 +30,21 @@ const PieChart = () => {
     },
     vAxis: {
       textStyle: {
-        color: textColor
+        color: textColor,
       },
       titleTextStyle: {
-        color: textColor
-      }
+        color: textColor,
+      },
     },
     hAxis: {
       textStyle: {
-        color: textColor
+        color: textColor,
       },
       titleTextStyle: {
-        color: textColor
-      }
+        color: textColor,
+      },
     },
-    backgroundColor: bgColor
+    backgroundColor: bgColor,
   };
 
   const data = [
@@ -60,13 +56,7 @@ const PieChart = () => {
     ["Sleep", 7],
   ];
 
-  return (
-    <Chart
-      chartType="PieChart"
-      data={data}
-      options={chartOptions}
-    />
-  );
+  return <Chart chartType="PieChart" data={data} options={chartOptions} />;
 };
 
 export default PieChart;

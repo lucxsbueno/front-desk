@@ -14,7 +14,9 @@ const ChatHeader = (props) => {
   const navigate = useNavigate();
 
   const openSearch = () => {
-    navigate(`/conversas/${params.id}/pesquisar-mensagem`, { state: { data: location.state.data } });
+    navigate(`/conversas/${params.id}/pesquisar-mensagem`, {
+      state: { data: location.state.data },
+    });
   };
 
   return (

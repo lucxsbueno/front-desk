@@ -11,25 +11,27 @@ const ApexPieChart = () => {
         type: "donut",
       },
       dataLabels: {
-        enabled: false
+        enabled: false,
       },
-      responsive: [{
-        breakpoint: 480,
-        options: {
-          chart: {
-            width: "auto"
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: "auto",
+            },
+            legend: {
+              show: false,
+            },
           },
-          legend: {
-            show: false
-          }
-        }
-      }],
+        },
+      ],
       legend: {
         position: "right",
         offsetY: 0,
         height: 230,
-      }
-    }
+      },
+    },
   });
 
   useEffect(() => {
@@ -45,30 +47,36 @@ const ApexPieChart = () => {
           type: "donut",
         },
         dataLabels: {
-          enabled: false
+          enabled: false,
         },
-        responsive: [{
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: "auto"
+        responsive: [
+          {
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: "auto",
+              },
+              legend: {
+                show: false,
+              },
             },
-            legend: {
-              show: false
-            }
-          }
-        }],
+          },
+        ],
         legend: {
           enabled: false,
           position: "right",
           offsetY: 0,
-        }
-      }
+        },
+      },
     });
   }, [state.series]);
 
   return (
-    <ReactApexChart options={state.options} series={state.series} type="donut" />
+    <ReactApexChart
+      options={state.options}
+      series={state.series}
+      type="donut"
+    />
   );
 };
 
