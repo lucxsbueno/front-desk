@@ -1,12 +1,14 @@
 import React, { useRef, useEffect } from "react";
 
 import autosize from "autosize";
+import { useLocation } from "react-router-dom";
 
 import "./styles.css";
 
 const SenderTextarea = (props) => {
   const { setOpenPresets, textMessage, setTextMessage } = props;
   const textareaRef = useRef(null);
+  const location = useLocation();
 
   useEffect(() => {
     textareaRef.current.focus();
@@ -17,7 +19,14 @@ const SenderTextarea = (props) => {
     autosize(textareaRef.current);
   }, []);
 
-  const handleKeyDown = (e) => {
+  useEffect(() => {
+    setTextMessage("");
+    textareaRef.current.focus();
+    setOpenPresets(false);
+    // eslint-disable-next-line
+  }, [location.pathname]);
+
+  const handleKeyUp = (e) => {
     const regex = /\/[^ ]*[^ ]?$/;
 
     if (regex.test(e.target.value)) {
@@ -25,7 +34,9 @@ const SenderTextarea = (props) => {
     } else {
       setOpenPresets(false);
     }
+  };
 
+  const handleKeyDown = (e) => {
     // Get the code of pressed key
     const keyCode = e.which || e.keyCode;
 
@@ -50,6 +61,7 @@ const SenderTextarea = (props) => {
       value={textMessage}
       ref={textareaRef}
       onKeyDown={handleKeyDown}
+      onKeyUp={handleKeyUp}
       rows={1}
       type="text"
       className="sender__input"

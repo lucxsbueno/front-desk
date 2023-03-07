@@ -4,7 +4,7 @@
 
 .preset:hover {
   cursor: pointer;
-  border: 2px dashed var(--primary-color);
+  border: 2px solid var(--primary-color);
 }
 
 .presets__list {

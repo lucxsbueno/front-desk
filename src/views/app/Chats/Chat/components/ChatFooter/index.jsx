@@ -21,6 +21,8 @@ const ChatFooter = () => {
         <PresetsList
           textMessage={textMessage}
           setTextMessage={setTextMessage}
+          openPresets={openPresets}
+          setOpenPresets={setOpenPresets}
         />
       )}
 
