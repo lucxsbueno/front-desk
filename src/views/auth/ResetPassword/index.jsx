@@ -30,7 +30,7 @@ const ResetPassword = () => {
       <Box className="box--email-validate x-p-20 y-p-20 w-400-h-auto">
         <Input placeholder="Digite uma nova senha" className="mb-20" />
         <Input placeholder="Digite a senha novamente" className="mb-20" />
-        <Button>Redefinir senha</Button>
+        <Button className="w-100">Redefinir senha</Button>
       </Box>
     </div>
   );

@@ -13,14 +13,14 @@ import {
 import "./styles.css";
 
 const Chat = () => {
-  const location = useLocation();
   const params = useParams();
+  const location = useLocation();
   const [searchParams] = useSearchParams();
 
   const isNewChat = searchParams.get("type") == "new";
 
   return (
-    <div className="d-flex flex-row">
+    <div className="chat d-flex flex-row">
       <div className="chat__container">
         <ChatHeader location={location} />
 

@@ -132,8 +132,8 @@ const PresetsList = (props) => {
   const filteredPresets =
     textMessage.length > 0
       ? presets.filter((preset) =>
-        preset.title.includes(textMessage.match(/\/[^ ]*[^ ]?$/, ""))
-      )
+          preset.title.includes(textMessage.match(/\/[^ ]*[^ ]?$/, ""))
+        )
       : presets;
 
   return (

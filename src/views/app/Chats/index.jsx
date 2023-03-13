@@ -46,7 +46,9 @@ const Chats = () => {
         </div>
 
         <div className="chat__menu-footer">
-          <Button onClick={() => {}}>Nova conversa</Button>
+          <Button className="w-100" onClick={() => {}}>
+            Nova conversa
+          </Button>
         </div>
       </div>
 

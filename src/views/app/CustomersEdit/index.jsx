@@ -57,7 +57,9 @@ const CustomersEdit = () => {
 
         <InputLabel label="Nome completo">
           <Input type="text" placeholder="John Doe" className="mb-10" />
-          <Button onClick={() => {}}>Salvar nome</Button>
+          <Button className="w-100" onClick={() => {}}>
+            Salvar nome
+          </Button>
         </InputLabel>
 
         <InputLabel label="Tags">
@@ -84,7 +86,9 @@ const CustomersEdit = () => {
 
         <InputLabel label="Observações">
           <Textarea rows={4} className="mb-10" />
-          <Button onClick={() => {}}>Salvar observação</Button>
+          <Button className="w-100" onClick={() => {}}>
+            Salvar observação
+          </Button>
         </InputLabel>
 
         <InputLabel label="Trocar telefone">
@@ -105,7 +109,9 @@ const CustomersEdit = () => {
             className="mb-15"
           />
 
-          <Button onClick={() => {}}>Alterar número</Button>
+          <Button className="w-100" onClick={() => {}}>
+            Alterar número
+          </Button>
         </InputLabel>
       </div>
 

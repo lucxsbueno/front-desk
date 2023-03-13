@@ -20,8 +20,6 @@
 .chat__menu-body {
   height: calc(100% - 40px);
   overflow: auto;
-
-  /* background-color: grey; */
 }
 
 .chat__menu-footer {

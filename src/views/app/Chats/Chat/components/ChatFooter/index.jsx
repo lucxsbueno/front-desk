@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 
+import AcceptChat from "./AcceptChat";
 import EmojiButton from "../EmojiButton";
 import SendButton from "../../../../../../components/SendButton";
-import SenderTextarea from "../../../../../../components/SenderTextarea";
-import HeaderButton from "../../../../../../components/HeaderButton";
 import PresetsList from "../../../../../../components/PresetsList";
-import { MoreVertical, Send } from "lucide-react";
+import HeaderButton from "../../../../../../components/HeaderButton";
+import SenderTextarea from "../../../../../../components/SenderTextarea";
+import { PlusSquare, Send } from "lucide-react";
 
 import "./styles.css";
 
-const ChatFooter = () => {
+const ChatFooter = (props) => {
+  const { isNewChat } = props;
   // Para não esquecer: estou mandando a props "isNewChat"
   // para quando precisar saber se é um chat novo ou não
   const [openPresets, setOpenPresets] = useState(false);
@@ -26,27 +28,31 @@ const ChatFooter = () => {
         />
       )}
 
-      <div className="chat__input-wrapper d-flex flex-row align-items-start">
-        <div className="chat__input d-flex flex-row">
-          <SenderTextarea
-            setOpenPresets={setOpenPresets}
-            textMessage={textMessage}
-            setTextMessage={setTextMessage}
-          />
+      {isNewChat && <AcceptChat />}
 
-          <div className="d-flex flex-row align-items-start pb-3">
-            <EmojiButton />
+      {!isNewChat && (
+        <div className="chat__input-wrapper d-flex flex-row align-items-start">
+          <div className="chat__input d-flex flex-row">
+            <SenderTextarea
+              setOpenPresets={setOpenPresets}
+              textMessage={textMessage}
+              setTextMessage={setTextMessage}
+            />
 
-            <HeaderButton className="mr-5">
-              <MoreVertical />
-            </HeaderButton>
+            <div className="d-flex flex-row align-items-center">
+              <EmojiButton />
+
+              <HeaderButton className="mr-5">
+                <PlusSquare />
+              </HeaderButton>
+            </div>
           </div>
-        </div>
 
-        <SendButton className="ml-15">
-          <Send size={20} />
-        </SendButton>
-      </div>
+          <SendButton className="ml-15" onClick={() => alert("Enviar")}>
+            <Send size={20} />
+          </SendButton>
+        </div>
+      )}
     </div>
   );
 };

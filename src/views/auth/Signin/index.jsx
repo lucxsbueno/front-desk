@@ -21,7 +21,7 @@ const Signin = () => {
           placeholder="Senha de acesso"
           className="mb-20"
         />
-        <Button>Acessar conta</Button>
+        <Button className="w-100">Acessar conta</Button>
       </Box>
 
       <Link

@@ -94,7 +94,9 @@ const CustomersNew = () => {
             </InputLabel>
 
             <div className="x-p-15 mb-15">
-              <Button onClick={() => {}}>Aplicar filtros</Button>
+              <Button className="w-100" onClick={() => {}}>
+                Aplicar filtros
+              </Button>
             </div>
           </div>
 

@@ -30,7 +30,7 @@ const SendEmailValidate = () => {
 
       <Box className="box--email-validate x-p-20 y-p-20 w-400-h-auto">
         <Input placeholder="Endereço de e-mail" className="mb-20" />
-        <Button>Enviar instruções</Button>
+        <Button className="w-100">Enviar instruções</Button>
       </Box>
     </div>
   );

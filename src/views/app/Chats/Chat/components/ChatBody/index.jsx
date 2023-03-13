@@ -37,7 +37,7 @@ const ChatBody = (props) => {
   useEffect(() => {
     setTimeout(() => {
       scrollToBottom();
-    }, 100);
+    }, 200);
   }, [props.id]);
 
   return (

@@ -33,7 +33,9 @@ const NotFound = () => {
       </p>
 
       <div className="signin__footer-bttn">
-        <Button onClick={goBack}>Voltar a página de login</Button>
+        <Button className="w-100" onClick={goBack}>
+          Voltar a página de login
+        </Button>
       </div>
     </div>
   );

@@ -35,6 +35,7 @@ code {
   --grey-01: #F9F9F9;
   --grey-02: #EDF0F3;
   --grey-03: #9FA7B4;
+  --grey-04: #f4f4f4;
   --white-01: #FFFFFF;
   --verified-green: #58AE4A;
   --opacity-red: #FFDDDD;
@@ -104,7 +105,8 @@ code {
   --grey-01: #292929;
   --grey-02: #3f3f3f;
   --grey-03: #9FA7B4;
-  --white-01: #303030;
+  --grey-04: #242424;
+  --white-01: #2e2e2e;
   --verified-green: #58AE4A;
   --opacity-red: #FFDDDD;
   --red: #ED4343;
@@ -164,6 +166,14 @@ code {
 }
 
 /* General */
+.w-auto {
+  width: inherit;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
 .text-description {
   margin: 0px;
   padding: 0px;
