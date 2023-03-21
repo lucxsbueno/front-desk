@@ -1,0 +1,77 @@
+.message__video-wrapper {
+  position: relative;
+
+  margin: 5px;
+
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.message__video {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.message__video-cover {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, #000000 -14.51%, rgba(0, 0, 0, 0) 27.63%, rgba(0, 0, 0, 0) 50.24%, rgba(0, 0, 0, 0) 74.65%, #000000 113.45%);
+}
+
+.message__video-hour {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  z-index: 9997;
+  color: #fff;
+}
+
+.message__video-wrapper--me .message__video-hour {
+  right: 30px;
+}
+
+.message__video-time-duration {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  z-index: 9998;
+  color: #fff;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.message__video-title {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  z-index: 9998;
+  color: #fff;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 280px;
+}
+
+.video-thumb {
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.message__video-wrapper--me .message__read {
+  position: absolute;
+  bottom: 6px;
+  right: 10px;
+  z-index: 9997;
+  color: #fff;
+}

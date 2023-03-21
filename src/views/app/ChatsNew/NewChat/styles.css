@@ -1,0 +1,45 @@
+.chat {
+  position: relative;
+}
+
+.chat__container {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  /* background-image: url("../../../../utils/icons/bg-chat.svg"); */
+
+  background: radial-gradient(circle at bottom left, transparent 25%, var(--grey-04) 25.5%, var(--grey-04) 36%, transparent 37%, transparent 100%), radial-gradient(circle at top right, transparent 34%, var(--grey-04) 34.5%, var(--grey-04) 45.5%, transparent 46%, transparent 100%);
+  background-size: 5em 5em;
+  background-color: var(--grey-01);
+  opacity: 1;
+}
+
+.chat__inner {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  overflow-y: auto;
+}
+
+/* .chat__footer {} */
+
+/* .chat__information {} */
+
+.chat__overlay {
+  position: absolute;
+  z-index: 9999;
+
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+
+  width: 100%;
+  height: 100%;
+
+  transition: all 2s ease-in-out;
+}

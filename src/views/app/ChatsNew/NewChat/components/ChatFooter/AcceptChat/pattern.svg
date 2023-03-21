@@ -1,0 +1,52 @@
+<svg className="border shadow-md" viewBox="0 0 786.72 786.72" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <rect className="bg" id="bg" x="0" y="0" width="786.72" height="786.72" fill="#ffffff"></rect>
+  <g transform="
+        translate(-82.60559999999998
+        -397.29359999999997)
+        scale(1.46)
+                        ">
+    <path d="M634.5,563Q589,733,417,692Q245,651,180,522Q115,393,179,262.5Q243,132,380.5,154.5Q518,177,599,285Q680,393,634.5,563Z" fill="none" stroke="#263378" strokeWidth="9"></path>
+  </g>
+  <g transform="
+        translate(0
+        -314.688)
+        scale(1.25)
+                        ">
+    <path d="M634.5,563Q589,733,417,692Q245,651,180,522Q115,393,179,262.5Q243,132,380.5,154.5Q518,177,599,285Q680,393,634.5,563Z" fill="none" stroke="#2c398a" strokeWidth="9"></path>
+  </g>
+  <g transform="
+        translate(82.60559999999998
+        -232.08240000000004)
+        scale(1.04)
+                        ">
+    <path d="M634.5,563Q589,733,417,692Q245,651,180,522Q115,393,179,262.5Q243,132,380.5,154.5Q518,177,599,285Q680,393,634.5,563Z" fill="none" stroke="#323f9c" strokeWidth="9"></path>
+  </g>
+  <g transform="
+        translate(165.21120000000002
+        -149.4768)
+        scale(0.83)
+                        ">
+    <path d="M634.5,563Q589,733,417,692Q245,651,180,522Q115,393,179,262.5Q243,132,380.5,154.5Q518,177,599,285Q680,393,634.5,563Z" fill="none" stroke="#3845ae" strokeWidth="9"></path>
+  </g>
+  <g transform="
+        translate(243.88320000000002
+        -70.8048)
+        scale(0.63)
+                        ">
+    <path d="M634.5,563Q589,733,417,692Q245,651,180,522Q115,393,179,262.5Q243,132,380.5,154.5Q518,177,599,285Q680,393,634.5,563Z" fill="none" stroke="#3e4bc0" strokeWidth="9"></path>
+  </g>
+  <g transform="
+        translate(326.4888
+        11.80080000000001)
+        scale(0.42)
+                        ">
+    <path d="M634.5,563Q589,733,417,692Q245,651,180,522Q115,393,179,262.5Q243,132,380.5,154.5Q518,177,599,285Q680,393,634.5,563Z" fill="none" stroke="#4451d2" strokeWidth="9"></path>
+  </g>
+  <g transform="
+        translate(409.09440000000006
+        94.40640000000002)
+        scale(0.21)
+                        ">
+    <path d="M634.5,563Q589,733,417,692Q245,651,180,522Q115,393,179,262.5Q243,132,380.5,154.5Q518,177,599,285Q680,393,634.5,563Z" fill="none" stroke="#4a57e4" strokeWidth="9"></path>
+  </g>
+</svg>

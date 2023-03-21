@@ -1,0 +1,115 @@
+/*
+ * <div className="document d-flex flex-row">
+ *   <div className="document__icon-wrapper">
+ *     <img src={pdf} alt="" className="document__icon" />
+ *   </div>
+ *   <div className="document__body d-flex flex-column">
+ *     <span className="document__title">certificado-startup-summit-2022.pdf</span>
+ *     <div className="d-flex flex-row align-items-center justify-content-space-between">
+ *       <div className="">
+ *         <span className="document__type">PDF</span>
+ *         <span className="document__size">1.005 B</span>
+ *       </div>
+ *
+ *       <div className="">
+ *         <span className="document__sended-at">12:34</span>
+ *       </div>
+ *     </div>
+ *   </div>
+ *   <div className="document__download">
+ *     <button className="document__download-bttn" onClick={() => { }}>
+ *       <Download />
+ *     </button>
+ *   </div>
+ * </div>
+ *
+ */
+:root {
+  --bg-doc-color: #333333;
+  --bg-doc-color-hover: #353535;
+}
+
+.document {
+  margin: 5px;
+  padding: 10px;
+
+  border-radius: 4px;
+
+  background-color: var(--grey-01);
+}
+
+/* .document__icon-wrapper {} */
+
+/* .document__icon {} */
+
+.document__body {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.document__title {
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.document__type {
+  color: var(--grey-03);
+}
+
+.document__size {
+  color: var(--grey-03);
+}
+
+.document__sended-at {
+  color: var(--text-color);
+}
+
+.document__download {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.document__download-bttn {
+  color: var(--text-color);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: var(--grey-01);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.document__download-bttn:hover {
+  color: var(--text-color);
+  background-color: var(--grey-02);
+}
+
+/* .document--me {} */
+
+.document--me {
+  background-color: var(--bg-doc-color);
+}
+
+.document--me .document__title {
+  color: #FFFFFF;
+}
+
+.document--me .document__sended-at {
+  color: #FFFFFF;
+}
+
+.document--me .document__download-bttn {
+  color: #FFFFFF;
+  background-color: var(--bg-doc-color);
+}
+
+.document--me .document__download-bttn:hover {
+  color: #FFFFFF;
+  background-color: var(--bg-doc-color-hover);
+}
