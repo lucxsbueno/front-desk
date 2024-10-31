@@ -69,7 +69,7 @@ const ApexPieChart = () => {
         },
       },
     });
-  }, [state.series]);
+  }, []);
 
   return (
     <ReactApexChart

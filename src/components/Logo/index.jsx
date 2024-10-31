@@ -5,7 +5,7 @@ const Logo = (props) => {
 
   return (
     <span className={`text-center text-fixed-white fs-16 ${className}`.trim()}>
-      gvm<span className="text-bold text-primary-color">desk</span>
+      front<span className="text-bold text-primary-color">desk</span>
     </span>
   );
 };

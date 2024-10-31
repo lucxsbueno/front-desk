@@ -11,7 +11,7 @@ const Signin = () => {
   return (
     <div className="signin w-100 h-100 d-flex flex-column align-items-center justify-content-center bg-chat">
       <span className="logo logo--lg">
-        gvm<span className="logo__primary">desk</span>
+        front<span className="logo__primary">desk</span>
       </span>
 
       <Box className="box--signin x-p-20 y-p-20 w-400-h-auto">

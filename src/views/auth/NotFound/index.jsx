@@ -15,7 +15,7 @@ const NotFound = () => {
   return (
     <div className="signin w-100 h-100 d-flex flex-column align-items-center justify-content-center bg-chat">
       <Link onClick={goBack} className="text-color text-semi-bold">
-        ← gvmdesk
+        ← frontdesk
       </Link>
 
       <div className="signin__icon">

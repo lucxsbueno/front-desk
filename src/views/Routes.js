@@ -59,7 +59,7 @@ export const MainRoutes = () => {
           <Route path=":id" element={<Information />} />
         </Route>
         <Route path="ranking" element={<Ranking />} />
-        <Route path="lotes-favoritados" element={<FavLots />} />
+        <Route path="lorem-ipsum" element={<FavLots />} />
         <Route path="relatorio-de-acessos" element={<AccessReports />} />
         <Route path="minha-conta" element={<MyAccount />}>
           <Route index element={<CallsHistory />} />

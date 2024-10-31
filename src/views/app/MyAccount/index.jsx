@@ -24,7 +24,7 @@ const MyAccount = () => {
               </div>
 
               <span className="account__email">
-                vitoria.ester@viamaquinas.com.br
+                vitoria.ester@example.com.br
               </span>
 
               <div className="w-100 d-flex flex-row mb-10">

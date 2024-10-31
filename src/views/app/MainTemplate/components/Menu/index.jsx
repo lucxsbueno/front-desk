@@ -39,8 +39,8 @@ const Menu = () => {
         <Link icon={<BarChart2 />} title="Ranking" to="/ranking" />
         <Link
           icon={<Star />}
-          title="Lotes favoritados"
-          to="/lotes-favoritados"
+          title="Lorem ipsum"
+          to="/lorem-ipsum"
         />
         <Link
           icon={<BookOpen />}

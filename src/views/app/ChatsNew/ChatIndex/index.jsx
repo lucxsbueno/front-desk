@@ -8,7 +8,7 @@ const ChatIndex = () => {
       <div className="d-flex flex-column align-items-center">
         <div className="chat-img" />
         <span className="logo logo--lg">
-          gvm<span className="logo__primary">desk</span>
+          front<span className="logo__primary">desk</span>
         </span>
         <p className="logo__p">
           Escolha uma conversa para começar ou inicie uma nova conversa

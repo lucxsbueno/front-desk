@@ -26,17 +26,17 @@ const Dashboard = () => {
                 Olá, <span>Lucas Bueno</span>!
               </h2>
               <p className="mb-20 dashboard__subtitle">
-                Fique por dentro dos principais indicadores do gvmdesk.
+                Fique por dentro dos principais indicadores do frontdesk.
               </p>
 
-              <Card
-                icon={<AlertOctagon />}
-                title="$2.456,0"
-                subtitle="Lorem ipsum dolor"
-                color="primary"
-              />
-
               <CardGrid>
+                <Card
+                  icon={<AlertOctagon />}
+                  title="$2.456,0"
+                  subtitle="Lorem ipsum dolor"
+                  color="primary"
+                />
+
                 <Card
                   icon={<AlertOctagon />}
                   title="45%"
@@ -68,7 +68,7 @@ const Dashboard = () => {
                   <TableRow>
                     <TableHead>Posição</TableHead>
                     <TableHead>Nome completo</TableHead>
-                    <TableHead>Útimo login no usadão</TableHead>
+                    <TableHead>Lorem ipsum</TableHead>
                     <TableHead>Situação</TableHead>
                   </TableRow>
                 </thead>

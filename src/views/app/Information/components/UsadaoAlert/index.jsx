@@ -11,7 +11,7 @@ const UsadaoAlert = () => {
           <Check />
         </div>
 
-        <span className="usadao-alert__title">Tem cadastro no leilão</span>
+        <span className="usadao-alert__title">Tem cadastro</span>
       </div>
     </div>
   );

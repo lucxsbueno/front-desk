@@ -2,7 +2,7 @@ const mock = [
   {
     id: 1,
     name: "Carlos Eduardo Daniel Assunção",
-    current_message: "Poderia me passar informações sobre o leilão?",
+    current_message: "Poderia me passar informações sobre o ?",
     hour: "12:32",
     unread_messages: 0,
     profile_picture:
@@ -26,7 +26,7 @@ const mock = [
   {
     id: 3,
     name: "Carla Aline de Paula",
-    current_message: "TRATOR JD 6600 ANO 1999 LOTE (#87699)",
+    current_message: "LOREM IPSUM DOLOR SIT AMET",
     hour: "12:32",
     unread_messages: 4,
     profile_picture:
@@ -38,7 +38,7 @@ const mock = [
   {
     id: 4,
     name: "Roberto Osvaldo da Silva",
-    current_message: "Não quero mais nenhum trator, obrigado",
+    current_message: "Não quero mais, obrigado",
     hour: "12:32",
     unread_messages: 1,
     profile_picture:

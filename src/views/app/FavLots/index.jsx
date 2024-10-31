@@ -13,20 +13,15 @@ const FavLots = () => {
     <div className="h-100 d-flex flex-column">
       <Header className="header--bg-white bg-white">
         <div className="d-flex flex-row align-items-center justify-content-space-between w-100">
-          <span className="text-color text-semi-bold">Lotes favoritados</span>
+          <span className="text-color text-semi-bold">Lorem ipsum</span>
         </div>
       </Header>
 
       <div className="w-100 favlots__table">
         <div className="container">
           <p className="text-description mb-15 mt-15">
-            A página de lotes favoritados permite que você, como vendedor,
-            visualize os lotes que os usuários marcaram como favoritos. Isso
-            pode ser usado para entender melhor as preferências dos potenciais
-            compradores e ajustar sua estratégia de vendas. Além disso, você
-            pode usá-la para entrar em contato com os usuários e oferecer
-            informações adicionais sobre os lotes favoritos e outras opções que
-            possam ser do interesse deles.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio neque ea possimus placeat nam sequi ad laudantium numquam tempore beatae atque cupiditate, assumenda porro voluptas minus reiciendis, voluptates, perferendis hic!
+            Dignissimos architecto eaque quaerat voluptatibus maiores, a ad voluptate similique, alias dolorem corporis ullam id dolore adipisci sit provident nemo ut dolores aspernatur. Facere cum nostrum illo fuga incidunt itaque.
           </p>
 
           <div className="row">
@@ -34,10 +29,10 @@ const FavLots = () => {
               <Table>
                 <thead>
                   <TableRow>
-                    <TableHead>Posição</TableHead>
-                    <TableHead>Nome completo</TableHead>
-                    <TableHead>Útimo login no usadão</TableHead>
-                    <TableHead>Situação</TableHead>
+                    <TableHead>Lorem ipsum</TableHead>
+                    <TableHead>Lorem ipsum</TableHead>
+                    <TableHead>Lorem ipsum</TableHead>
+                    <TableHead>Lorem ipsum</TableHead>
                   </TableRow>
                 </thead>
                 <tbody>

@@ -1,4 +1,4 @@
-# GVMDESK
+# frontdesk
 
 Este projeto tem como objetivo a construção de uma **aplicação de chat em tempo real** criado com o intuito de **mantermos nossos clientes na nossa base de dados**. Conectando nossos sistemas entre si, abstraindo o máximo de informações disponíveis atualmente.
 

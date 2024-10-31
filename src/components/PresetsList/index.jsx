@@ -13,7 +13,7 @@ export const fastMessages = [
   },
   {
     id: 2,
-    body: "Eu me chamo Lucas Bueno, e falo do Leilão Usadão Máquinas",
+    body: "Eu me chamo Lucas Bueno",
   },
   {
     id: 3,
@@ -41,17 +41,17 @@ export const presets = [
   {
     id: 1,
     title: "/visitacao",
-    body: "Os equipamentos com suas respectivas fotos e descrições poderão ser visualizados através do site Usadão Máquinas url www.usadaomaquinas.com.br ou, ainda, pessoalmente, devendo o cliente interessado solicitar o agendamento de visita. Para agendar uma visita aos equipamentos, o cliente deverá efetuar um lance de interesse no lote desejado e entrar em contato no telefone (47) 3311-0550. As visitas encerram-se 24 horas antes do encerramento do leilão. Não serão aceitas reclamações posteriores referentes a fotos, descrições e possíveis erros nos laudos dos produtos. A VIA MÁQUINAS não se responsabiliza por eventuais promessas ou avaliações feitas por telefone ou trocas de mensagens junto aos vendedores. RECOMENDAMOS A VISITAÇÃO DOS BENS PARA POSTERIOR COMPRA. OS BENS SERÃO VENDIDOS NO ESTADO QUE SE ENCONTRAM. Eventuais danos aos bens expostos durante a visitação deverão ser ressarcidos ao comitente/vendedor.",
+    body: "Os equipamentos com suas respectivas fotos e descrições poderão ser visualizados através do site, ou, ainda, pessoalmente, devendo o cliente interessado solicitar o agendamento de visita. Para agendar uma visita, o cliente deverá entrar em contato. Não serão aceitas reclamações posteriores referentes a fotos, descrições e possíveis erros nos laudos dos produtos.",
   },
   {
     id: 2,
     title: "/retirada",
-    body: "Os bens poderão ser retirados, satisfeitos todos os pagamentos e procedimentos legais, a partir do 4º dia útil após a realização do leilão, em até 30 (trinta) dias corridos, das 9:30 às 11:30 e das 14:30 às 17:30 de segunda e sexta-feira, mediante prévio e obrigatório agendamento. Poderá o local de retirada ser aproximado ao local de anúncio. Consulte o consultor antes da retirada.",
+    body: "Os bens poderão ser retirados, satisfeitos todos os pagamentos e procedimentos legais, a partir do 4º dia útil após a realização do , em até 30 (trinta) dias corridos, das 9:30 às 11:30 e das 14:30 às 17:30 de segunda e sexta-feira, mediante prévio e obrigatório agendamento. Poderá o local de retirada ser aproximado ao local de anúncio. Consulte o consultor antes da retirada.",
   },
   {
     id: 3,
     title: "/pagamento",
-    body: "O preço do bem arrematado incluindo a comissão e taxa administrativa, deverão ser pagos através de depósito em dinheiro na rede bancária, DOC ou TED, no prazo de até 2 (dois) dias úteis após o encerramento do leilão, impreterivelmente. O pagamento deverá ser realizado na conta da Via Comércio de Máquinas e Equipamentos Ltda– CPJ 11.280.481/0001-52– Banco Itaú (341), Agência 6382, Conta Corrente 09975-9. Cada arrematante receberá um e-mail com as orientações para pagamento. SOLICITAMOS AGUARDAR O RECEBIMENTO DESTE E-MAIL ANTES DE EFETUAR QUAISQUER PAGAMENTOS. Após os 2 (dois) dias úteis e encerrado o Leilão (prazo final para pagamento dos lotes arrematados), caso o arrematante não tenha efetuado o pagamento, o Leiloeiro poderá usar de sua prerrogativa legal constante no item 8.2 do Contrato de Adesão as Site Usadão Máquinas. Após o recebimento do e-mail, os arrematantes deverão efetuar o pagamento e enviar o comprovante (valor arrematado + comissão + taxa administrativa) para o e-mail financeiro@usadaomaquinas.com.br, devendo constar o nome do arrematante, número dos lotes arrematados, para em até 3 (três) dias úteis após a confirmação do pagamento o recibo de venda de leilão ser enviado para o e-mail cadastrado. O recibo de venda de leilão poderá ser enviado ao arrematante via Sedex com AR, mediante o custeamento do envio no valor de R$ 40,00 (quarenta reais), o qual deverá ser efetuado através de depósito identificado junto a conta da Via Máquinas. Para envio via Sedex com AR, o arrematante/comprador deverá oficializar esta solicitação via e-mail:financeiro@usadaomaquinas.com.br.",
+    body: "O preço do bem incluindo a comissão e taxa administrativa, deverão ser pagos através de depósito em dinheiro na rede bancária, DOC ou TED, no prazo de até 2 (dois) dias úteis após o encerramento do , impreterivelmente. O pagamento deverá ser realizado na conta.",
   },
   {
     id: 4,
@@ -132,8 +132,8 @@ const PresetsList = (props) => {
   const filteredPresets =
     textMessage.length > 0
       ? presets.filter((preset) =>
-          preset.title.includes(textMessage.match(/\/[^ ]*[^ ]?$/, ""))
-        )
+        preset.title.includes(textMessage.match(/\/[^ ]*[^ ]?$/, ""))
+      )
       : presets;
 
   return (
